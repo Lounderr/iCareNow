@@ -8,7 +8,6 @@
     using iCareNow.Data.Models;
     using iCareNow.Data.Repositories;
     using iCareNow.Data.Seeding;
-    using iCareNow.Services.Data;
     using iCareNow.Services.Mapping;
     using iCareNow.Services.Messaging;
     using iCareNow.Web.ViewModels;
