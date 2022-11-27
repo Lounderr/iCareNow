@@ -1,0 +1,66 @@
+﻿@import "../../utilities/variables";
+
+.nav-active {
+    display: block !important;
+    position: absolute;
+    top: $nav-height;
+    left: 0;
+    width: 100%;
+    height: min-content;
+    background-color: $black;
+    padding: 15px 40px 40px 40px;
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .nav-item {
+            a {
+                width: 100%;
+                display: block;
+                font-size: 1.2rem !important;
+                text-transform: uppercase;
+
+                &:after {
+                    content: none !important;
+                }
+            }
+
+            &:not(:last-child):after {
+                content: "";
+                display: inline-block;
+                height: 1px;
+                width: 100%;
+                background-color: #161616;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav-active {
+        height: calc(100vh - $nav-height);
+        padding: 40px;
+
+        .nav-items {
+            .nav-item {
+                a {
+                    font-size: 1.5rem !important;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.menu-active {
+    .menu-btn {
+        display: none !important;
+    }
+
+    .close-btn {
+        display: block !important;
+    }
+}

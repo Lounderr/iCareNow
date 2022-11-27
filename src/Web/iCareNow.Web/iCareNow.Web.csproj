@@ -9,12 +9,27 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\css\scss\**" />
+    <Content Remove="wwwroot\css\scss\**" />
+    <EmbeddedResource Remove="wwwroot\css\scss\**" />
+    <None Remove="wwwroot\css\scss\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
 	<ItemGroup>
 		<AdditionalFiles Include="..\..\stylecop.json" />
 	</ItemGroup>
 	
 	<ItemGroup>
 		<InternalsVisibleTo Include="iCareNow.Web.Tests" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <None Include="compilerconfig.json" />
 	</ItemGroup>
 
   <ItemGroup>
@@ -39,5 +54,9 @@
     <ProjectReference Include="..\..\Services\iCareNow.Services\iCareNow.Services.csproj" />
     <ProjectReference Include="..\iCareNow.Web.Infrastructure\iCareNow.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\iCareNow.Web.ViewModels\iCareNow.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 </Project>

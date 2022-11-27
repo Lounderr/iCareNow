@@ -1,4 +1,12 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const navContainer = document.querySelector('.nav-items-container');
+const controls = document.querySelector('.menu-controls');
 
-// Write your JavaScript code.
+addEventListener("resize", (event) => {
+    controls.classList.remove('menu-active');
+    navContainer.classList.remove('nav-active');
+});
+
+function toggleMenu() {
+    navContainer.classList.toggle('nav-active');
+    controls.classList.toggle('menu-active');
+}

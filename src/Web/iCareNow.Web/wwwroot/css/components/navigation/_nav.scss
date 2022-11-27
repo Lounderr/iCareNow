@@ -1,0 +1,168 @@
+﻿@import "../../utilities/variables";
+@import "../buttons/buttons";
+@import "nav-open";
+
+header {
+    height: $nav-height;
+
+    .top-nav {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: $nav-height;
+        width: 100%;
+        padding-inline: 10px;
+        background-color: $black;
+        color: $white;
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 400;
+
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+
+        .nav-items-container {
+            .nav-items {
+                white-space: nowrap;
+
+                .nav-item {
+                    display: inline;
+                    margin-inline: calc(1vw - 5px);
+                    list-style-type: none;
+
+                    a {
+                        position: relative;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        text-decoration: none;
+                        white-space: nowrap;
+                        color: $white;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -4px;
+                            left: 0;
+                            transition: 0.2s;
+                            height: 1px;
+                            width: 0%;
+                            border-radius: 10px;
+                            background: $white;
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+
+            @include btn-black(1);
+
+            a .account-name {
+                color: $white;
+            }
+
+            a .profile-btn,
+            .menu-controls .menu-btn,
+            .menu-controls .close-btn {
+                display: none;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    header {
+        .top-nav {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-items-container {
+                .nav-items {
+                    .nav-item {
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .controls {
+                .login-btn {
+                    display: none;
+                }
+
+                a {
+                    .account-name {
+                        color: $white;
+                    }
+
+                    .profile-btn {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        .top-nav {
+            justify-content: space-between;
+            padding-inline: 30px;
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .nav-items-container {
+                display: none;
+            }
+
+            .controls {
+                a .account-name {
+                    color: $white;
+                }
+
+                a .profile-btn,
+                .menu-controls .menu-btn,
+                .menu-controls .close-btn {
+                    height: 45px;
+                }
+
+                .menu-controls .menu-btn {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    top-nav {
+        padding-inline: 20px !important;
+    }
+}
