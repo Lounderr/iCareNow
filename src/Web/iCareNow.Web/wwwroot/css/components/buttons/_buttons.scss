@@ -1,0 +1,23 @@
+﻿@mixin btn-black($scale: 1) {
+    .btn-black {
+        height: 35px;
+        width: fit-content;
+        padding-inline: 30px;
+        border: 1px solid #ffffff;
+        border-radius: 7px;
+        color: #ffffff;
+        background-color: #080808;
+        cursor: pointer;
+        user-select: none !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        transform: scale($scale);
+        transform-origin: left top;
+
+        &:hover {
+            background-color: #ffffff;
+            color: #080808;
+        }
+    }
+}
