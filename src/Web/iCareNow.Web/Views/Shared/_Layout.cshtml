@@ -8,7 +8,6 @@
     @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />*@
     <link rel="stylesheet" href="~/css/utilities/style.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/layout/layout.min.css" asp-append-version="true" />
-    <script src="/js/site.js"></script>
 </head>
 <body>
     <header>
@@ -26,8 +25,7 @@
                 </ul>
             </div>
             <div class="controls">
-                <button class="login-btn btn-black" type="button">Впиши се</button>
-                <img class="profile-btn" (click)="handleClick($event)" src="/assets/profileBtn.svg" alt="" />
+                <partial name="_LoginPartial" />
                 <!-- class: menu-active -->
                 <div class="menu-controls">
                     <img class="menu-btn" onclick="toggleMenu()" src="/assets/menuBtn.svg" alt="" />

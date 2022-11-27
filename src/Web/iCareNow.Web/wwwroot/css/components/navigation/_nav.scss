@@ -75,7 +75,11 @@ header {
 
             @include btn-black(1);
 
-            .profile-btn,
+            a .account-name {
+                color: $white;
+            }
+
+            a .profile-btn,
             .menu-controls .menu-btn,
             .menu-controls .close-btn {
                 display: none;
@@ -109,8 +113,14 @@ header {
                     display: none;
                 }
 
-                .profile-btn {
-                    display: block;
+                a {
+                    .account-name {
+                        color: $white;
+                    }
+
+                    .profile-btn {
+                        display: block;
+                    }
                 }
             }
         }
@@ -132,7 +142,11 @@ header {
             }
 
             .controls {
-                .profile-btn,
+                a .account-name {
+                    color: $white;
+                }
+
+                a .profile-btn,
                 .menu-controls .menu-btn,
                 .menu-controls .close-btn {
                     height: 45px;

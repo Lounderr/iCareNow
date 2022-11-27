@@ -128,7 +128,10 @@ header .top-nav .controls .btn-black:hover {
   background-color: #ffffff;
   color: #080808;
 }
-header .top-nav .controls .profile-btn,
+header .top-nav .controls a .account-name {
+  color: #ffffff;
+}
+header .top-nav .controls a .profile-btn,
 header .top-nav .controls .menu-controls .menu-btn,
 header .top-nav .controls .menu-controls .close-btn {
   display: none;
@@ -146,7 +149,10 @@ header .top-nav .controls .menu-controls .close-btn {
   header .top-nav .controls .login-btn {
     display: none;
   }
-  header .top-nav .controls .profile-btn {
+  header .top-nav .controls a .account-name {
+    color: #ffffff;
+  }
+  header .top-nav .controls a .profile-btn {
     display: block;
   }
 }
@@ -161,7 +167,10 @@ header .top-nav .controls .menu-controls .close-btn {
   header .top-nav .nav-items-container {
     display: none;
   }
-  header .top-nav .controls .profile-btn,
+  header .top-nav .controls a .account-name {
+    color: #ffffff;
+  }
+  header .top-nav .controls a .profile-btn,
 header .top-nav .controls .menu-controls .menu-btn,
 header .top-nav .controls .menu-controls .close-btn {
     height: 45px;
