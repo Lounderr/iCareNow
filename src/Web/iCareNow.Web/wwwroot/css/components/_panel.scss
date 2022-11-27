@@ -19,7 +19,7 @@
         .panel-description {
             font-size: 1.1rem;
             font-weight: 400;
-            margin: 0 0 40px 0; // FIXME: When button scaling is fixed, this needs to be changed
+            margin: 0 0 40px 0;
         }
 
         .panel-buttons {
@@ -33,34 +33,15 @@
 
     @media screen and (max-width: 700px) {
         .panel-container {
-            height: auto;
             width: 100%;
-            background-color: $black;
-            color: #ffffff;
             padding: 30px 0 50px 40px;
 
             .panel-title {
                 font-size: 2rem;
-                font-weight: 600;
-                margin: 0 0 20px 0;
             }
 
             .panel-description {
                 font-size: 1rem;
-                font-weight: 400;
-                margin: 0 0 40px 0; // FIXME: When button scaling is fixed, this needs to be changed
-            }
-
-            .panel-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                .btnBlack {
-                    transform: scale($btns-scale) !important;
-                    transform-origin: left;
-                    margin-block: 0px;
-                }
             }
         }
     }
