@@ -201,7 +201,6 @@ footer .footer-info-container {
 }
 footer .footer-info-container .description-container {
   width: 30%;
-  margin-bottom: 30px;
 }
 footer .footer-info-container .description-container h2 {
   font-size: 2rem;
@@ -210,9 +209,6 @@ footer .footer-info-container .description-container h2 {
 }
 footer .footer-info-container .description-container p {
   margin-bottom: 15px;
-}
-footer .footer-info-container .sitemap-container {
-  margin-bottom: 30px;
 }
 footer .footer-info-container .sitemap-container h3 {
   font-size: 1.3rem;
@@ -229,9 +225,6 @@ footer .footer-info-container .sitemap-container nav a:visited {
 }
 footer .footer-info-container .sitemap-container nav a:hover {
   text-shadow: 0 0 0.1px #ffffff;
-}
-footer .footer-info-container .feedback-container {
-  margin-bottom: 30px;
 }
 footer .footer-info-container .feedback-container h3 {
   font-size: 1.3rem;
@@ -278,10 +271,13 @@ footer .legal-content-container a:visited {
   }
   footer .footer-info-container {
     flex-direction: column;
-    margin-bottom: 40px;
+    gap: 40px;
   }
   footer .footer-info-container .description-container {
     width: 100%;
+  }
+  footer .footer-info-container .sitemap-container h3 {
+    height: 50px;
   }
   footer .legal-content-container {
     flex-direction: column;
