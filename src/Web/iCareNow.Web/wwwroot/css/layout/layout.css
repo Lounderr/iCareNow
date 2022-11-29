@@ -184,3 +184,110 @@ header .top-nav .controls .menu-controls .close-btn {
     padding-inline: 20px !important;
   }
 }
+footer {
+  width: 100%;
+  height: min-content;
+  background-color: #080808;
+  color: #ffffff;
+  padding: 50px 0 20px 5%;
+}
+footer .footer-info-container {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8%;
+  margin-bottom: 40px;
+}
+footer .footer-info-container .description-container {
+  width: 30%;
+  margin-bottom: 30px;
+}
+footer .footer-info-container .description-container h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  height: 80px;
+}
+footer .footer-info-container .description-container p {
+  margin-bottom: 15px;
+}
+footer .footer-info-container .sitemap-container {
+  margin-bottom: 30px;
+}
+footer .footer-info-container .sitemap-container h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  height: 80px;
+}
+footer .footer-info-container .sitemap-container nav a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+footer .footer-info-container .sitemap-container nav a:visited {
+  color: #ffffff;
+}
+footer .footer-info-container .sitemap-container nav a:hover {
+  text-shadow: 0 0 0.1px #ffffff;
+}
+footer .footer-info-container .feedback-container {
+  margin-bottom: 30px;
+}
+footer .footer-info-container .feedback-container h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  height: 80px;
+}
+footer .footer-info-container .feedback-container .btn-black {
+  height: 35px;
+  width: fit-content;
+  padding-inline: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  color: #ffffff;
+  background-color: #080808;
+  cursor: pointer;
+  user-select: none !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transform: scale(1.1);
+  transform-origin: left top;
+}
+footer .footer-info-container .feedback-container .btn-black:hover {
+  background-color: #ffffff;
+  color: #080808;
+}
+footer .legal-content-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+footer .legal-content-container a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+footer .legal-content-container a:visited {
+  color: #cccccc;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    padding: 50px 0 40px 7%;
+  }
+  footer .footer-info-container {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  footer .footer-info-container .description-container {
+    width: 100%;
+  }
+  footer .legal-content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .legal-content-container a {
+    font-size: 0.7rem;
+  }
+}
