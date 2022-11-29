@@ -45,4 +45,12 @@
             }
         }
     }
+
+
+    @media screen and (orientation: landscape) and (max-height: 520px) {
+        .panel-container {
+            transform: scale(0.6);
+            transform-origin: left top;
+        }
+    }
 }
