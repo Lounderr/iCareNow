@@ -58,5 +58,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\" />
+    <Folder Include="wwwroot\css\components\footer\" />
   </ItemGroup>
 </Project>

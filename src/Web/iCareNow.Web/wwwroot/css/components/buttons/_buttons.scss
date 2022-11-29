@@ -1,12 +1,14 @@
-﻿@mixin btn-black($scale: 1) {
+﻿@import "../../utilities/_variables.scss";
+
+@mixin btn-black($scale: 1) {
     .btn-black {
         height: 35px;
         width: fit-content;
         padding-inline: 30px;
-        border: 1px solid #ffffff;
+        border: 1px solid $white;
         border-radius: 7px;
-        color: #ffffff;
-        background-color: #080808;
+        color: $white;
+        background-color: $black;
         cursor: pointer;
         user-select: none !important;
         font-weight: 600;
@@ -16,8 +18,66 @@
         transform-origin: left top;
 
         &:hover {
-            background-color: #ffffff;
-            color: #080808;
+            background-color: $white;
+            color: $black;
         }
+    }
+}
+
+@mixin btn-icon($scale: 1, $margin: 0px) {
+    .btn-icon {
+        height: calc(150px * $scale);
+        width: calc(200px * $scale);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        padding-inline: 10px;
+        margin: $margin;
+        border: none;
+        border-radius: 23px;
+        color: $black;
+        background-color: $white;
+        cursor: pointer;
+        user-select: none !important;
+        /*        transform: scale($scale);
+        transform-origin: center;*/
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+        img {
+            height: calc(65px * $scale);
+        }
+
+        span {
+            height: calc(50px * $scale);
+            display: block;
+            font-weight: 500;
+            font-size: calc(1.2rem * $scale);
+            text-align: center;
+        }
+    }
+    /* TODO: Possible optimization: Add @media here instead of everywhere else */
+}
+
+
+@mixin btn-white($scale: 1, $margin: 0px) {
+    .btn-white {
+        height: 40px;
+        width: fit-content;
+        padding-inline: 30px;
+        margin: $margin;
+        border: none;
+        border-radius: 10px;
+        color: $black;
+        background-color: $white;
+        cursor: pointer;
+        user-select: none !important;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1rem;
+        white-space: nowrap;
+        transform: scale($scale);
+        transform-origin: left top;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
