@@ -12,3 +12,7 @@ body {
 body {
   overflow-x: hidden;
 }
+
+* a {
+  color: white;
+}
