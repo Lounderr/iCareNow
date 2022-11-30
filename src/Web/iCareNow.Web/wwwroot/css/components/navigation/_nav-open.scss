@@ -6,9 +6,11 @@
     top: $nav-height;
     left: 0;
     width: 100%;
-    height: min-content;
+    height: auto;
+    max-height: calc(100vh - $nav-height);
     background-color: $black;
     padding: 15px 40px 40px 40px;
+    overflow-y: scroll;
 
     .nav-items {
         display: flex;

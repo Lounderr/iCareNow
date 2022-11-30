@@ -4,9 +4,11 @@
   top: 75px;
   left: 0;
   width: 100%;
-  height: min-content;
+  height: auto;
+  max-height: calc(100vh - 75px);
   background-color: #080808;
   padding: 15px 40px 40px 40px;
+  overflow-y: scroll;
 }
 .nav-active .nav-items {
   display: flex;
