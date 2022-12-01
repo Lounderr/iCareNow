@@ -3,7 +3,9 @@
     this.ViewData["Title"] = "Home Page";
 }
 
-<link rel="stylesheet" href="~/css/pages/index/index.min.css" asp-append-version="true" />
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/index/index.min.css" asp-append-version="true" />
+}
 
 <section class="first-section">
     <img class="background-image" src="assets/backgroundImage.png" alt="" />
