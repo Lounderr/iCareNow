@@ -111,19 +111,20 @@ header .top-nav .controls {
   gap: 15px;
 }
 header .top-nav .controls .btn-black {
+  display: block;
   height: 35px;
   width: fit-content;
   padding-inline: 30px;
+  margin: 0px;
   border: 1px solid #ffffff;
   border-radius: 7px;
   color: #ffffff;
   background-color: #080808;
-  cursor: pointer;
   user-select: none !important;
   font-weight: 600;
   font-size: 0.9rem;
+  line-height: 33px;
   white-space: nowrap;
-  margin: 0px;
 }
 header .top-nav .controls .btn-black:hover {
   background-color: #ffffff;
@@ -226,19 +227,20 @@ footer .footer-info-container .feedback-container h3 {
   height: 80px;
 }
 footer .footer-info-container .feedback-container .btn-black {
+  display: block;
   height: 38.5px;
   width: fit-content;
   padding-inline: 30px;
+  margin: 0px;
   border: 1px solid #ffffff;
   border-radius: 7px;
   color: #ffffff;
   background-color: #080808;
-  cursor: pointer;
   user-select: none !important;
   font-weight: 600;
   font-size: 0.99rem;
+  line-height: 36.5px;
   white-space: nowrap;
-  margin: 0px;
 }
 footer .footer-info-container .feedback-container .btn-black:hover {
   background-color: #ffffff;

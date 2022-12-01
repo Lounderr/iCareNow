@@ -38,19 +38,20 @@
   gap: 20px;
 }
 .first-section .panel-container .panel-buttons .btn-black {
+  display: block;
   height: 40.25px;
   width: fit-content;
   padding-inline: 30px;
+  margin: 0px;
   border: 1px solid #ffffff;
   border-radius: 7px;
   color: #ffffff;
   background-color: #080808;
-  cursor: pointer;
   user-select: none !important;
   font-weight: 600;
   font-size: 1.035rem;
+  line-height: 38.25px;
   white-space: nowrap;
-  margin: 0px;
 }
 .first-section .panel-container .panel-buttons .btn-black:hover {
   background-color: #ffffff;
@@ -93,7 +94,7 @@
   text-align: center;
   color: #ffffff;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-block: 50px;
 }
 .categories-container .categories {
@@ -104,6 +105,7 @@
   /* TODO: Possible optimization: Add @media here instead of everywhere else */
 }
 .categories-container .categories .btn-icon {
+  display: block;
   height: 150px;
   width: 200px;
   display: flex;
@@ -116,7 +118,6 @@
   border-radius: 23px;
   color: #080808;
   background-color: #ffffff;
-  cursor: pointer;
   user-select: none !important;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -124,13 +125,14 @@
   height: 65px;
 }
 .categories-container .categories .btn-icon span {
-  height: 50px;
-  display: block;
+  /*display: block;*/
+  /*height: calc(50px * $scale);*/
   font-weight: 500;
   font-size: 1.2rem;
   text-align: center;
 }
 .categories-container .btn-white {
+  display: block;
   height: 40px;
   width: fit-content;
   padding-inline: 30px;
@@ -139,11 +141,11 @@
   border-radius: 10px;
   color: #080808;
   background-color: #ffffff;
-  cursor: pointer;
   user-select: none !important;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1rem;
+  line-height: 40px;
   white-space: nowrap;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -153,6 +155,7 @@
     /* TODO: Possible optimization: Add @media here instead of everywhere else */
   }
   .categories-container .categories .btn-icon {
+    display: block;
     height: 120px;
     width: 160px;
     display: flex;
@@ -165,7 +168,6 @@
     border-radius: 23px;
     color: #080808;
     background-color: #ffffff;
-    cursor: pointer;
     user-select: none !important;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
@@ -173,13 +175,14 @@
     height: 52px;
   }
   .categories-container .categories .btn-icon span {
-    height: 40px;
-    display: block;
+    /*display: block;*/
+    /*height: calc(50px * $scale);*/
     font-weight: 500;
     font-size: 0.96rem;
     text-align: center;
   }
   .categories-container .btn-white {
+    display: block;
     height: 40px;
     width: fit-content;
     padding-inline: 30px;
@@ -188,11 +191,11 @@
     border-radius: 10px;
     color: #080808;
     background-color: #ffffff;
-    cursor: pointer;
     user-select: none !important;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1rem;
+    line-height: 40px;
     white-space: nowrap;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }

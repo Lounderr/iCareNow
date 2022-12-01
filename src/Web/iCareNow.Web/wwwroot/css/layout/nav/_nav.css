@@ -111,19 +111,20 @@ header .top-nav .controls {
   gap: 15px;
 }
 header .top-nav .controls .btn-black {
+  display: block;
   height: 35px;
   width: fit-content;
   padding-inline: 30px;
+  margin: 0px;
   border: 1px solid #ffffff;
   border-radius: 7px;
   color: #ffffff;
   background-color: #080808;
-  cursor: pointer;
   user-select: none !important;
   font-weight: 600;
   font-size: 0.9rem;
+  line-height: 33px;
   white-space: nowrap;
-  margin: 0px;
 }
 header .top-nav .controls .btn-black:hover {
   background-color: #ffffff;

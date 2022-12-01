@@ -2,19 +2,20 @@
 
 @mixin btn-black($scale: 1, $margin: 0px) {
     .btn-black {
+        display: block;
         height: calc(35px * $scale);
         width: fit-content;
         padding-inline: 30px;
+        margin: $margin;
         border: 1px solid $white;
         border-radius: 7px;
         color: $white;
         background-color: $black;
-        cursor: pointer;
         user-select: none !important;
         font-weight: 600;
         font-size: calc(0.9rem * $scale);
+        line-height: calc(35px * $scale - 2px);
         white-space: nowrap;
-        margin: $margin;
 
         &:hover {
             background-color: $white;
@@ -25,6 +26,7 @@
 
 @mixin btn-icon($scale: 1, $margin: 0px) {
     .btn-icon {
+        display: block;
         height: calc(150px * $scale);
         width: calc(200px * $scale);
         display: flex;
@@ -37,7 +39,6 @@
         border-radius: 23px;
         color: $black;
         background-color: $white;
-        cursor: pointer;
         user-select: none !important;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -46,8 +47,8 @@
         }
 
         span {
-            height: calc(50px * $scale);
-            display: block;
+            /*display: block;*/
+            /*height: calc(50px * $scale);*/
             font-weight: 500;
             font-size: calc(1.2rem * $scale);
             text-align: center;
@@ -56,9 +57,9 @@
     /* TODO: Possible optimization: Add @media here instead of everywhere else */
 }
 
-
 @mixin btn-white($scale: 1, $margin: 0px) {
     .btn-white {
+        display: block;
         height: calc(40px * $scale);
         width: fit-content;
         padding-inline: 30px;
@@ -67,11 +68,11 @@
         border-radius: 10px;
         color: $black;
         background-color: $white;
-        cursor: pointer;
         user-select: none !important;
         text-transform: uppercase;
         font-weight: 600;
         font-size: calc(1rem * $scale);
+        line-height: calc(40px * $scale);
         white-space: nowrap;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     }
