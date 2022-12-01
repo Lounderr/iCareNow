@@ -1,0 +1,41 @@
+﻿@import "../../utilities/_colors.scss";
+@import "../../mixins/_buttons.scss";
+
+.categories-container {
+    width: 100%;
+    height: min-content;
+    background-color: $green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .choose-category {
+        text-align: center;
+        color: $white;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-block: 50px;
+    }
+
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-block: 20px;
+
+        @include btn-icon(1, 20px);
+    }
+
+    @include btn-white(1, 40px);
+}
+
+@media screen and (max-width: 900px) {
+    .categories-container {
+        .categories {
+            @include btn-icon(0.8, 10px);
+        }
+
+        @include btn-white(1, 50px);
+    }
+}

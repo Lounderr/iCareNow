@@ -1,5 +1,6 @@
-﻿@import "../../utilities/variables";
-@import "../buttons/buttons";
+﻿@import "../../utilities/_colors.scss";
+@import "../../utilities/_variables.scss";
+@import "../../mixins/_buttons.scss";
 @import "nav-open";
 
 header {
