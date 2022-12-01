@@ -1,8 +1,7 @@
-﻿/* Global styles */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 :root {
   font-family: "Montserrat", sans-serif;
-  font-size: 100%;
+  font-size: 16px;
   font-weight: 400;
   /*
   400 - Normal, Book, Regular
@@ -22,13 +21,22 @@
   /*outline: 1px dotted red;*/
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 img, picture, svg, video {
   display: block;
   max-width: 100%;
+}
+
+ol, ul {
+  list-style: none;
 }
 
 a {
@@ -52,4 +60,18 @@ a.link:link, a.link:visited, a.link:hover {
 }
 a.link:hover {
   text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

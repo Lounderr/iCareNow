@@ -1,0 +1,16 @@
+﻿@import "_variables.scss";
+
+@function px-rem($value, $suffix: rem) {
+    $calculated: calc($value/strip-units($base-font-size));
+    @return #{$calculated}#{$suffix};
+}
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+@mixin media($screen) {
+    @media (max-width: $screen) {
+        @content
+    }
+}
