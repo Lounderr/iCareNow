@@ -38,7 +38,7 @@
   gap: 20px;
 }
 .first-section .panel-container .panel-buttons .btn-black {
-  height: 35px;
+  height: 40.25px;
   width: fit-content;
   padding-inline: 30px;
   border: 1px solid #ffffff;
@@ -48,10 +48,9 @@
   cursor: pointer;
   user-select: none !important;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.035rem;
   white-space: nowrap;
-  transform: scale(1.15);
-  transform-origin: left top;
+  margin: 0px;
 }
 .first-section .panel-container .panel-buttons .btn-black:hover {
   background-color: #ffffff;
@@ -119,8 +118,6 @@
   background-color: #ffffff;
   cursor: pointer;
   user-select: none !important;
-  /*        transform: scale($scale);
-  transform-origin: center;*/
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .categories-container .categories .btn-icon img {
@@ -148,8 +145,6 @@
   font-weight: 600;
   font-size: 1rem;
   white-space: nowrap;
-  transform: scale(1);
-  transform-origin: left top;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -172,8 +167,6 @@
     background-color: #ffffff;
     cursor: pointer;
     user-select: none !important;
-    /*        transform: scale($scale);
-    transform-origin: center;*/
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .categories-container .categories .btn-icon img {
@@ -201,8 +194,6 @@
     font-weight: 600;
     font-size: 1rem;
     white-space: nowrap;
-    transform: scale(1);
-    transform-origin: left top;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }

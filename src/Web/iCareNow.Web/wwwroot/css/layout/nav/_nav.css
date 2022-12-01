@@ -123,8 +123,7 @@ header .top-nav .controls .btn-black {
   font-weight: 600;
   font-size: 0.9rem;
   white-space: nowrap;
-  transform: scale(1);
-  transform-origin: left top;
+  margin: 0px;
 }
 header .top-nav .controls .btn-black:hover {
   background-color: #ffffff;

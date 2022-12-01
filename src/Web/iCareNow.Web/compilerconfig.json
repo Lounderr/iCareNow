@@ -1,9 +1,5 @@
 ﻿[
   {
-    "outputFile": "wwwroot/css/utilities/style.css",
-    "inputFile": "wwwroot/css/utilities/style.scss"
-  },
-  {
     "outputFile": "wwwroot/css/pages/index/index.css",
     "inputFile": "wwwroot/css/pages/index/index.scss"
   },
