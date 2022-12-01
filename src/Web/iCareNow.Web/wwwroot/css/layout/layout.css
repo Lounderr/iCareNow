@@ -173,8 +173,8 @@ header .top-nav .controls .menu-controls .close-btn {
     color: #ffffff;
   }
   header .top-nav .controls a .profile-btn,
-header .top-nav .controls .menu-controls .menu-btn,
-header .top-nav .controls .menu-controls .close-btn {
+  header .top-nav .controls .menu-controls .menu-btn,
+  header .top-nav .controls .menu-controls .close-btn {
     height: 45px;
   }
   header .top-nav .controls .menu-controls .menu-btn {
@@ -220,13 +220,6 @@ footer .footer-info-container .sitemap-container h3 {
 footer .footer-info-container .sitemap-container nav a {
   display: block;
   margin-bottom: 10px;
-  text-decoration: none;
-}
-footer .footer-info-container .sitemap-container nav a:visited {
-  color: #ffffff;
-}
-footer .footer-info-container .sitemap-container nav a:hover {
-  text-shadow: 0 0 0.1px #ffffff;
 }
 footer .footer-info-container .feedback-container h3 {
   font-size: 1.3rem;
@@ -261,9 +254,6 @@ footer .legal-content-container {
 footer .legal-content-container a {
   font-size: 0.8rem;
   font-weight: 400;
-  text-decoration: none;
-}
-footer .legal-content-container a:visited {
   color: #cccccc;
 }
 

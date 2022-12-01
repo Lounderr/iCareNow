@@ -42,16 +42,6 @@ footer {
                 a {
                     display: block;
                     margin-bottom: 10px;
-                    text-decoration: none;
-
-
-                    &:visited {
-                        color: $white;
-                    }
-
-                    &:hover {
-                        text-shadow: 0 0 0.1px $white;
-                    }
                 }
             }
         }
@@ -75,11 +65,7 @@ footer {
         a {
             font-size: 0.8rem;
             font-weight: 400;
-            text-decoration: none;
-
-            &:visited {
-                color: $gray;
-            }
+            color: $gray;
         }
     }
 }
