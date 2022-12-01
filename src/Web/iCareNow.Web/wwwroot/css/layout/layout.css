@@ -4,9 +4,11 @@
   top: 75px;
   left: 0;
   width: 100%;
-  height: min-content;
+  height: auto;
+  max-height: calc(100vh - 75px);
   background-color: #080808;
   padding: 15px 40px 40px 40px;
+  overflow-y: scroll;
 }
 .nav-active .nav-items {
   display: flex;
@@ -109,20 +111,20 @@ header .top-nav .controls {
   gap: 15px;
 }
 header .top-nav .controls .btn-black {
+  display: block;
   height: 35px;
   width: fit-content;
   padding-inline: 30px;
+  margin: 0px;
   border: 1px solid #ffffff;
   border-radius: 7px;
   color: #ffffff;
   background-color: #080808;
-  cursor: pointer;
   user-select: none !important;
   font-weight: 600;
   font-size: 0.9rem;
+  line-height: 33px;
   white-space: nowrap;
-  transform: scale(1);
-  transform-origin: left top;
 }
 header .top-nav .controls .btn-black:hover {
   background-color: #ffffff;
@@ -171,8 +173,8 @@ header .top-nav .controls .menu-controls .close-btn {
     color: #ffffff;
   }
   header .top-nav .controls a .profile-btn,
-header .top-nav .controls .menu-controls .menu-btn,
-header .top-nav .controls .menu-controls .close-btn {
+  header .top-nav .controls .menu-controls .menu-btn,
+  header .top-nav .controls .menu-controls .close-btn {
     height: 45px;
   }
   header .top-nav .controls .menu-controls .menu-btn {
@@ -182,5 +184,98 @@ header .top-nav .controls .menu-controls .close-btn {
 @media screen and (max-width: 700px) {
   top-nav {
     padding-inline: 20px !important;
+  }
+}
+footer {
+  width: 100%;
+  height: min-content;
+  background-color: #080808;
+  color: #ffffff;
+  padding: 50px 0 20px 5%;
+}
+footer .footer-info-container {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8%;
+  margin-bottom: 40px;
+}
+footer .footer-info-container .description-container {
+  width: 30%;
+}
+footer .footer-info-container .description-container h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  height: 80px;
+}
+footer .footer-info-container .description-container p {
+  margin-bottom: 15px;
+}
+footer .footer-info-container .sitemap-container h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  height: 80px;
+}
+footer .footer-info-container .sitemap-container nav a {
+  display: block;
+  margin-bottom: 10px;
+}
+footer .footer-info-container .feedback-container h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  height: 80px;
+}
+footer .footer-info-container .feedback-container .btn-black {
+  display: block;
+  height: 38.5px;
+  width: fit-content;
+  padding-inline: 30px;
+  margin: 0px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  color: #ffffff;
+  background-color: #080808;
+  user-select: none !important;
+  font-weight: 600;
+  font-size: 0.99rem;
+  line-height: 36.5px;
+  white-space: nowrap;
+}
+footer .footer-info-container .feedback-container .btn-black:hover {
+  background-color: #ffffff;
+  color: #080808;
+}
+footer .legal-content-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+footer .legal-content-container a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #cccccc;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    padding: 50px 0 40px 7%;
+  }
+  footer .footer-info-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  footer .footer-info-container .description-container {
+    width: 100%;
+  }
+  footer .footer-info-container .sitemap-container h3 {
+    height: 50px;
+  }
+  footer .legal-content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .legal-content-container a {
+    font-size: 0.7rem;
   }
 }

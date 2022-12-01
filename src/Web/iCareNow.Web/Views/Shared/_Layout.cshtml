@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
     @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />*@
-    <link rel="stylesheet" href="~/css/utilities/style.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/reset.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/layout/layout.min.css" asp-append-version="true" />
+    @await this.RenderSectionAsync("Styles", required: false)
 </head>
 <body>
     <header>
         <nav class="top-nav">
-            <h1 class="logo"><a href="#">iCareNow</a></h1>
+            <h1 class="logo"><a href="#">@GlobalConstants.SystemName</a></h1>
             <!-- class: nav-active -->
-            <div class="nav-items-container"> 
+            <div class="nav-items-container">
                 <ul class="nav-items">
                     <li class="nav-item"><a href="#">Начало</a></li>
                     <li class="nav-item"><a href="#">Здраве от А до Я</a></li>
@@ -38,6 +39,34 @@
     <main role="main">
         @this.RenderBody()
     </main>
+    <footer>
+        <div class="footer-info-container">
+            <div class="description-container">
+                <h2>@GlobalConstants.SystemName</h2>
+                <p>Приложението @GlobalConstants.SystemName е медицински наръчник, който помага  да се справиш със симптомите на често срещаните болести чрез доказани и безопасни методи за лечение.</p>
+                <p>Нашето приложение предоставя и опцията за онлайн консултация с квалифицирани медицински лица.</p>
+            </div>
+            <div class="sitemap-container">
+                <h3>Карта на сайта</h3>
+                <nav>
+                    <a href="#">Начало</a>
+                    <a href="#">Категории</a>
+                    <a href="#">Свържете се с лекар</a>
+                    @*<a>Медицински статии</a>*@
+                    <a href="#">За нас</a>
+                </nav>
+            </div>
+            <div class="feedback-container">
+                <h3>Имате проблем или идея? <br>Пишете ни!</h3>
+                <a href="#" class="btn-black">Обратна връзка</a>
+            </div>
+        </div>
+        <div class="legal-content-container">
+            <a href="#">&copy; @DateTime.UtcNow.Year @GlobalConstants.SystemName. Всички права запазени</a>
+            <a href="#">Условия за ползване</a>
+            <a href="#">Политика за поверителност</a>
+        </div>
+    </footer>
 
 
     @*

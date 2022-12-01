@@ -38,20 +38,20 @@
   gap: 20px;
 }
 .first-section .panel-container .panel-buttons .btn-black {
-  display: block;
-  height: 40.25px;
+  height: 35px;
   width: fit-content;
   padding-inline: 30px;
-  margin: 0px;
   border: 1px solid #ffffff;
   border-radius: 7px;
   color: #ffffff;
   background-color: #080808;
+  cursor: pointer;
   user-select: none !important;
   font-weight: 600;
-  font-size: 1.035rem;
-  line-height: 38.25px;
+  font-size: 0.9rem;
   white-space: nowrap;
+  transform: scale(1.15);
+  transform-origin: left top;
 }
 .first-section .panel-container .panel-buttons .btn-black:hover {
   background-color: #ffffff;
@@ -94,7 +94,7 @@
   text-align: center;
   color: #ffffff;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-block: 50px;
 }
 .categories-container .categories {
@@ -105,7 +105,6 @@
   /* TODO: Possible optimization: Add @media here instead of everywhere else */
 }
 .categories-container .categories .btn-icon {
-  display: block;
   height: 150px;
   width: 200px;
   display: flex;
@@ -118,21 +117,23 @@
   border-radius: 23px;
   color: #080808;
   background-color: #ffffff;
+  cursor: pointer;
   user-select: none !important;
+  /*        transform: scale($scale);
+  transform-origin: center;*/
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .categories-container .categories .btn-icon img {
   height: 65px;
 }
 .categories-container .categories .btn-icon span {
-  /*display: block;*/
-  /*height: calc(50px * $scale);*/
+  height: 50px;
+  display: block;
   font-weight: 500;
   font-size: 1.2rem;
   text-align: center;
 }
 .categories-container .btn-white {
-  display: block;
   height: 40px;
   width: fit-content;
   padding-inline: 30px;
@@ -141,12 +142,14 @@
   border-radius: 10px;
   color: #080808;
   background-color: #ffffff;
+  cursor: pointer;
   user-select: none !important;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1rem;
-  line-height: 40px;
   white-space: nowrap;
+  transform: scale(1);
+  transform-origin: left top;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -155,7 +158,6 @@
     /* TODO: Possible optimization: Add @media here instead of everywhere else */
   }
   .categories-container .categories .btn-icon {
-    display: block;
     height: 120px;
     width: 160px;
     display: flex;
@@ -168,21 +170,23 @@
     border-radius: 23px;
     color: #080808;
     background-color: #ffffff;
+    cursor: pointer;
     user-select: none !important;
+    /*        transform: scale($scale);
+    transform-origin: center;*/
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .categories-container .categories .btn-icon img {
     height: 52px;
   }
   .categories-container .categories .btn-icon span {
-    /*display: block;*/
-    /*height: calc(50px * $scale);*/
+    height: 40px;
+    display: block;
     font-weight: 500;
     font-size: 0.96rem;
     text-align: center;
   }
   .categories-container .btn-white {
-    display: block;
     height: 40px;
     width: fit-content;
     padding-inline: 30px;
@@ -191,12 +195,14 @@
     border-radius: 10px;
     color: #080808;
     background-color: #ffffff;
+    cursor: pointer;
     user-select: none !important;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1rem;
-    line-height: 40px;
     white-space: nowrap;
+    transform: scale(1);
+    transform-origin: left top;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }

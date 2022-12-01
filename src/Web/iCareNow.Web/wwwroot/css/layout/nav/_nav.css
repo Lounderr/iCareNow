@@ -4,9 +4,11 @@
   top: 75px;
   left: 0;
   width: 100%;
-  height: min-content;
+  height: auto;
+  max-height: calc(100vh - 75px);
   background-color: #080808;
   padding: 15px 40px 40px 40px;
+  overflow-y: scroll;
 }
 .nav-active .nav-items {
   display: flex;
@@ -109,20 +111,20 @@ header .top-nav .controls {
   gap: 15px;
 }
 header .top-nav .controls .btn-black {
+  display: block;
   height: 35px;
   width: fit-content;
   padding-inline: 30px;
+  margin: 0px;
   border: 1px solid #ffffff;
   border-radius: 7px;
   color: #ffffff;
   background-color: #080808;
-  cursor: pointer;
   user-select: none !important;
   font-weight: 600;
   font-size: 0.9rem;
+  line-height: 33px;
   white-space: nowrap;
-  transform: scale(1);
-  transform-origin: left top;
 }
 header .top-nav .controls .btn-black:hover {
   background-color: #ffffff;
@@ -171,8 +173,8 @@ header .top-nav .controls .menu-controls .close-btn {
     color: #ffffff;
   }
   header .top-nav .controls a .profile-btn,
-header .top-nav .controls .menu-controls .menu-btn,
-header .top-nav .controls .menu-controls .close-btn {
+  header .top-nav .controls .menu-controls .menu-btn,
+  header .top-nav .controls .menu-controls .close-btn {
     height: 45px;
   }
   header .top-nav .controls .menu-controls .menu-btn {

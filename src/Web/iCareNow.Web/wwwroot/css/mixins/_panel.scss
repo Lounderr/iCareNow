@@ -1,5 +1,5 @@
-﻿@import "../utilities/variables";
-@import "../components/buttons/buttons";
+﻿@import "../utilities/_colors.scss";
+@import "../mixins/_buttons.scss";
 
 @mixin panel($btns-scale: 1.1) {
     .panel-container {
@@ -43,6 +43,14 @@
             .panel-description {
                 font-size: 1rem;
             }
+        }
+    }
+
+
+    @media screen and (orientation: landscape) and (max-height: 520px) {
+        .panel-container {
+            transform: scale(0.6);
+            transform-origin: left top;
         }
     }
 }

@@ -1,0 +1,101 @@
+﻿@import "../mixins/_buttons.scss";
+@import "../utilities/_colors.scss";
+
+footer {
+    width: 100%;
+    height: min-content;
+    background-color: $black;
+    color: $white;
+    padding: 50px 0 20px 5%;
+
+
+    .footer-info-container {
+        width: 100%;
+        height: min-content;
+        display: flex;
+        justify-content: flex-start;
+        gap: 8%;
+        margin-bottom: 40px;
+
+        .description-container {
+            width: 30%;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 400;
+                height: 80px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
+
+        .sitemap-container {
+            h3 {
+                font-size: 1.3rem;
+                font-weight: 500;
+                height: 80px;
+            }
+
+            nav {
+                a {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .feedback-container {
+            h3 {
+                font-size: 1.3rem;
+                font-weight: 500;
+                height: 80px;
+            }
+
+            @include btn-black(1.1);
+        }
+    }
+
+    .legal-content-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        a {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $gray;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        padding: 50px 0 40px 7%;
+
+        .footer-info-container {
+            flex-direction: column;
+            gap: 40px;
+
+            .description-container {
+                width: 100%;
+            }
+
+            .sitemap-container {
+                h3 {
+                    height: 50px;
+                }
+            }
+        }
+
+        .legal-content-container {
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

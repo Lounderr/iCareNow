@@ -1,26 +1,18 @@
 ﻿[
   {
-    "outputFile": "wwwroot/css/layout/style.css",
-    "inputFile": "wwwroot/css/layout/style.scss"
-  },
-  {
-    "outputFile": "wwwroot/css/utilities/style.css",
-    "inputFile": "wwwroot/css/utilities/style.scss"
+    "outputFile": "wwwroot/css/pages/index/index.css",
+    "inputFile": "wwwroot/css/pages/index/index.scss"
   },
   {
     "outputFile": "wwwroot/css/layout/layout.css",
     "inputFile": "wwwroot/css/layout/layout.scss"
   },
   {
-    "outputFile": "wwwroot/css/pages/index/index.css",
-    "inputFile": "wwwroot/css/pages/index/index.scss"
+    "outputFile": "wwwroot/css/reset.css",
+    "inputFile": "wwwroot/css/reset.scss"
   },
   {
-    "outputFile": "wwwroot/css/components/navigation/_nav.css",
-    "inputFile": "wwwroot/css/components/navigation/_nav.scss"
-  },
-  {
-    "outputFile": "wwwroot/css/components/navigation/_nav-open.css",
-    "inputFile": "wwwroot/css/components/navigation/_nav-open.scss"
+    "outputFile": "wwwroot/css/layout/nav/_nav.css",
+    "inputFile": "wwwroot/css/layout/nav/_nav.scss"
   }
 ]
