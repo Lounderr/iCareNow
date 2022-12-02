@@ -5,7 +5,7 @@
         display: block;
         height: calc(35px * $scale);
         width: fit-content;
-        padding-inline: 30px;
+        padding-inline: calc(30px * $scale);
         margin: $margin;
         border: 1px solid $white;
         border-radius: 7px;
