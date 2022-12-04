@@ -10,9 +10,5 @@
   {
     "outputFile": "wwwroot/css/reset.css",
     "inputFile": "wwwroot/css/reset.scss"
-  },
-  {
-    "outputFile": "wwwroot/css/layout/nav/_nav.css",
-    "inputFile": "wwwroot/css/layout/nav/_nav.scss"
   }
 ]

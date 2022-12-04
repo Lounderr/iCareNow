@@ -354,3 +354,4 @@ MigrationBackup/
 **/wwwroot/lib
 *.min.css
 *.min.js
+*.css
