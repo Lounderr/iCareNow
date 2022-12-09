@@ -1,0 +1,60 @@
+﻿@import "../utilities/_colors.scss";
+
+@mixin input-default($scale: 1) {
+    .input-field {
+        position: relative;
+
+        .input-icon {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            height: 45px;
+            width: 320px;
+            background: none;
+            border: 1px solid #{$white}AA;
+            color: $white;
+            padding: 0 10px 0 40px;
+            font-size: 0.9rem;
+
+            &:focus {
+                outline: solid 1px white;
+            }
+        }
+    }
+
+    /*.btn-default {
+        display: block;
+        height: calc(45px * $scale);
+        width: fit-content;
+        padding-inline: calc(45px * $scale);
+        border: 1px solid $white;
+        color: $white;
+        background-color: transparent;
+        text-transform: uppercase;
+        user-select: none !important;
+        font-weight: 700;
+        font-size: calc(1rem * $scale);
+        line-height: calc($btn-height * $scale);
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+
+        &.btn-inverted {
+            color: $black;
+            background-color: $white;
+        }*/
+        /*        &.btn-small {
+            height: calc(45px * ($scale * 0.9));
+            padding-inline: calc(45px * ($scale * 0.9));
+            font-size: calc(1rem * ($scale * 0.9));
+            line-height: calc($btn-height * ($scale * 0.9));
+        }*/
+    /*}*/
+}

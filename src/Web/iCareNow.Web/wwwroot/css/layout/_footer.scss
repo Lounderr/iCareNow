@@ -1,4 +1,4 @@
-﻿@import "../mixins/_buttons.scss";
+﻿@import "../components/_buttons.scss";
 @import "../utilities/_colors.scss";
 
 footer {
@@ -53,7 +53,7 @@ footer {
                 height: 80px;
             }
 
-            @include btn-black(1.1);
+            @include btn-default(0.8);
         }
     }
 
