@@ -1,0 +1,109 @@
+﻿@import "../../utilities/_variables.scss";
+@import "../../utilities/_colors.scss";
+@import "../../components/_box-collapsable.scss";
+@import "_article-summary.scss";
+@import "_subsection.scss";
+
+
+
+@include nature-background(fixed);
+
+
+.article-container {
+    height: fit-content; // fc
+    width: 1350px;
+    margin: 20px auto 50px auto;
+    padding: 80px 100px 80px 100px;
+    background: #{$black}A0;
+    color: $white;
+    display: grid;
+    grid-template-columns: 2px 600px auto;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 75px;
+
+    * {
+        /*outline: 1px solid red;*/
+    }
+
+    h1, h2 {
+        font-weight: 600;
+        margin: 0 0 20px 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p, ul {
+        font-weight: 500;
+        color: #BBBBBB;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style: disc;
+        list-style-position: outside;
+        margin-block: 1rem;
+        padding-left: 2rem;
+
+        li {
+            margin-block: 0.8rem;
+        }
+    }
+
+    ul.numbered-list {
+        list-style: decimal;
+    }
+
+    .vertical-line {
+        grid-area: 1 / 1 / 4 / 2;
+        background: $white;
+    }
+
+    .article-summary {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .specialist-advice {
+        grid-area: 1 / 3 / 4 / 4;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @include box-collapsable();
+    }
+
+    .article-content {
+        grid-area: 2 / 2 / 3 / 3;
+
+        .subsection {
+            margin-block: 50px;
+            @include box-collapsable();
+        }
+    }
+
+    @include box-collapsable();
+
+    .revision-info {
+        grid-area: 3 / 2 / 4 / 3;
+
+        p {
+            font-size: 0.9rem;
+            margin-top: 0.9rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    .dark-container {
+        height: calc(100vh - $nav-height-tablet);
+    }
+}
+
+@media screen and (max-width: 700px) {
+}

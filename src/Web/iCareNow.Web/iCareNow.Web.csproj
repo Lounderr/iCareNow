@@ -20,8 +20,15 @@
   <ItemGroup>
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Home\Index.cshtml.old" />
+  </ItemGroup>
 	<ItemGroup>
 		<AdditionalFiles Include="..\..\stylecop.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Views\Home\Index.cshtml.old" />
 	</ItemGroup>
 	
 	<ItemGroup>

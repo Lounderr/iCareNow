@@ -10,5 +10,9 @@
   {
     "outputFile": "wwwroot/css/reset.css",
     "inputFile": "wwwroot/css/reset.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.css",
+    "inputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.scss"
   }
 ]
