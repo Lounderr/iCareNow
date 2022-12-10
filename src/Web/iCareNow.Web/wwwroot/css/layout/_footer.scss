@@ -6,7 +6,7 @@ footer {
     height: min-content;
     background-color: $black;
     color: $white;
-    padding: 50px 0 20px 5%;
+    padding: 50px 10px 20px 5%;
 
 
     .footer-info-container {
@@ -72,7 +72,8 @@ footer {
 
 @media screen and (max-width: 900px) {
     footer {
-        padding: 50px 0 40px 7%;
+        padding: 50px 10px 20px 6%;
+
 
         .footer-info-container {
             flex-direction: column;

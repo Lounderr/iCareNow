@@ -82,8 +82,6 @@
         }
     }
 
-    @include box-collapsable();
-
     .revision-info {
         grid-area: 3 / 2 / 4 / 3;
 
@@ -159,6 +157,30 @@
 
 @media screen and (max-width: 700px) {
     .article-container {
+        justify-content: center;
+        width: 100%;
+        padding: 25px 0 0 0;
         margin: 0;
+
+        h1 {
+            font-size: 2.3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p, ol, ul {
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            padding-left: 1rem;
+        }
+
+        .revision-info p {
+            font-size: 0.9rem;
+            margin-bottom: 50px;
+        }
     }
 }

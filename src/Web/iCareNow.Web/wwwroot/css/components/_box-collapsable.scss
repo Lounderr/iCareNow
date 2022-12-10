@@ -88,9 +88,9 @@
         }
     }
 
-    @media screen and (max-width: 1350px) {
-    }
-
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: calc($width + 50px)) {
+        details {
+            width: 100% !important;
+        }
     }
 }
