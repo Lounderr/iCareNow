@@ -27,9 +27,6 @@
 	<ItemGroup>
 		<AdditionalFiles Include="..\..\stylecop.json" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Content Include="Views\Home\Index.cshtml.old" />
-	</ItemGroup>
 	
 	<ItemGroup>
 		<InternalsVisibleTo Include="iCareNow.Web.Tests" />
@@ -37,6 +34,7 @@
 	
 	<ItemGroup>
 	  <None Include="compilerconfig.json" />
+	  <None Include="Views\Home\Index.cshtml" />
 	</ItemGroup>
 
   <ItemGroup>
