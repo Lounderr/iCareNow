@@ -5,7 +5,40 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1>@ViewData["Title"]</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/index/index.min.css" asp-append-version="true" />
+}
+<div class="background">
+    <img class="background-image" src="/assets/backgroundImage.png" alt="" />
+    <div class="background-darken"></div>
+</div>
+<section class="first-section">
+
+    <div class="panel-container panel-centered">
+        <h2 class="panel-title">Впиши се</h2>
+        <h4 class="panel-description">Въведете своите данни</h4>
+
+        <div class="input-fields">
+            <div class="input-field">
+                <img src="/assets/mailIcon.svg" class="input-icon" />
+                <input type="text" placeholder="Имейл или потребителско име" />
+            </div>
+            <div class="input-field">
+                <img src="/assets/keyIcon.svg" class="input-icon" />
+                <input type="password" placeholder="Парола" />
+            </div>
+        </div>
+
+        <a asp-page="./ForgotPassword" class="link forgotten-password">Забравена парола?</a>
+
+        <div class="panel-buttons">
+            <a href="#" class="btn-default">Впиши се</a>
+        </div>
+        <span class="create-account-question">Не разполагаш с акаунт? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="link">Създай го!</a></span>
+    </div>
+</section>
+
+@*<h1>@ViewData["Title"]</h1>
 <div class="row">
     <div class="col-md-4">
         <section>
@@ -78,7 +111,7 @@
             }
         </section>
     </div>
-</div>
+</div>*@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
