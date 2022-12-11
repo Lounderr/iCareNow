@@ -17,6 +17,7 @@ $btn-height: 45px;
         font-size: calc(1rem * $scale);
         line-height: calc($btn-height * $scale);
         white-space: nowrap;
+        cursor: pointer;
 
         &:hover {
             background-color: $white;

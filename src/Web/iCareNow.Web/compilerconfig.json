@@ -14,5 +14,13 @@
   {
     "outputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.css",
     "inputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/identity/login.css",
+    "inputFile": "wwwroot/css/pages/identity/login.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/identity/register.css",
+    "inputFile": "wwwroot/css/pages/identity/register.scss"
   }
 ]

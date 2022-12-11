@@ -53,6 +53,11 @@
             public string Email { get; set; }
 
             [Required]
+            [StringLength(80, ErrorMessage = "Name is too long")]
+            [Display(Name = "Name")]
+            public string Name { get; set; }
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -62,6 +67,9 @@
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Display(Name = "Приемам условията за ползване")]
+            public bool AcceptTos { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
