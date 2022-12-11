@@ -1,4 +1,4 @@
-﻿@import "../../utilities/_colors.scss";
+﻿/*@import "../../utilities/_colors.scss";
 @import "../../mixins/_buttons.scss";
 
 .categories-container {
@@ -39,3 +39,4 @@
         @include btn-white(1, 50px);
     }
 }
+*/

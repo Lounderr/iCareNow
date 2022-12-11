@@ -1,20 +1,55 @@
 ﻿@import "../utilities/_colors.scss";
 
-@mixin btn-black($scale: 1, $margin: 0px) {
-    .btn-black {
+$btn-height: 45px;
+
+@mixin btn-default($scale: 1, $inverted: false) {
+    .btn-default {
         display: block;
-        height: calc(35px * $scale);
+        height: calc(45px * $scale);
         width: fit-content;
-        padding-inline: calc(30px * $scale);
-        margin: $margin;
+        padding-inline: calc(45px * $scale);
         border: 1px solid $white;
-        border-radius: 7px;
         color: $white;
-        background-color: $black;
+        background-color: transparent;
+        text-transform: uppercase;
         user-select: none !important;
-        font-weight: 600;
-        font-size: calc(0.9rem * $scale);
-        line-height: calc(35px * $scale - 2px);
+        font-weight: 700;
+        font-size: calc(1rem * $scale);
+        line-height: calc($btn-height * $scale);
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+
+        &.btn-inverted {
+            color: $black;
+            background-color: $white;
+        }
+        /*        &.btn-small {
+            height: calc(45px * ($scale * 0.9));
+            padding-inline: calc(45px * ($scale * 0.9));
+            font-size: calc(1rem * ($scale * 0.9));
+            line-height: calc($btn-height * ($scale * 0.9));
+        }*/
+    }
+}
+
+/*@mixin btn-default($scale: 1) {
+    .btn-default {
+        display: block;
+        height: calc(45px * $scale);
+        width: fit-content;
+        padding-inline: calc(45px * $scale);
+        border: 1px solid $white;
+        color: $white;
+        text-transform: uppercase;*/
+/*        background-color: $black;
+*/ /*user-select: none !important;
+        font-weight: 700;
+        font-size: calc(1rem * $scale);
+        line-height: calc($btn-height * $scale - 2px);
         white-space: nowrap;
 
         &:hover {
@@ -22,9 +57,9 @@
             color: $black;
         }
     }
-}
+}*/
 
-@mixin btn-icon($scale: 1, $margin: 0px) {
+/*@mixin btn-icon($scale: 1, $margin: 0px) {
     .btn-icon {
         display: block;
         height: calc(150px * $scale);
@@ -46,17 +81,17 @@
             height: calc(65px * $scale);
         }
 
-        span {
+        span {*/
             /*display: block;*/
             /*height: calc(50px * $scale);*/
-            font-weight: 500;
+            /*font-weight: 500;
             font-size: calc(1.2rem * $scale);
             text-align: center;
         }
-    }
+    }*/
     /* TODO: Possible optimization: Add @media here instead of everywhere else */
-}
-
+/*}*/
+/*
 @mixin btn-white($scale: 1, $margin: 0px) {
     .btn-white {
         display: block;
@@ -77,3 +112,4 @@
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
+*/

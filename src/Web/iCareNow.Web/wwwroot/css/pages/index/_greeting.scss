@@ -1,28 +1,25 @@
 ﻿@import "../../utilities/_variables.scss";
-@import "../../mixins/_panel.scss";
+@import "../../components/_panel.scss";
+@import "../../components/_background.scss";
+
+
+@include nature-background(fixed);
 
 .first-section {
     position: relative;
-    padding: 4vw 0 0 3vw;
     height: calc(100vh - $nav-height);
 
-    .background-image {
-        z-index: -99;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-        filter: brightness(85%)
-    }
+    @include panel(1);
+}
 
-    @include panel(1.15);
+@media screen and (max-width: 1350px) {
+    .first-section {
+        height: calc(100vh - $nav-height-tablet);
+    }
 }
 
 @media screen and (max-width: 700px) {
     .first-section {
-        padding: 0 !important;
+        /*        padding-top: $nav-height !important;*/
     }
 }

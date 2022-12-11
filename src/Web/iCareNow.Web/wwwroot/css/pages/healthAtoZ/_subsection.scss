@@ -1,0 +1,22 @@
+﻿@import "../../utilities/_variables.scss";
+@import "../../components/_background.scss";
+@import "../../components/_box-collapsable.scss";
+
+
+@mixin subsection() {
+    .subsection {
+        h2 {
+        }
+
+        p {
+        }
+
+        ul {
+            li {
+
+            }
+        }
+
+        @include box-collapsable();
+    }
+}

@@ -1,0 +1,75 @@
+﻿@import "../utilities/_colors.scss";
+@import "../components/_buttons.scss";
+@import "../components/_inputs.scss";
+
+@mixin panel($btns-scale: 1) {
+    .panel-container {
+        height: auto;
+        width: fit-content;
+        background-color: none;
+        color: $white;
+        padding: 15vh 0 0 10vw;
+
+        .panel-title {
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+
+        .panel-description {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0 0 40px 0;
+        }
+
+        .input-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            @include input-default();
+        }
+
+        .forgotten-password, .create-account-question {
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        .panel-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            @include btn-default($btns-scale, true);
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .panel-container {
+            padding: 6vh 0 0 10vw;
+
+            .panel-title {
+                font-size: 2.3rem;
+            }
+
+            .panel-description {
+                font-size: 1.1rem;
+            }
+        }
+
+        .panel-container.panel-centered {
+            padding: 6vh 0 0 0vw;
+            margin: auto;
+        }
+    }
+
+
+    @media screen and (orientation: landscape) and (max-height: 520px) {
+        .panel-container {
+            transform: scale(0.6);
+            transform-origin: left top;
+        }
+    }
+}

@@ -6,49 +6,51 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/pages/index/index.min.css" asp-append-version="true" />
 }
-
+<div class="background">
+    <img class="background-image" src="/assets/backgroundImage.png" alt="" />
+    <div class="background-darken"></div>
+</div>
 <section class="first-section">
-    <img class="background-image" src="assets/backgroundImage.png" alt="" />
-
     <div class="panel-container">
         <h2 class="panel-title">Медицински <br>наръчник</h2>
         <h4 class="panel-description">Информация, на която <br>можеш да се довериш</h4>
         <div class="panel-buttons">
-            <a href="#" class="btn-black">Здраве от А до Я</a>
-            <a href="#" class="btn-black">Впиши се</a>
+            <a asp-controller="Diseases" asp-action="Index" class="btn-default btn-inverted">Здраве от А до Я</a>
+            <a asp-area="Identity" asp-page="/Account/Login" class="btn-default">Впиши се</a>
         </div>
     </div>
 </section>
 
-@*
-<section class="first-section">
-    <img class="background-image" src="assets/backgroundImage.png" alt="" />
 
-    <div class="panel-container">
+<section class="first-section">
+
+    <div class="panel-container panel-centered">
         <h2 class="panel-title">Впиши се</h2>
+        <h4 class="panel-description">Въведете своите данни</h4>
 
         <div class="input-fields">
-            <div class="input-w-icon">
+            <div class="input-field">
                 <img src="assets/mailIcon.svg" class="input-icon" />
-                <input class="input-field" type="text" placeholder="Имейл или потребителско име" />
+                <input type="text" placeholder="Имейл или потребителско име" />
             </div>
-            <div class="input-w-icon">
+            <div class="input-field">
                 <img src="assets/keyIcon.svg" class="input-icon" />
-                <input class="input-field" type="text" placeholder="Парола" />
+                <input type="password" placeholder="Парола" />
             </div>
         </div>
 
         <a href="#" class="link forgotten-password">Забравена парола?</a>
 
         <div class="panel-buttons">
-            <a href="#" class="btn-black">Впиши се</a>
+            <a href="#" class="btn-default">Впиши се</a>
         </div>
         <span class="create-account-question">Не разполагаш с акаунт? <a href="#" class="link">Създай го!</a></span>
     </div>
 </section>
-*@
 
-<section class="categories-container">
+
+
+@*<section class="categories-container">
     <h3 class="choose-category">ИЗБЕРЕТЕ КАТЕГОРИЯ</h3>
     <div class="categories">
         <a href="#" class="btn-icon">
@@ -69,4 +71,4 @@
         </a>
     </div>
     <a href="#" class="btn-white">Виж всички</a>
-</section>
+</section>*@

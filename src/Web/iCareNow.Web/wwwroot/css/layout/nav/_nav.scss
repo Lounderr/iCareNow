@@ -1,6 +1,6 @@
 ﻿@import "../../utilities/_colors.scss";
 @import "../../utilities/_variables.scss";
-@import "../../mixins/_buttons.scss";
+@import "../../components/_buttons.scss";
 @import "nav-open";
 
 header {
@@ -12,17 +12,16 @@ header {
         top: 0;
         left: 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         height: $nav-height;
         width: 100%;
-        padding-inline: 10px;
-        background-color: $black;
+        padding-inline: 70px;
         color: $white;
 
         .logo {
             font-size: 2rem;
-            font-weight: 400;
+            font-weight: 500;
 
             a {
                 text-decoration: none;
@@ -30,94 +29,115 @@ header {
             }
         }
 
-        .nav-items-container {
-            .nav-items {
-                white-space: nowrap;
+        .nav-items {
+            white-space: nowrap;
 
-                .nav-item {
-                    display: inline;
-                    margin-inline: calc(1vw - 5px);
-                    list-style-type: none;
+            .nav-item {
+                display: inline;
+                margin-inline: calc(1vw - 5px);
+                list-style-type: none;
 
-                    a {
-                        position: relative;
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        text-decoration: none;
-                        white-space: nowrap;
-                        color: $white;
+                a {
+                    position: relative;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    color: $white;
 
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -4px;
+                        left: 0;
+                        transition: 0.2s;
+                        height: 1px;
+                        width: 0%;
+                        border-radius: 10px;
+                        background: $white;
+                    }
+
+                    &:hover {
                         &::after {
-                            content: "";
-                            position: absolute;
-                            bottom: -4px;
-                            left: 0;
-                            transition: 0.2s;
-                            height: 1px;
-                            width: 0%;
-                            border-radius: 10px;
-                            background: $white;
-                        }
-
-                        &:hover {
-                            &::after {
-                                width: 100%;
-                            }
+                            width: 100%;
                         }
                     }
                 }
             }
         }
 
+
         .controls {
             display: flex;
             flex-direction: row;
             gap: 15px;
-
-            @include btn-black(1);
-
-            a .account-name {
+            /*            a .account-name {
                 color: $white;
+            }*/
+
+            .profile-btn,
+            .menu-controls .menu-btn,
+            .menu-controls .close-btn {
+                height: 45px;
+                cursor: pointer;
             }
 
-            a .profile-btn,
+            a .profile-btn {
+                display: block;
+            }
+
             .menu-controls .menu-btn,
             .menu-controls .close-btn {
                 display: none;
-                height: 35px;
-                cursor: pointer;
             }
         }
+
+        transition: 0.3s ease-in-out;
+    }
+
+    .top-nav.scrolled {
+        background-color: #{$black}F0;
+        box-shadow: 5px -1px 12px -5px grey;
     }
 }
 
 
 @media screen and (max-width: 1350px) {
     header {
+        height: $nav-height-tablet;
+
         .top-nav {
+            height: $nav-height-tablet;
+            justify-content: space-around;
+            padding-inline: 0px;
+
             .logo {
                 font-size: 1.5rem;
             }
 
-            .nav-items-container {
-                .nav-items {
-                    .nav-item {
-                        a {
-                            font-size: 1rem;
-                        }
+            .nav-items {
+                .nav-item {
+                    a {
+                        font-size: 1rem;
                     }
                 }
             }
 
+            a .profile-btn,
+            .menu-controls .menu-btn,
+            .menu-controls .close-btn {
+                height: 35px !important;
+            }
+
             .controls {
-                .login-btn {
+                /*                .login-btn {
                     display: none;
-                }
+                }*/
 
                 a {
-                    .account-name {
+                    /*                    .account-name {
                         color: $white;
-                    }
+                    }*/
 
                     .profile-btn {
                         display: block;
@@ -128,18 +148,26 @@ header {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     header {
         .top-nav {
             justify-content: space-between;
             padding-inline: 30px;
+            background-color: #{$black}F0;
+            backdrop-filter: blur(4px);
 
             .logo {
                 font-size: 2rem;
             }
 
-            .nav-items-container {
+            .nav-items {
                 display: none;
+            }
+
+            a .profile-btn,
+            .menu-controls .menu-btn,
+            .menu-controls .close-btn {
+                height: 42px !important;
             }
 
             .controls {
@@ -158,12 +186,5 @@ header {
                 }
             }
         }
-    }
-}
-
-
-@media screen and (max-width: 700px) {
-    top-nav {
-        padding-inline: 20px !important;
     }
 }

@@ -13,18 +13,16 @@
 <body>
     <header>
         <nav class="top-nav">
-            <h1 class="logo"><a href="#">@GlobalConstants.SystemName</a></h1>
+            <h1 class="logo"><a asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a></h1>
             <!-- class: nav-active -->
-            <div class="nav-items-container">
                 <ul class="nav-items">
-                    <li class="nav-item"><a href="#">Начало</a></li>
-                    <li class="nav-item"><a href="#">Здраве от А до Я</a></li>
+                    <li class="nav-item"><a asp-controller="Home" asp-action="Index">Начало</a></li>
+                    <li class="nav-item"><a asp-controller="Diseases" asp-action="Index">Здраве от А до Я</a></li>
                     <li class="nav-item"><a href="#">Свържи се с лекар</a></li>
                     <li class="nav-item"><a href="#">Запитвания</a></li>
                     <li class="nav-item"><a href="#">Медицински статии</a></li>
                     <li class="nav-item"><a href="#">За нас</a></li>
                 </ul>
-            </div>
             <div class="controls">
                 <partial name="_LoginPartial" />
                 <!-- class: menu-active -->
@@ -49,7 +47,7 @@
             <div class="sitemap-container">
                 <h3>Карта на сайта</h3>
                 <nav>
-                    <a href="#">Начало</a>
+                    <a asp-controller="Home" asp-action="Index">Начало</a>
                     <a href="#">Категории</a>
                     <a href="#">Свържете се с лекар</a>
                     @*<a>Медицински статии</a>*@
@@ -58,7 +56,7 @@
             </div>
             <div class="feedback-container">
                 <h3>Имате проблем или идея? <br>Пишете ни!</h3>
-                <a href="#" class="btn-black">Обратна връзка</a>
+                <a href="#" class="btn-default">Обратна връзка</a>
             </div>
         </div>
         <div class="legal-content-container">
