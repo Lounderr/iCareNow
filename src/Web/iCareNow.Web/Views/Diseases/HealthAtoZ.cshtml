@@ -21,15 +21,10 @@
             </button>
             <input class="input-text" type="text" placeholder="Търси болест или симптом" />
         </div>
-        <div class="filters">
-            <span>ФИЛТРИ</span>
-            <img class="filters-icon" src="/assets/filters.svg" />
-        </div>
-
-        <div class="filters-open" style="display: none;">
+        <div class="filters-open hidden">
             <div class="first-row">
                 <span>ФИЛТРИ</span>
-                <img class="close" src="/assets/close.svg" />
+                <img class="close" onclick="toggleFilters()" src="/assets/close.svg" />
             </div>
             <details open class="disclosure">
                 <summary>Система</summary>
@@ -76,6 +71,11 @@
 
                 </div>
             </details>
+        </div>
+
+        <div class="filters" onclick="toggleFilters();">
+            <span>ФИЛТРИ</span>
+            <img class="filters-icon" src="/assets/filters.svg" />
         </div>
     </div>
 

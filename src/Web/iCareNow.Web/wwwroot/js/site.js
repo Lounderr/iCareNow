@@ -11,20 +11,10 @@ function toggleMenu() {
     controls.classList.toggle('menu-active');
 }
 
-
-//addEventListener("scroll", (event) => {
-//    const navbar = document.querySelector('.top-nav');
-//    navbar.classList.toggle('nav-active');
-
-//    console.log(navbar);
-
-//    if (window.scrollY > 100) {
-//        navbar.classList.toggle('nav-active');
-//    } else {
-//        navbar.classList.remove('nav-active');
-//    }
-//});
-
+const filtersOpen = document.querySelector('.filters-open');
+function toggleFilters() {
+    filtersOpen.classList.toggle('hidden');
+}
 
 const navbar = document.querySelector('.top-nav');
 window.onscroll = () => {
