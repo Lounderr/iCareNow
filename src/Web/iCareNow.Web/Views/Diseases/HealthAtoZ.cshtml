@@ -1,5 +1,101 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using iCareNow.Common
 @{
+    this.ViewData["Title"] = "Home Page";
 }
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/healthAtoZ/healthAtoZ.min.css" asp-append-version="true" />
+}
+<div class="background">
+    <img class="background-image" src="/assets/backgroundImage.png" alt="" />
+    <div class="background-darken"></div>
+</div>
+
+<section class="health-a-to-z">
+    <div class="searchbar-area">
+        <h1 class="search-heading">Търси</h1>
+        <div class="input-field">
+            <img class="magnifying-glass-icon" src="/assets/mag-glass.svg" />
+            <button class="search-icon-container">
+                <img class="search-icon" src="/assets/arrow.svg" />
+            </button>
+            <input class="input-text" type="text" placeholder="Търси болест или симптом" />
+        </div>
+        <div class="filters">
+            <span>ФИЛТРИ</span>
+            <img class="filters-icon" src="/assets/filters.svg" />
+        </div>
+
+        <div class="filters-open" style="display: none;">
+            <div class="first-row">
+                <span>ФИЛТРИ</span>
+                <img class="close" src="/assets/close.svg" />
+            </div>
+            <details open class="disclosure">
+                <summary>Система</summary>
+                <div class="disclosure-content">
+                    <div class="med-sys"><a>Кръвоносна</a></div>
+                    <div class="med-sys"><a>Кръвоносна</a></div>
+                </div>
+            </details>
+
+            <details open class="disclosure">
+                <summary>Буква</summary>
+                <div class="disclosure-content">
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+                    <div class="letter-container"><a>А</a></div>
+
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <div class="results">
+        <div class="result">
+            <span>А</span>
+            <ul>
+                <li><a>Лорем ипсум</a></li>
+                <li><a>Лорем ипсум</a></li>
+                <li><a>Лорем ипсум</a></li>
+            </ul>
+        </div>
+        <div class="result">
+            <span>А</span>
+            <ul>
+                <li><a>Лорем ипсум</a></li>
+                <li><a>Лорем ипсум</a></li>
+                <li><a>Лорем ипсум</a></li>
+            </ul>
+        </div>
+    </div>
+
+</section>

@@ -1,186 +1,146 @@
 ﻿@import "../../utilities/_variables.scss";
 @import "../../utilities/_colors.scss";
 @import "../../components/_box-collapsable.scss";
-@import "_article-summary.scss";
-@import "_subsection.scss";
+@import "../../components/_background.scss";
+@import "_filters-open.scss";
+
+
 
 
 
 @include nature-background(fixed);
 
 
-.article-container {
-    height: fit-content; // fc
-    width: 1350px;
-    margin: 20px auto 50px auto;
-    padding: 80px 100px 80px 100px;
-    background: #{$black}A0;
-    color: $white;
-    display: grid;
-    grid-template-columns: 2px 600px auto;
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 75px;
+.health-a-to-z {
+    margin-block: 100px;
+    width: fit-content;
+    margin-inline: auto;
 
-    h1, h2 {
-        font-weight: 600;
-        margin: 0 0 20px 0;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    p, ul {
-        font-weight: 500;
-        color: #BBBBBB;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-
-    ul {
-        list-style: disc;
-        list-style-position: outside;
-        margin-block: 1rem;
-        padding-left: 2rem;
-
-        li {
-            margin-block: 0.8rem;
-        }
-    }
-
-    ul.numbered-list {
-        list-style: decimal;
-    }
-
-    .vertical-line {
-        grid-area: 1 / 1 / 4 / 2;
-        background: $white;
-    }
-
-    .article-summary {
-        grid-area: 1 / 2 / 2 / 3;
-    }
-
-    .specialist-advice {
-        grid-area: 1 / 3 / 4 / 4;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        @include box-collapsable();
-    }
-
-    .article-content {
-        grid-area: 2 / 2 / 3 / 3;
-
-        .subsection {
-            margin-block: 50px;
-            @include box-collapsable();
-        }
-    }
-
-    .revision-info {
-        grid-area: 3 / 2 / 4 / 3;
-
-        p {
-            font-size: 0.9rem;
-            margin-top: 0.9rem;
-        }
-    }
-}
+    .searchbar-area {
+        margin-bottom: 25px;
+        width: fit-content;
+        margin-inline: auto;
 
 
-@media screen and (max-width: 1350px) {
-    .article-container {
-        grid-template-columns: 0 600px auto;
-        width: 1200px;
-        padding-inline: 0;
 
-        .vertical-line {
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .article-container {
-        grid-template-columns: 45vw 45vw;
-        gap: 0;
-        width: min-content;
-        padding-top: 50px;
-        padding-inline: 30px;
-
-        .vertical-line {
-            display: none;
+        .search-heading {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: $white;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        .article-summary {
-            grid-area: 1 / 1 / 1 / 3;
-        }
+        .input-field {
+            position: relative;
+            margin-bottom: 20px;
 
-        .specialist-advice {
-            grid-area: 2 / 1 / 2 / 3;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 0;
-            gap: 20px;
-        }
+            .magnifying-glass-icon {
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translate(-50%, -50%);
+            }
 
-        .article-content {
-            grid-area: 3 / 1 / 3 / 3;
+            .search-icon-container {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(-35%, -50%);
+                height: 32px;
+                width: 32px;
+                background: $black;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                cursor: pointer;
 
-            .subsection:nth-child(1) {
-                margin-top: 1rem;
+                .search-icon {
+                    height: 17px;
+                    transform: translate(5%);
+                }
+            }
+
+            input {
+                width: 600px;
+                height: 45px;
+                padding-left: 40px;
+                border-radius: 5px;
+                border: none;
+                font-weight: 600;
+
+
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                }
             }
         }
 
-        .revision-info {
-            grid-area: 4 / 1 / 4 / 3;
+        .filters {
+            background: $white;
+            width: fit-content;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+
+            span {
+                font-weight: 500;
+            }
+
+            .filters-icon {
+                display: inline-block;
+            }
         }
+
+        @include filters-open();
     }
-}
 
-@media screen and (max-width: 890px) {
-    .article-container {
-        .specialist-advice {
-            justify-content: left;
-            align-items: flex-start;
+    .results {
+        width: 700px;
+        height: fit-content;
+        padding: 50px 70px 30px 70px;
+        background: #{$black}88;
+        border-radius: 10px;
 
-            @include box-collapsable(100%)
-        }
-    }
-}
 
-@media screen and (max-width: 700px) {
-    .article-container {
-        justify-content: center;
-        width: 100%;
-        padding: 25px 0 0 0;
-        margin: 0;
+        .result {
+            height: fit-content;
+            margin-bottom: 40px;
 
-        h1 {
-            font-size: 2.3rem;
-        }
+            span {
+                display: block;
+                font-weight: 700;
+                font-size: 3rem;
+                color: $white;
+                margin-bottom: 10px;
+            }
 
-        h2 {
-            font-size: 1.5rem;
-        }
+            ul {
 
-        p, ol, ul {
-            font-size: 1rem;
-        }
+                li {
+                    display: block;
+                    background: $white;
+                    width: fit-content;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    padding-inline: 10px;
+                    padding-block: 3px;
 
-        ul, ol {
-            padding-left: 1rem;
-        }
-
-        .revision-info p {
-            font-size: 0.9rem;
-            margin-bottom: 50px;
+                    a {
+                        color: $black;
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     }
 }
