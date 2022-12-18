@@ -14,86 +14,141 @@
 <section class="health-a-to-z">
     <div class="searchbar-area">
         <h1 class="search-heading">Търси</h1>
-        <div class="input-field">
+        <div class="search-input-field">
             <img class="magnifying-glass-icon" src="/assets/mag-glass.svg" />
-            <button class="search-icon-container">
-                <img class="search-icon" src="/assets/arrow.svg" />
-            </button>
-            <input class="input-text" type="text" placeholder="Търси болест или симптом" />
+            <input type="text" placeholder="Търси болест или симптом" />
+            <button class="search-button">ТЪРСИ</button>
         </div>
-        <div class="filters-open hidden">
-            <div class="first-row">
-                <span>ФИЛТРИ</span>
-                <img class="close" onclick="toggleFilters()" src="/assets/close.svg" />
-            </div>
-            <details open class="disclosure">
-                <summary>Система</summary>
-                <div class="disclosure-content">
-                    <div class="med-sys"><a>Кръвоносна</a></div>
-                    <div class="med-sys"><a>Кръвоносна</a></div>
-                </div>
-            </details>
-
-            <details open class="disclosure">
-                <summary>Буква</summary>
-                <div class="disclosure-content">
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-                    <div class="letter-container"><a>А</a></div>
-
-                </div>
-            </details>
+        <div class="letters">
+            <a>А</a>
+            <a>Б</a>
+            <a>В</a>
+            <a>Г</a>
+            <a>Д</a>
+            <a>Е</a>
+            <a>Ж</a>
+            <a>З</a>
+            <a>И</a>
+            <a>Й</a>
+            <a>К</a>
+            <a>Л</a>
+            <a>М</a>
+            <a>Н</a>
+            <a>О</a>
+            <a>П</a>
+            <a>Р</a>
+            <a>С</a>
+            <a>Т</a>
+            <a>У</a>
+            <a>Ф</a>
+            <a>Х</a>
+            <a>Ц</a>
+            <a>Ч</a>
+            <a>Ш</a>
+            <a>Щ</a>
+            <a>Ъ</a>
+            <a>Ю</a>
+            <a>Я</a>
         </div>
-
-        <div class="filters" onclick="toggleFilters();">
-            <span>ФИЛТРИ</span>
-            <img class="filters-icon" src="/assets/filters.svg" />
+        @*        <div class="filters-open hidden">
+        <div class="first-row">
+        <span>ФИЛТРИ</span>
+        <img class="close" onclick="toggleFilters()" src="/assets/close.svg" />
         </div>
+        <details open class="disclosure">
+        <summary>Система</summary>
+        <div class="disclosure-content">
+        <div class="med-sys"><a>Кръвоносна</a></div>
+        <div class="med-sys"><a>Кръвоносна</a></div>
+        </div>
+        </details>
+
+        <details open class="disclosure">
+        <summary>Буква</summary>
+        <div class="disclosure-content">
+        <div class="letter-container"><a>А</a></div>
+        <div class="letter-container"><a>Б</a></div>
+        <div class="letter-container"><a>В</a></div>
+        <div class="letter-container"><a>Г</a></div>
+        <div class="letter-container"><a>Д</a></div>
+        <div class="letter-container"><a>Е</a></div>
+        <div class="letter-container"><a>Ж</a></div>
+        <div class="letter-container"><a>З</a></div>
+        <div class="letter-container"><a>И</a></div>
+        <div class="letter-container"><a>Й</a></div>
+        <div class="letter-container"><a>К</a></div>
+        <div class="letter-container"><a>Л</a></div>
+        <div class="letter-container"><a>М</a></div>
+        <div class="letter-container"><a>Н</a></div>
+        <div class="letter-container"><a>О</a></div>
+        <div class="letter-container"><a>П</a></div>
+        <div class="letter-container"><a>Р</a></div>
+        <div class="letter-container"><a>С</a></div>
+        <div class="letter-container"><a>Т</a></div>
+        <div class="letter-container"><a>У</a></div>
+        <div class="letter-container"><a>Ф</a></div>
+        <div class="letter-container"><a>Х</a></div>
+        <div class="letter-container"><a>Ц</a></div>
+        <div class="letter-container"><a>Ч</a></div>
+        <div class="letter-container"><a>Ш</a></div>
+        <div class="letter-container"><a>Щ</a></div>
+        <div class="letter-container"><a>Ъ</a></div>
+        <div class="letter-container"><a>Ю</a></div>
+        <div class="letter-container"><a>Я</a></div>
+
+        </div>
+        </details>
+        </div>
+        *@
+        @*        <div class="filters" onclick="toggleFilters();">
+        <span>ФИЛТРИ</span>
+        <img class="filters-icon" src="/assets/filters.svg" />
+        </div>*@
     </div>
 
     <div class="results">
+
+        <details class="filters-disclosure">
+            <summary class="filters-disclosure-summary">
+                <span>ФИЛТРИ</span>
+                <div class="summary-line"></div>
+            </summary>
+
+            <div class="filters-disclosure-content">
+                <details open class="category-disclosure">
+                    <summary class="category-disclosure-summary">
+                        <span>Система</span>
+                    </summary>
+
+                    <div class="category-disclosure-content">
+                        <button>Кръвоносна</button>
+                        <button>Дихателна</button>
+                        <button>Отделителна</button>
+                        <button>Нервна</button>
+                        <button>Ендокринна</button>
+                        <button>Имунна</button>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+
         <div class="result">
             <span>А</span>
             <ul>
-                <li><a>Лорем ипсум</a></li>
-                <li><a>Лорем ипсум</a></li>
-                <li><a>Лорем ипсум</a></li>
+                <li><a>АНГИНА</a></li>
+                <li><a>АСТРОЛИПОХИМИЯ</a></li>
+                <li><a>АНЕМИЯ</a></li>
+                <li><a>АБСОЛЮТНА ЗАГУБА НА СЪЗНАНИЕ</a></li>
             </ul>
         </div>
         <div class="result">
-            <span>А</span>
+            <span>Б</span>
             <ul>
-                <li><a>Лорем ипсум</a></li>
-                <li><a>Лорем ипсум</a></li>
-                <li><a>Лорем ипсум</a></li>
+                <li><a>БОЛНО ГЪРЛО</a></li>
+                <li><a>БОЛКИ В СТОМАХА</a></li>
+                <li><a>БОЛКИ В ГЛАВАТА</a></li>
             </ul>
         </div>
     </div>

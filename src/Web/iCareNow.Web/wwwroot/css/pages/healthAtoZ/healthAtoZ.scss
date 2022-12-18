@@ -12,26 +12,27 @@
 
 
 .health-a-to-z {
-    margin-block: 100px;
+    margin-block: 40px;
     width: fit-content;
     margin-inline: auto;
 
     .searchbar-area {
-        margin-bottom: 25px;
+        margin-bottom: 45px;
         width: fit-content;
         margin-inline: auto;
 
         .search-heading {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 600;
             color: $white;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
-        .input-field {
+        .search-input-field {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            display: flex;
 
             .magnifying-glass-icon {
                 position: absolute;
@@ -40,36 +41,12 @@
                 transform: translate(-50%, -50%);
             }
 
-            .search-icon-container {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translate(-35%, -50%);
-                height: 32px;
-                width: 32px;
-                background: $black;
-                border-radius: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: none;
-                cursor: pointer;
-
-                .search-icon {
-                    height: 17px;
-                    transform: translate(5%);
-                }
-            }
-
             input {
-                width: 600px;
+                width: 490px;
                 height: 45px;
-                padding-left: 40px;
-                border-radius: 5px;
+                padding-left: 45px;
                 border: none;
                 font-weight: 600;
-
-
 
                 &:focus {
                     outline: none;
@@ -78,46 +55,178 @@
                 &::placeholder {
                 }
             }
+
+            .search-button {
+                width: 110px;
+                height: 45px;
+                background: $green;
+                border: none;
+                color: $white;
+                font-weight: 900;
+                font-size: 1rem;
+                cursor: pointer;
+            }
         }
 
-        .filters {
-            background: $white;
-            width: fit-content;
-            padding: 5px 10px 5px 10px;
-            border-radius: 5px;
+        .letters {
             display: flex;
-            justify-content: center;
-            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            font-weight: 500;
             cursor: pointer;
-
-            span {
-                font-weight: 500;
-            }
-
-            .filters-icon {
-                display: inline-block;
-            }
         }
-
-        @include filters-open();
     }
 
     .results {
         width: 700px;
         height: fit-content;
-        padding: 50px 70px 30px 70px;
-        background: #{$black}88;
-        border-radius: 10px;
+
+        .filters-disclosure {
+            transition: 0.2s ease;
+            margin-bottom: 20px;
+
+
+            .filters-disclosure-summary {
+                position: relative;
+                cursor: pointer;
+                padding-left: 1.5rem;
+                user-select: none !important;
+                font-weight: 600;
+                line-height: 1rem;
+                font-size: 1rem;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: inline-block;
+                    user-select: none !important;
+                    color: $white;
+                }
+
+                &:before {
+                    content: '';
+                    background-image: url(/assets/arrow.svg);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    height: 12px;
+                    width: 12px;
+                    transform: rotate(90deg) translate(-50%);
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    filter: invert(1);
+                }
+
+                .summary-line {
+                    display: inline-block;
+                    margin-left: 10px;
+                    height: 1px;
+                    flex: 1 0 auto;
+                    background-color: $white;
+                }
+            }
+
+            &:not([open]) {
+                height: min-content;
+            }
+
+            &[open] summary {
+                border-radius: 8px 8px 0 0;
+
+                &:before {
+                    transform: rotate(270deg) translate(50%);
+                }
+            }
+
+            .filters-disclosure-content {
+                padding-left: 1rem;
+                padding-top: 15px;
+
+                .category-disclosure {
+                    transition: 0.2s ease;
+                    margin-bottom: 20px;
+
+                    .category-disclosure-summary {
+                        position: relative;
+                        cursor: pointer;
+                        padding-left: 1.5rem;
+                        user-select: none !important;
+                        font-weight: 600;
+                        line-height: 1rem;
+                        font-size: 1rem;
+                        list-style-type: none;
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            display: inline-block;
+                            user-select: none !important;
+                            color: $white;
+                        }
+
+                        &:before {
+                            content: '';
+                            background-image: url(/assets/arrow.svg);
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            height: 12px;
+                            width: 12px;
+                            transform: rotate(90deg) translate(-50%);
+                            position: absolute;
+                            left: 0px;
+                            top: 50%;
+                            filter: invert(1);
+                        }
+                    }
+
+                    &:not([open]) {
+                        height: min-content;
+                    }
+
+                    &[open] summary {
+                        border-radius: 8px 8px 0 0;
+
+                        &:before {
+                            transform: rotate(270deg) translate(50%);
+                        }
+                    }
+
+                    .category-disclosure-content {
+                        padding-top: 15px;
+                        display: flex;
+                        gap: 10px;
+                        flex-wrap: wrap;
+
+                        button {
+                            border: none;
+                            padding: 5px 20px;
+                            background: $white;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                            cursor: pointer;
+
+                            &:hover {
+                                background: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
 
         .result {
             height: fit-content;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
 
             span {
                 display: block;
                 font-weight: 700;
-                font-size: 3rem;
+                font-size: 2rem;
                 color: $white;
                 margin-bottom: 10px;
             }
@@ -125,17 +234,22 @@
             ul {
 
                 li {
-                    display: block;
-                    background: $white;
-                    width: fit-content;
-                    border-radius: 5px;
-                    margin-bottom: 10px;
-                    padding-inline: 10px;
-                    padding-block: 3px;
-
                     a {
+                        display: block;
+                        background: $white;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        padding-inline: 30px;
+                        padding-block: 10px;
                         color: $black;
+                        font-size: 1.2rem;
                         font-weight: 600;
+                        text-transform: uppercase;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: $gray;
+                        }
                     }
                 }
             }
