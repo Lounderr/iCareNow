@@ -4,12 +4,7 @@
 @import "../../components/_background.scss";
 @import "_filters-open.scss";
 
-
-
-
-
 @include nature-background(fixed);
-
 
 .health-a-to-z {
     margin-block: 40px;
@@ -249,6 +244,141 @@
 
                         &:hover {
                             background: $gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .health-a-to-z {
+        width: 95%;
+
+
+        .searchbar-area {
+            width: auto;
+
+            .search-heading {
+            }
+
+            .search-input-field {
+                margin-bottom: 20px;
+
+                .magnifying-glass-icon {
+                }
+
+                input {
+                    width: 100%;
+                    font-size: 0.9rem;
+
+                    &:focus {
+                    }
+
+                    &::placeholder {
+                    }
+                }
+
+                .search-button {
+                    width: fit-content;
+                    padding-inline: 5px;
+                }
+            }
+
+            .letters {
+                justify-content: left;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                a {
+                    width: 15px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .results {
+            width: auto;
+
+            .filters-disclosure {
+
+
+
+                .filters-disclosure-summary {
+
+                    span {
+                    }
+
+                    &:before {
+                    }
+
+                    .summary-line {
+                    }
+                }
+
+                &:not([open]) {
+                }
+
+                &[open] summary {
+
+                    &:before {
+                    }
+                }
+
+                .filters-disclosure-content {
+
+
+                    .category-disclosure {
+
+
+                        .category-disclosure-summary {
+
+
+                            span {
+                            }
+
+                            &:before {
+                            }
+                        }
+
+                        &:not([open]) {
+                        }
+
+                        &[open] summary {
+
+                            &:before {
+                            }
+                        }
+
+                        .category-disclosure-content {
+
+
+                            button {
+
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .result {
+
+
+                span {
+                }
+
+                ul {
+
+                    li {
+                        a {
+
+
+                            &:hover {
+                            }
                         }
                     }
                 }
