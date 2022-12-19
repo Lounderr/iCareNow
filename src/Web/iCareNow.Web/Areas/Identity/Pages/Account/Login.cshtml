@@ -1,0 +1,58 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Впиши се";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/identity/login.min.css" asp-append-version="true" />
+}
+
+<div class="background">
+    <img class="background-image" src="/assets/backgroundImage.png" alt="" />
+    <div class="background-darken"></div>
+</div>
+<section class="first-section">
+
+    <div class="panel-container panel-centered">
+        <h2 class="panel-title">@ViewData["Title"]</h2>
+        <h4 class="panel-description">Въведете своите данни</h4>
+
+        <form method="post">
+            <div class="input-fields">
+                <div class="input-field">
+                    <div class="input-text-field">
+                        <img src="/assets/mailIcon.svg" class="input-icon" />
+                        <input asp-for="Input.Email" placeholder="Имейл" />
+                    </div>
+                    <span asp-validation-for="Input.Email" class="validation_error"></span>
+                </div>
+                <div class="input-field">
+                    <div class="input-text-field">
+                        <img src="/assets/keyIcon.svg" class="input-icon" />
+                        <input asp-for="Input.Password" placeholder="Парола" />
+                    </div>
+                    <span asp-validation-for="Input.Password" class="validation_error"></span>
+                </div>
+                <div class="checkbox">
+                    <label asp-for="Input.RememberMe">
+                        <input asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+            </div>
+
+            <div class="panel-buttons">
+                <button type="submit" class="btn-default">@ViewData["Title"]</button>
+            </div>
+        </form>
+        <a asp-page="./ForgotPassword" class="link forgotten-password">Забравена парола?</a>
+        <span class="create-account-question">Не разполагате с акаунт? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="link">Създай го!</a></span>
+
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

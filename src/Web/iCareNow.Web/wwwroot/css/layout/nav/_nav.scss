@@ -71,14 +71,22 @@ header {
             display: flex;
             flex-direction: row;
             gap: 15px;
-            /*            a .account-name {
-                color: $white;
-            }*/
+
+            a {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+
+                .account-name {
+                    color: $white;
+                    white-space: nowrap; 
+                }
+            }
 
             .profile-btn,
             .menu-controls .menu-btn,
             .menu-controls .close-btn {
-                height: 45px;
+                height: 40px;
                 cursor: pointer;
             }
 
@@ -123,6 +131,12 @@ header {
                 }
             }
 
+            a {
+                .account-name {
+                    display: none;
+                }
+            }
+
             a .profile-btn,
             .menu-controls .menu-btn,
             .menu-controls .close-btn {
@@ -130,15 +144,7 @@ header {
             }
 
             .controls {
-                /*                .login-btn {
-                    display: none;
-                }*/
-
                 a {
-                    /*                    .account-name {
-                        color: $white;
-                    }*/
-
                     .profile-btn {
                         display: block;
                     }
@@ -171,8 +177,10 @@ header {
             }
 
             .controls {
-                a .account-name {
-                    color: $white;
+                a {
+                    .account-name {
+                        color: $white;
+                    }
                 }
 
                 a .profile-btn,

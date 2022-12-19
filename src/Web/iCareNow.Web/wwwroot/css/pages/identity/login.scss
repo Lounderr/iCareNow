@@ -8,7 +8,7 @@
 .first-section {
     position: relative;
     height: calc(100vh - $nav-height);
-    padding: 15vh 0 0 10vw;
+    padding: 15vh 0 0 0;
 
     @include panel(1);
 }
@@ -21,6 +21,6 @@
 
 @media screen and (max-width: 700px) {
     .first-section {
-        /*        padding-top: $nav-height !important;*/
+        padding: 3vh 0 0 0;
     }
 }
