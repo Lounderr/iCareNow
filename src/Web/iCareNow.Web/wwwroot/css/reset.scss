@@ -43,31 +43,49 @@ ol, ul {
     list-style: none;
 }
 
+ul.list, ol.list {
+    list-style: disc;
+}
+
 a {
     text-decoration: none;
-    color: $white;
+    color: $black;
+    cursor: pointer;
 
     &:link, &visited, &:hover {
-        color: $white;
-    }
-
-    &:hover {
-        text-shadow: 0 0 0.1px $white;
+        color: $black;
     }
 }
 
-a.link {
-    color: $link;
-    font-weight: 500;
+button, input, textarea {
+    background: $gray;
+    color: $black;
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
 
-    &:link, &:visited, &:hover {
-        color: $link;
-        text-shadow: none;
-    }
-
+button {
+    cursor: pointer;
 
     &:hover {
-        text-decoration: underline;
+        background: $gray;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+details {
+    summary {
+        list-style-type: none;
+        user-select: none !important;
+        cursor: pointer;
+
+        span {
+            user-select: none !important;
+        }
     }
 }
 

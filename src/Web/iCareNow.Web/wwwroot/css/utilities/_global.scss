@@ -1,3 +1,357 @@
-﻿.hidden {
-    display: none !important;
+﻿@import "_colors.scss";
+@import "_variables.scss";
+
+.-hide {
+    display: none;
 }
+
+.-h1 {
+    font-size: 3rem;
+}
+
+.-h2 {
+    font-size: 2rem;
+}
+
+.-h3 {
+    font-size: 1.5rem;
+}
+
+.-h4 {
+    font-size: 1.3rem;
+}
+
+.-h5 {
+    font-size: 1.2rem;
+}
+
+.-h6 {
+    font-size: 1.1rem;
+}
+
+.-font-weight-400 {
+    font-weight: 400;
+}
+
+.-font-weight-500 {
+    font-weight: 400;
+}
+
+.-font-weight-600 {
+    font-weight: 400;
+}
+
+.-font-weight-700 {
+    font-weight: 400;
+}
+
+.-font-weight-800 {
+    font-weight: 400;
+}
+
+.-font-weight-900 {
+    font-weight: 400;
+}
+
+.-hover-text-white-glare:hover {
+    text-shadow: 0 0 0.3px $white;
+}
+
+a.-link {
+    color: $link;
+    font-weight: 500;
+
+    &:link, &:visited, &:hover {
+        color: $link;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ol.-list, ul.-list {
+    list-style-type: disc;
+
+    & > * {
+        margin-left: 2rem;
+    }
+}
+
+textarea.-resize-vertical {
+    resize: vertical;
+}
+
+textarea.-resize-horizontal {
+    resize: horizontal;
+}
+
+textarea.-resize {
+    resize: both;
+}
+
+a.-underline-anim-white {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        transition: 0.2s;
+        height: 1px;
+        width: 0%;
+        border-radius: 10px;
+        background: $white;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+details.-details {
+    summary {
+        position: relative;
+        padding-left: 1.5rem;
+        user-select: none !important;
+        line-height: 1rem;
+        font-size: 1rem;
+        list-style-type: none;
+
+        &:before {
+            content: '';
+            background-image: url(/assets/arrow.svg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 12px;
+            width: 12px;
+            transform: rotate(90deg) translate(-50%);
+            position: absolute;
+            left: 5px;
+            top: 50%;
+        }
+
+        span {
+            display: inline-block;
+            font-weight: 600;
+            user-select: none !important;
+            color: $black;
+        }
+    }
+
+    &.--invert {
+        summary {
+            span {
+                color: $white;
+            }
+
+            &:before {
+                filter: invert(1);
+            }
+
+            &:after {
+                background: $white !important;
+            }
+        }
+    }
+
+    &.-details.-horizontal-line {
+        summary {
+            display: flex;
+            align-items: center;
+
+            &:after {
+                content: '';
+                display: inline-block;
+                margin-left: 10px;
+                height: 1px;
+                flex: 1 0 auto;
+                background-color: $black;
+            }
+        }
+    }
+
+    &:not([open]) {
+        height: min-content;
+    }
+
+    &[open] summary {
+        &:before {
+            transform: rotate(270deg) translate(50%);
+        }
+    }
+
+    .-content {
+        padding-left: 1.5rem;
+    }
+}
+
+button.-button,
+a.-button {
+    display: inline-block;
+    height: 36px;
+    width: fit-content;
+    padding-inline: 36px;
+    color: $white;
+    background-color: transparent;
+    border: 1px solid $white;
+    text-transform: uppercase;
+    user-select: none !important;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 35px;
+    white-space: nowrap;
+    transition: ease-in-out 0.2s;
+
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+
+    &.--small {
+        height: 30px;
+        padding-inline: 30px;
+        line-height: 28px;
+        font-size: 0.75rem;
+    }
+
+    &.--large {
+        height: 45px;
+        padding-inline: 45px;
+        line-height: 45px;
+        font-size: 1rem;
+    }
+
+    &.--invert {
+        color: $black;
+        background-color: $white;
+        border: 1px solid transparent;
+
+    }
+
+    &:active {
+        border: 1px solid transparent;
+        transition: ease-in-out 0s;
+        box-shadow: inset 0px 0px 15px $gray;
+    }
+}
+
+label.-checkbox-button {
+    display: inline-block;
+
+    &.--small span {
+        height: 30px;
+        padding-inline: 30px;
+        line-height: 28px;
+        font-size: 0.75rem;
+    }
+
+    &.--large span {
+        height: 45px;
+        padding-inline: 45px;
+        line-height: 45px;
+        font-size: 1rem;
+    }
+
+    &.--invert span {
+        color: $black;
+        background-color: $white;
+        border: 1px solid transparent;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input:checked + span {
+        background-color: $green;
+        color: $white;
+        border: 1px solid transparent;
+    }
+
+    span {
+        display: inline-block;
+        height: 36px;
+        width: fit-content;
+        padding-inline: 36px;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $white;
+        text-transform: uppercase;
+        user-select: none !important;
+        font-weight: 700;
+        font-size: 0.8rem;
+        line-height: 35px;
+        white-space: nowrap;
+        transition: ease-in-out 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+}
+
+input[type="checkbox"].-checkbox,
+input[type="radio"].-checkbox {
+    height: 20px;
+    width: 20px;
+    appearance: none;
+    background: $white;
+    border: 2px solid $gray;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+        border: 2px solid #aaa;
+    }
+
+    &:disabled {
+        opacity: 0.7;
+        background: $gray;
+        border: 2px solid #aaa;
+        cursor: not-allowed;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+    }
+
+    &:checked:after {
+        transform: scale(1);
+    }
+
+    &:after {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:checked {
+        border: none;
+        background-color: $green;
+
+        &:after {
+            display: flex;
+            justify-content: center;
+            width: 10px;
+            content: url(/assets/checkmark.svg);
+        }
+    }
+}
+
+
+
+
+// Add Disclosure Collapsable box
