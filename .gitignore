@@ -352,6 +352,8 @@ MigrationBackup/
 # Custom ignores
 **/Web/iCareNow.Web/appsettings.Production.json
 **/wwwroot/lib
+**/Views/Sandbox
+**/Controllers/SandboxController.cs
 *.min.css
 *.min.js
 *.css
