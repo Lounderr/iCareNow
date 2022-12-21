@@ -1,6 +1,4 @@
 ﻿@import "../utilities/_colors.scss";
-@import "../components/_buttons.scss";
-@import "../components/_inputs.scss";
 
 @mixin panel($btns-scale: 1) {
     .panel-container {
@@ -29,11 +27,11 @@
             margin-inline: auto;
             align-items: center;
 
-            @include input-default();
-        }
+/*            @include input-default();
+*/        }
 
-        @include checkbox-default();
-
+/*        @include checkbox-default();
+*/
         .forgotten-password, .create-account-question {
             display: block;
             margin-bottom: 25px;
@@ -45,8 +43,8 @@
             gap: 20px;
             margin-bottom: 20px;
 
-            @include btn-default($btns-scale, true);
-        }
+/*            @include btn-default($btns-scale, true);
+*/        }
     }
 
     .panel-container.panel-centered {

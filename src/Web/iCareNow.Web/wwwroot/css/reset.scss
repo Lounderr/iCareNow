@@ -52,7 +52,7 @@ a {
     color: $black;
     cursor: pointer;
 
-    &:link, &visited, &:hover {
+    &:link, &:visited, &:hover {
         color: $black;
     }
 }

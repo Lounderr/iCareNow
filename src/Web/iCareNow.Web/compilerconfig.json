@@ -22,5 +22,9 @@
   {
     "outputFile": "wwwroot/css/pages/identity/register.css",
     "inputFile": "wwwroot/css/pages/identity/register.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/healthArticle/healthArticle.css",
+    "inputFile": "wwwroot/css/pages/healthArticle/healthArticle.scss"
   }
 ]

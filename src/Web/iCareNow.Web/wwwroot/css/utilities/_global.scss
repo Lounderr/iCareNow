@@ -80,7 +80,11 @@ ol.-list, ul.-list {
         margin-bottom: 0.5rem;
     }
 
-    &.--padding {
+    &.--decimal {
+        list-style: decimal;
+    }
+
+    &.--margin-left {
         margin-left: 2rem;
     }
 }
@@ -167,7 +171,7 @@ details.-details {
     }
 
     &.--horizontal-line {
-        summary {
+        > summary {
             display: flex;
             align-items: center;
 
@@ -209,6 +213,14 @@ details.-details {
                 font-size: 0.92rem;
                 font-weight: 600;
                 color: $black;
+            }
+
+            & *:first-child {
+                margin-top: 0;
+
+                li {
+                    margin-top: 0;
+                }
             }
         }
 
@@ -285,7 +297,8 @@ details.-details {
     }
 
     .-content {
-        padding-left: 1.5rem;
+        padding-left: 1rem;
+        padding-top: 15px;
     }
 }
 
@@ -451,6 +464,13 @@ input[type="radio"].-checkbox {
     }
 }
 
+.-checkbox-label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: $white;
+}
+
 .-text-field-input {
     width: fit-content;
     position: relative;
@@ -493,7 +513,9 @@ input[type="radio"].-checkbox {
                 outline: solid 1px $black;
             }
         }
+    }
 
+    &.--invert-icon {
         > img {
             filter: invert(1);
         }

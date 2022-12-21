@@ -15,118 +15,85 @@
     <div class="searchbar-area">
         <h1 class="search-heading">Търси</h1>
         <div class="search-input-field">
-            <img class="magnifying-glass-icon" src="/assets/mag-glass.svg" />
-            <input type="text" placeholder="Търси болест или симптом" />
+            <div class="-text-field-input --icon --invert">
+                <input type="text" placeholder="Търси болест или симптом" />
+                <img src="/assets/mag-glass.svg" />
+            </div>
             <button class="search-button">ТЪРСИ</button>
         </div>
         <div class="letters">
-            <a>А</a>
-            <a>Б</a>
-            <a>В</a>
-            <a>Г</a>
-            <a>Д</a>
-            <a>Е</a>
-            <a>Ж</a>
-            <a>З</a>
-            <a>И</a>
-            <a>Й</a>
-            <a>К</a>
-            <a>Л</a>
-            <a>М</a>
-            <a>Н</a>
-            <a>О</a>
-            <a>П</a>
-            <a>Р</a>
-            <a>С</a>
-            <a>Т</a>
-            <a>У</a>
-            <a>Ф</a>
-            <a>Х</a>
-            <a>Ц</a>
-            <a>Ч</a>
-            <a>Ш</a>
-            <a>Щ</a>
-            <a>Ъ</a>
-            <a>Ю</a>
-            <a>Я</a>
+            <a class="-hover-text-white-glare">А</a>
+            <a class="-hover-text-white-glare">Б</a>
+            <a class="-hover-text-white-glare">В</a>
+            <a class="-hover-text-white-glare">Г</a>
+            <a class="-hover-text-white-glare">Д</a>
+            <a class="-hover-text-white-glare">Е</a>
+            <a class="-hover-text-white-glare">Ж</a>
+            <a class="-hover-text-white-glare">З</a>
+            <a class="-hover-text-white-glare">И</a>
+            <a class="-hover-text-white-glare">Й</a>
+            <a class="-hover-text-white-glare">К</a>
+            <a class="-hover-text-white-glare">Л</a>
+            <a class="-hover-text-white-glare">М</a>
+            <a class="-hover-text-white-glare">Н</a>
+            <a class="-hover-text-white-glare">О</a>
+            <a class="-hover-text-white-glare">П</a>
+            <a class="-hover-text-white-glare">Р</a>
+            <a class="-hover-text-white-glare">С</a>
+            <a class="-hover-text-white-glare">Т</a>
+            <a class="-hover-text-white-glare">У</a>
+            <a class="-hover-text-white-glare">Ф</a>
+            <a class="-hover-text-white-glare">Х</a>
+            <a class="-hover-text-white-glare">Ц</a>
+            <a class="-hover-text-white-glare">Ч</a>
+            <a class="-hover-text-white-glare">Ш</a>
+            <a class="-hover-text-white-glare">Щ</a>
+            <a class="-hover-text-white-glare">Ъ</a>
+            <a class="-hover-text-white-glare">Ю</a>
+            <a class="-hover-text-white-glare">Я</a>
         </div>
-        @*        <div class="filters-open hidden">
-        <div class="first-row">
-        <span>ФИЛТРИ</span>
-        <img class="close" onclick="toggleFilters()" src="/assets/close.svg" />
-        </div>
-        <details open class="disclosure">
-        <summary>Система</summary>
-        <div class="disclosure-content">
-        <div class="med-sys"><a>Кръвоносна</a></div>
-        <div class="med-sys"><a>Кръвоносна</a></div>
-        </div>
-        </details>
-
-        <details open class="disclosure">
-        <summary>Буква</summary>
-        <div class="disclosure-content">
-        <div class="letter-container"><a>А</a></div>
-        <div class="letter-container"><a>Б</a></div>
-        <div class="letter-container"><a>В</a></div>
-        <div class="letter-container"><a>Г</a></div>
-        <div class="letter-container"><a>Д</a></div>
-        <div class="letter-container"><a>Е</a></div>
-        <div class="letter-container"><a>Ж</a></div>
-        <div class="letter-container"><a>З</a></div>
-        <div class="letter-container"><a>И</a></div>
-        <div class="letter-container"><a>Й</a></div>
-        <div class="letter-container"><a>К</a></div>
-        <div class="letter-container"><a>Л</a></div>
-        <div class="letter-container"><a>М</a></div>
-        <div class="letter-container"><a>Н</a></div>
-        <div class="letter-container"><a>О</a></div>
-        <div class="letter-container"><a>П</a></div>
-        <div class="letter-container"><a>Р</a></div>
-        <div class="letter-container"><a>С</a></div>
-        <div class="letter-container"><a>Т</a></div>
-        <div class="letter-container"><a>У</a></div>
-        <div class="letter-container"><a>Ф</a></div>
-        <div class="letter-container"><a>Х</a></div>
-        <div class="letter-container"><a>Ц</a></div>
-        <div class="letter-container"><a>Ч</a></div>
-        <div class="letter-container"><a>Ш</a></div>
-        <div class="letter-container"><a>Щ</a></div>
-        <div class="letter-container"><a>Ъ</a></div>
-        <div class="letter-container"><a>Ю</a></div>
-        <div class="letter-container"><a>Я</a></div>
-
-        </div>
-        </details>
-        </div>
-        *@
-        @*        <div class="filters" onclick="toggleFilters();">
-        <span>ФИЛТРИ</span>
-        <img class="filters-icon" src="/assets/filters.svg" />
-        </div>*@
     </div>
 
     <div class="results">
 
-        <details class="filters-disclosure">
-            <summary class="filters-disclosure-summary">
+        <details class="filters-disclosure -details --horizontal-line --invert">
+            <summary>
                 <span>ФИЛТРИ</span>
                 <div class="summary-line"></div>
             </summary>
 
-            <div class="filters-disclosure-content">
+            <div class="-content">
                 <details open class="category-disclosure">
                     <summary class="category-disclosure-summary">
-                        <span>Система</span>
+                        <span>Биологична система</span>
                     </summary>
 
-                    <div class="category-disclosure-content">
-                        <button>Кръвоносна</button>
-                        <button>Дихателна</button>
-                        <button>Отделителна</button>
-                        <button>Нервна</button>
-                        <button>Ендокринна</button>
-                        <button>Имунна</button>
+                    <div class="bio-system-buttons -content">
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Дихателна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Ендокринна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Кръвоносна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Отделителна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Нервна</span>
+                        </label>
+
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Имунна</span>
+                        </label>
                     </div>
                 </details>
             </div>
@@ -137,7 +104,7 @@
         <div class="result">
             <span>А</span>
             <ul>
-                <li><a>АНГИНА</a></li>
+                <li><a asp-area="" asp-controller="Diseases" asp-action="HealthArticle">АНГИНА</a></li>
                 <li><a>АСТРОЛИПОХИМИЯ</a></li>
                 <li><a>АНЕМИЯ</a></li>
                 <li><a>АБСОЛЮТНА ЗАГУБА НА СЪЗНАНИЕ</a></li>
