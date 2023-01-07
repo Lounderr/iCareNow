@@ -19,4 +19,22 @@
             <a asp-area="Identity" asp-page="/Account/Login" class="-button --large">Впиши се</a>
         </div>
     </div>
+    <div class="-quotes-slideshow greeting-quote">
+        <div class="content">
+            <span class="quotation-mark">“</span>
+            <q class="user-quote active">Има наистина ползена информация, благодарение на която хремата ми бързо отмина!</q>
+            <q class="user-quote">Сайтът е изключително полезен за мен и моите близки - информацията е точна и лесна за разбиране.</q>
+            <q class="user-quote">Хареса ми много функционалността на сайта - интуитивен, лесен за използване и много полезен!</q>
+
+            @*<q class="user-quote active">Има наистина ползена информация, благодарение на която хремата ми бързо отмина!<br /><br />- Ивелина Стефанова</q>*@
+            @*<q class="user-quote">Сайтът е изключително полезен за мен и моите близки - информацията е точна и полезна!<br /><br />- Хари Потър</q>*@
+            @*<q class="user-quote">Хареса ми много функционалността на сайта - интуитивно лесен за използване и много полезен!<br /><br />- Лайтнинг Маккуин</q>*@
+            <span class="quotation-mark">”</span>
+        </div>
+        <div class="dots">
+            <span class="user-quote-dot active" onclick="userClickSlide(0)"></span>
+            <span class="user-quote-dot" onclick="userClickSlide(1)"></span>
+            <span class="user-quote-dot" onclick="userClickSlide(2)"></span>
+        </div>
+    </div>
 </section>

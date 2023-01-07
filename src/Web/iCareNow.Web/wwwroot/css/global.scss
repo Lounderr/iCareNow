@@ -527,3 +527,73 @@ input[type="radio"].-checkbox {
     color: $danger;
     width: 320px;
 }
+
+
+.-quotes-slideshow {
+    width: 600px;
+    height: 300px;
+    position: relative;
+
+    .content {
+        padding: 60px 40px 0 60px;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        q {
+            display: none;
+        }
+
+        q.active {
+            display: block;
+            quotes: none;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $white;
+        }
+
+        .quotation-mark {
+            position: absolute;
+            display: block;
+            font-weight: 500;
+            user-select: none !important;
+            color: $white;
+
+            &:first-of-type {
+                top: 0;
+                left: 0;
+                font-size: 128px;
+            }
+
+            &:last-of-type {
+                bottom: 0;
+                right: 0;
+                font-size: 98px;
+            }
+        }
+    }
+
+    .dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+
+        span {
+            display: inline-block;
+            content: '';
+            height: 14px;
+            width: 14px;
+            margin: 7px;
+            border: 3px solid $white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        span.active {
+            background: $white;
+        }
+    }
+}

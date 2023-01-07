@@ -8,14 +8,25 @@
 .first-section {
     position: relative;
     height: calc(100vh - $nav-height);
-    padding: 15vh 0 0 10vw;
+    padding: 15vh 0 0 0vw;
+    display: flex;
+    justify-content: space-around;
 
     @include panel(1);
+}
+
+.greeting-quote {
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 1350px) {
     .first-section {
         height: calc(100vh - $nav-height-tablet);
+        display: block;
+        padding: 15vh 0 0 10vw;
+    }
+    .greeting-quote {
+        display: none;
     }
 }
 
