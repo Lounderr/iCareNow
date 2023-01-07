@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
     @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />*@
-    <link rel="stylesheet" href="~/css/reset.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/global.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/layout/layout.min.css" asp-append-version="true" />
     @await this.RenderSectionAsync("Styles", required: false)
 </head>
@@ -17,11 +17,11 @@
             <!-- class: nav-active -->
             <ul class="nav-items">
                 <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Diseases" asp-action="Index">Здраве от А до Я</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Свържи се с лекар</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Запитвания</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Медицински статии</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">За нас</a></li>
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="HealthAtoZ" asp-action="Index">Здраве от А до Я</a></li>
+                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Свържи се с лекар</a></li>*@
+                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Моите запитвания</a></li>*@
+                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Медицински статии</a></li>*@
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index">За нас</a></li>
             </ul>
             <div class="controls">
                 <partial name="_LoginPartial" />

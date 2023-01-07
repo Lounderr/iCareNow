@@ -8,10 +8,6 @@
     "inputFile": "wwwroot/css/layout/layout.scss"
   },
   {
-    "outputFile": "wwwroot/css/reset.css",
-    "inputFile": "wwwroot/css/reset.scss"
-  },
-  {
     "outputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.css",
     "inputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.scss"
   },
@@ -26,5 +22,9 @@
   {
     "outputFile": "wwwroot/css/pages/healthArticle/healthArticle.css",
     "inputFile": "wwwroot/css/pages/healthArticle/healthArticle.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/global.css",
+    "inputFile": "wwwroot/css/global.scss"
   }
 ]
