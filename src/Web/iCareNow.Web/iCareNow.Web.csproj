@@ -66,8 +66,4 @@
     <ProjectReference Include="..\iCareNow.Web.Infrastructure\iCareNow.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\iCareNow.Web.ViewModels\iCareNow.Web.ViewModels.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\assets\" />
-  </ItemGroup>
 </Project>

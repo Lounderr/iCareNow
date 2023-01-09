@@ -4,19 +4,85 @@
 }
 
 @section Styles {
-        <link rel="stylesheet" href="~/css/pages/index/index.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages/aboutUs/aboutUs.min.css" asp-append-version="true" />
 }
 <div class="background">
     <img class="background-image" src="/assets/backgroundImage.png" alt="" />
     <div class="background-darken"></div>
 </div>
 <section class="first-section">
-    <div class="panel-container">
-        <h2 class="panel-title">ЗА НАС</h2>
-@*        <h4 class="panel-description">Информация, на която <br>можеш да се довериш</h4>
-        <div class="panel-buttons">
-            <a asp-area="" asp-controller="HealthAtoZ" asp-action="Index" class="-button --large --invert">Здраве от А до Я</a>
-            <a asp-area="Identity" asp-page="/Account/Login" class="-button --large">Впиши се</a>
-        </div>*@
+    <div class="about-us-heading-container">
+        <h1>За нас</h1>
+    </div>
+    <div class="main-container">
+        <div class="first-group">
+            <div class="text-block-container">
+                <h3>Какво е iCareNow</h3>
+                <p>Приложението iCareNow е медицински наръчник, който помага да се справите със симптомите на често срещаните болести чрез доказани и безопасни методи за лечение.</p>
+                <p>Нашето приложение също предоставя и опцията за онлайн консултация с квалифицирани медицински лица.</p>
+            </div>
+
+            <div class="text-block-divider"></div>
+
+            <div class="text-block-container">
+                <h3>Защо го създадохме?</h3>
+                <p>Създадохме този сайт със замисъла да помогнем на всички хора, особено на тези, които нямат лесен достъп до медицинска помощ.</p>
+                <p>
+                    (отстраним медицинските митове)<br />
+                    (представим информацията по лесен начин)<br />
+                    (посаветваме кога е наложително човек да посети своя лекар).
+                </p>
+            </div>
+
+            <div class="text-block-divider"></div>
+
+            <div class="text-block-container">
+                <h3>Кои сме ние?</h3>
+                <p>Ние сме двама приятели и програмисти, които имахме идеята да създадем приложение на български език, което помага на хората да се справят със симптомите на често срещаните болести.  Лорем ипсум долор амет ип до кас йет лма йсъ лас мнс гкмфссач тишмшс. Афом алфдмасо асдмалсда шергмес седфсддфсд дфсд сд дсф сдф шф.</p>
+            </div>
+        </div>
+
+        <div class="second-group">
+            <h2>НАШАТА МИСИЯ</h2>
+            <div class="icon-block-containers-wrap">
+                <div class="icon-block-container">
+                    <img src="/assets/messageBubble.svg" />
+                    <span>
+                        Да представим фактите на <span class="green">разбираем език</span>
+                    </span>
+                </div>
+
+                <div class="icon-block-container">
+                    <img src="/assets/swords.svg" />
+                    <span>
+                        Да <span class="green">преборим митовете</span> за здравето
+                    </span>
+                </div>
+
+                <div class="icon-block-container">
+                    <img src="/assets/hands.svg" />
+                    <span>
+                        Да <span class="green">помогнем</span> на тези, които имат нужда
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="third-group">
+            <div class="text-block-container">
+                <h3>Лични данни</h3>
+                <p>Приложението iCareNow е медицински наръчник, който помага да се справите със симптомите на често срещаните болести чрез доказани и безопасни методи за лечение.</p>
+                <p>Нашето приложение също предоставя и опцията за онлайн консултация с квалифицирани медицински лица.</p>
+            </div>
+
+            <div class="text-block-divider"></div>
+
+            <div class="text-block-container">
+                <h3>Не носим отговорност</h3>
+                <p>Приложението iCareNow е медицински наръчник, който помага да се справите със симптомите на често срещаните болести чрез доказани и безопасни методи за лечение.</p>
+                <p>Нашето приложение също предоставя и опцията за онлайн консултация с квалифицирани медицински лица.</p>
+            </div>
+        </div>
     </div>
 </section>
