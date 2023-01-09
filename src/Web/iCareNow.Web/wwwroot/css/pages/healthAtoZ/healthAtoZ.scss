@@ -140,20 +140,24 @@
                 .magnifying-glass-icon {
                 }
 
-                input {
+                .search-text-field-input {
                     width: 100%;
-                    font-size: 0.9rem;
 
-                    &:focus {
+                    input {
+                        width: 100%;
+                        font-size: 0.9rem;
+
+                        &:focus {
+                        }
+
+                        &::placeholder {
+                        }
                     }
 
-                    &::placeholder {
+                    .search-button {
+                        width: fit-content;
+                        padding-inline: 5px;
                     }
-                }
-
-                .search-button {
-                    width: fit-content;
-                    padding-inline: 5px;
                 }
             }
 
@@ -174,31 +178,8 @@
 
             .filters-disclosure {
 
-
-
-                .filters-disclosure-summary {
-
-                    span {
-                    }
-
-                    &:before {
-                    }
-
-                    .summary-line {
-                    }
-                }
-
-                &:not([open]) {
-                }
-
-                &[open] summary {
-
-                    &:before {
-                    }
-                }
-
-                .filters-disclosure-content {
-
+                .-content {
+                    padding-left: 10px;
 
                     .category-disclosure {
 
