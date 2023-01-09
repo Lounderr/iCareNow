@@ -1,16 +1,11 @@
 ﻿@import "../../utilities/_variables.scss";
 @import "../../utilities/_colors.scss";
-@import "../../components/_box-collapsable.scss";
-@import "_article-summary.scss";
-@import "_subsection.scss";
-
-
+@import "../../components/_background.scss";
 
 @include nature-background(fixed);
 
-
 .article-container {
-    height: fit-content; // fc
+    height: fit-content;
     width: 1350px;
     margin: 20px auto 50px auto;
     padding: 80px 100px 80px 100px;
@@ -45,15 +40,10 @@
         list-style: disc;
         list-style-position: outside;
         margin-block: 1rem;
-        padding-left: 2rem;
 
         li {
             margin-block: 0.8rem;
         }
-    }
-
-    ul.numbered-list {
-        list-style: decimal;
     }
 
     .vertical-line {
@@ -70,7 +60,6 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
-        @include box-collapsable();
     }
 
     .article-content {
@@ -78,7 +67,6 @@
 
         .subsection {
             margin-block: 50px;
-            @include box-collapsable();
         }
     }
 
@@ -150,7 +138,6 @@
             justify-content: left;
             align-items: flex-start;
 
-            @include box-collapsable(100%)
         }
     }
 }

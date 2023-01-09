@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
     @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />*@
-    <link rel="stylesheet" href="~/css/reset.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/global.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/layout/layout.min.css" asp-append-version="true" />
     @await this.RenderSectionAsync("Styles", required: false)
 </head>
@@ -15,14 +15,14 @@
         <nav class="top-nav">
             <h1 class="logo"><a asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a></h1>
             <!-- class: nav-active -->
-                <ul class="nav-items">
-                    <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Diseases" asp-action="Index">Здраве от А до Я</a></li>
-                    <li class="nav-item"><a href="#">Свържи се с лекар</a></li>
-                    <li class="nav-item"><a href="#">Запитвания</a></li>
-                    <li class="nav-item"><a href="#">Медицински статии</a></li>
-                    <li class="nav-item"><a href="#">За нас</a></li>
-                </ul>
+            <ul class="nav-items">
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="HealthAtoZ" asp-action="Index">Здраве от А до Я</a></li>
+                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Свържи се с лекар</a></li>*@
+                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Моите запитвания</a></li>*@
+                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Медицински статии</a></li>*@
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index">За нас</a></li>
+            </ul>
             <div class="controls">
                 <partial name="_LoginPartial" />
                 <!-- class: menu-active -->
@@ -47,22 +47,21 @@
             <div class="sitemap-container">
                 <h3>Карта на сайта</h3>
                 <nav>
-                    <a asp-area="" asp-controller="Home" asp-action="Index">Начало</a>
-                    <a href="#">Категории</a>
-                    <a href="#">Свържете се с лекар</a>
-                    @*<a>Медицински статии</a>*@
-                    <a href="#">За нас</a>
+                    <a class="-hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index">Начало</a>
+                    <a class="-hover-text-white-glare" href="#">Категории</a>
+                    <a class="-hover-text-white-glare" href="#">Свържете се с лекар</a>
+                    <a class="-hover-text-white-glare" href="#">За нас</a>
                 </nav>
             </div>
             <div class="feedback-container">
                 <h3>Имате проблем или идея? <br>Пишете ни!</h3>
-                <a href="#" class="btn-default">Обратна връзка</a>
+                <a href="#" class="-button">Обратна връзка</a>
             </div>
         </div>
         <div class="legal-content-container">
-            <a href="#">&copy; @DateTime.UtcNow.Year @GlobalConstants.SystemName. Всички права запазени</a>
-            <a href="#">Условия за ползване</a>
-            <a href="#">Политика за поверителност</a>
+            <a class="-hover-text-white-glare" href="#">&copy; @DateTime.UtcNow.Year @GlobalConstants.SystemName. Всички права запазени</a>
+            <a class="-hover-text-white-glare" href="#">Условия за ползване</a>
+            <a class="-hover-text-white-glare" href="#">Политика за поверителност</a>
         </div>
     </footer>
 

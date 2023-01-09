@@ -1,7 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import "utilities/_colors.scss";
-@import "utilities/_variables.scss";
-@import "utilities/_global.scss";
+@import "_colors.scss";
+@import "_variables.scss";
 
 :root {
     font-family: 'Montserrat', sans-serif;
@@ -43,31 +42,49 @@ ol, ul {
     list-style: none;
 }
 
+ul.list, ol.list {
+    list-style: disc;
+}
+
 a {
     text-decoration: none;
-    color: $white;
+    color: $black;
+    cursor: pointer;
 
-    &:link, &visited, &:hover {
-        color: $white;
-    }
-
-    &:hover {
-        text-shadow: 0 0 0.1px $white;
+    &:link, &:visited, &:hover {
+        color: $black;
     }
 }
 
-a.link {
-    color: $link;
-    font-weight: 500;
+button, input, textarea {
+    background: $gray;
+    color: $black;
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
 
-    &:link, &:visited, &:hover {
-        color: $link;
-        text-shadow: none;
-    }
-
+button {
+    cursor: pointer;
 
     &:hover {
-        text-decoration: underline;
+        background: $gray;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+details {
+    summary {
+        list-style-type: none;
+        user-select: none !important;
+        cursor: pointer;
+
+        span {
+            user-select: none !important;
+        }
     }
 }
 

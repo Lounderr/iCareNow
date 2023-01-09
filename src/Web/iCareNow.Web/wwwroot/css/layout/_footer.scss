@@ -1,5 +1,4 @@
-﻿@import "../components/_buttons.scss";
-@import "../utilities/_colors.scss";
+﻿@import "../utilities/_colors.scss";
 
 footer {
     width: 100%;
@@ -42,6 +41,7 @@ footer {
                 a {
                     display: block;
                     margin-bottom: 10px;
+                    color: $white;
                 }
             }
         }
@@ -52,8 +52,6 @@ footer {
                 font-weight: 500;
                 height: 80px;
             }
-
-            @include btn-default(0.8);
         }
     }
 

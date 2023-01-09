@@ -22,34 +22,32 @@
         <form method="post">
             <div class="input-fields">
                 <div class="input-field">
-                    <div class="input-text-field">
-                        <img src="/assets/mailIcon.svg" class="input-icon" />
-                        <input asp-for="Input.Email" placeholder="Имейл" />
+                    <div class="input-text-field -text-field-input --icon --invert-icon">
+                        <input asp-for="Input.Email" placeholder="Имейл" type="text" />
+                        <img src="/assets/mailIcon.svg" />
                     </div>
-                    <span asp-validation-for="Input.Email" class="validation_error"></span>
+                    <span asp-validation-for="Input.Email" class="-validation-error"></span>
                 </div>
                 <div class="input-field">
-                    <div class="input-text-field">
-                        <img src="/assets/keyIcon.svg" class="input-icon" />
-                        <input asp-for="Input.Password" placeholder="Парола" />
+                    <div class="input-text-field -text-field-input --icon --invert-icon">
+                        <input asp-for="Input.Password" placeholder="Парола" type="text" />
+                        <img src="/assets/keyIcon.svg" />
                     </div>
-                    <span asp-validation-for="Input.Password" class="validation_error"></span>
+                    <span asp-validation-for="Input.Password" class="-validation-error"></span>
                 </div>
-                <div class="checkbox">
-                    <label asp-for="Input.RememberMe">
-                        <input asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
-                </div>
+
+                <label class="-checkbox-label">
+                    <input class="-checkbox" type="checkbox" />
+                    <span>Запомни ме</span>
+                </label>
             </div>
 
             <div class="panel-buttons">
-                <button type="submit" class="btn-default">@ViewData["Title"]</button>
+                <button type="submit" class="-button --large">@ViewData["Title"]</button>
             </div>
         </form>
-        <a asp-page="./ForgotPassword" class="link forgotten-password">Забравена парола?</a>
-        <span class="create-account-question">Не разполагате с акаунт? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="link">Създай го!</a></span>
-
+        <a asp-page="./ForgotPassword" class="-link forgotten-password">Забравена парола?</a>
+        <span class="create-account-question">Не разполагате с акаунт? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="-link">Създайте го!</a></span>
     </div>
 </section>
 

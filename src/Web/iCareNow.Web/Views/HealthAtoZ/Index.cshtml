@@ -1,0 +1,123 @@
+﻿@using iCareNow.Common
+@{
+    this.ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/healthAtoZ/healthAtoZ.min.css" asp-append-version="true" />
+}
+<div class="background">
+    <img class="background-image" src="/assets/backgroundImage.png" alt="" />
+    <div class="background-darken"></div>
+</div>
+
+<section class="health-a-to-z">
+    <div class="searchbar-area">
+        <h1 class="search-heading">Търси</h1>
+        <div class="search-input-field">
+            <div class="-text-field-input --icon --invert">
+                <input type="text" placeholder="Търси болест или симптом" />
+                <img src="/assets/mag-glass.svg" />
+            </div>
+            <button class="search-button">ТЪРСИ</button>
+        </div>
+        <div class="letters">
+            <a class="-hover-text-white-glare">А</a>
+            <a class="-hover-text-white-glare">Б</a>
+            <a class="-hover-text-white-glare">В</a>
+            <a class="-hover-text-white-glare">Г</a>
+            <a class="-hover-text-white-glare">Д</a>
+            <a class="-hover-text-white-glare">Е</a>
+            <a class="-hover-text-white-glare">Ж</a>
+            <a class="-hover-text-white-glare">З</a>
+            <a class="-hover-text-white-glare">И</a>
+            <a class="-hover-text-white-glare">Й</a>
+            <a class="-hover-text-white-glare">К</a>
+            <a class="-hover-text-white-glare">Л</a>
+            <a class="-hover-text-white-glare">М</a>
+            <a class="-hover-text-white-glare">Н</a>
+            <a class="-hover-text-white-glare">О</a>
+            <a class="-hover-text-white-glare">П</a>
+            <a class="-hover-text-white-glare">Р</a>
+            <a class="-hover-text-white-glare">С</a>
+            <a class="-hover-text-white-glare">Т</a>
+            <a class="-hover-text-white-glare">У</a>
+            <a class="-hover-text-white-glare">Ф</a>
+            <a class="-hover-text-white-glare">Х</a>
+            <a class="-hover-text-white-glare">Ц</a>
+            <a class="-hover-text-white-glare">Ч</a>
+            <a class="-hover-text-white-glare">Ш</a>
+            <a class="-hover-text-white-glare">Щ</a>
+            <a class="-hover-text-white-glare">Ъ</a>
+            <a class="-hover-text-white-glare">Ю</a>
+            <a class="-hover-text-white-glare">Я</a>
+        </div>
+    </div>
+
+    <div class="results">
+
+        <details class="filters-disclosure -details --horizontal-line --invert">
+            <summary>
+                <span>ФИЛТРИ</span>
+                <div class="summary-line"></div>
+            </summary>
+
+            <div class="-content">
+                <details open class="category-disclosure">
+                    <summary class="category-disclosure-summary">
+                        <span>Биологични системи</span>
+                    </summary>
+
+                    <div class="bio-system-buttons -content">
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Дихателна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Ендокринна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Кръвоносна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Отделителна</span>
+                        </label>
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Нервна</span>
+                        </label>
+
+                        <label class="-checkbox-button --small">
+                            <input type="checkbox" />
+                            <span>Имунна</span>
+                        </label>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+
+        <div class="result">
+            <span>А</span>
+            <ul>
+                <li><a asp-area="" asp-controller="HealthAtoZ" asp-action="HealthArticle">АНГИНА</a></li>
+                <li><a>АСТРОЛИПОХИМИЯ</a></li>
+                <li><a>АНЕМИЯ</a></li>
+                <li><a>АБСОЛЮТНА ЗАГУБА НА СЪЗНАНИЕ</a></li>
+            </ul>
+        </div>
+        <div class="result">
+            <span>Б</span>
+            <ul>
+                <li><a>БОЛНО ГЪРЛО</a></li>
+                <li><a>БОЛКИ В СТОМАХА</a></li>
+                <li><a>БОЛКИ В ГЛАВАТА</a></li>
+            </ul>
+        </div>
+    </div>
+
+</section>

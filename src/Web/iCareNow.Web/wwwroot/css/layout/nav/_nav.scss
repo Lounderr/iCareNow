@@ -1,6 +1,5 @@
 ﻿@import "../../utilities/_colors.scss";
 @import "../../utilities/_variables.scss";
-@import "../../components/_buttons.scss";
 @import "nav-open";
 
 header {
@@ -44,24 +43,6 @@ header {
                     text-decoration: none;
                     white-space: nowrap;
                     color: $white;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        bottom: -4px;
-                        left: 0;
-                        transition: 0.2s;
-                        height: 1px;
-                        width: 0%;
-                        border-radius: 10px;
-                        background: $white;
-                    }
-
-                    &:hover {
-                        &::after {
-                            width: 100%;
-                        }
-                    }
                 }
             }
         }
