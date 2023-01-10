@@ -28,6 +28,10 @@
     "inputFile": "wwwroot/css/global.scss"
   },
   {
+    "outputFile": "wwwroot/css/pages/feedback/feedback.css",
+    "inputFile": "wwwroot/css/pages/feedback/feedback.scss"
+  },
+  {
     "outputFile": "wwwroot/css/pages/aboutUs/aboutUs.css",
     "inputFile": "wwwroot/css/pages/aboutUs/aboutUs.scss"
   }

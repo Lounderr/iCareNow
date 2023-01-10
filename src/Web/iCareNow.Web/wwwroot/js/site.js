@@ -30,7 +30,6 @@ var currentSlide = 0;
 const userQuotes = document.querySelectorAll('.user-quote');
 const userQuotesDots = document.querySelectorAll('.user-quote-dot');
 function showSlide(n) {
-    console.log('->' + n)
     userQuotes[currentSlide].classList.toggle('active');
     userQuotes[n].classList.toggle('active');
 

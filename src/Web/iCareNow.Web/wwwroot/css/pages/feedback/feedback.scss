@@ -1,0 +1,49 @@
+﻿@import "../../utilities/_variables.scss";
+@import "../../components/_panel.scss";
+@import "../../components/_background.scss";
+
+
+@include nature-background(fixed);
+
+.first-section {
+    position: relative;
+    height: calc(100vh - $nav-height);
+    padding: 15vh 0 0 0;
+
+    @include panel(1);
+    
+    .textarea-message {
+        width: 450px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .first-section {
+        height: calc(100vh - $nav-height-tablet);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .first-section {
+        padding: 3vh 0 0 0;
+
+        .panel-container {
+            padding: 20px;
+
+            form {
+                .input-field {
+                    width: auto;
+
+                    .input-text-field {
+                        width: 100%;
+                    }
+
+                    .textarea-message {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

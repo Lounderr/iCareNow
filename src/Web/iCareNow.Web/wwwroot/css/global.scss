@@ -88,15 +88,39 @@ ol.-list, ul.-list {
     }
 }
 
-textarea.-resize-vertical {
+.-textarea {
+    height: 200px;
+    width: 320px;
+    background: none;
+    border: 1px solid #{$white}AA;
+    color: $white;
+    padding: 10px;
+    font-size: 0.9rem;
+
+    &:focus {
+        outline: solid 1px $white;
+    }
+
+    &.--invert {
+        background: $white;
+        border: 1px solid #{$black}AA;
+        color: $black;
+
+        &:focus {
+            outline: solid 1px $black;
+        }
+    }
+}
+
+textarea.--resize-vertical {
     resize: vertical;
 }
 
-textarea.-resize-horizontal {
+textarea.--resize-horizontal {
     resize: horizontal;
 }
 
-textarea.-resize {
+textarea.--resize {
     resize: both;
 }
 
