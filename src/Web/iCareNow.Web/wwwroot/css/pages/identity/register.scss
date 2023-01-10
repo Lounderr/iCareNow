@@ -12,6 +12,12 @@
     padding: 15vh 0 0 0;
 
     @include panel(1);
+
+    .name-input {
+        img {
+            width: 15px;
+        }
+    }
 }
 
 @media screen and (max-width: 1350px) {
