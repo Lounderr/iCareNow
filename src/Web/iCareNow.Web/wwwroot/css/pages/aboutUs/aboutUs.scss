@@ -6,6 +6,8 @@
 @include nature-background(fixed);
 
 .first-section {
+    min-height: 600px;
+
     .about-us-heading-container {
         display: flex;
         justify-content: left;
