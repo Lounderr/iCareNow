@@ -38,6 +38,12 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <None Include="Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+	  <None Include="Areas\Identity\Pages\Account\Manage\Email.cshtml" />
+	  <None Include="Areas\Identity\Pages\Account\Manage\Index.cshtml" />
+	  <None Include="Areas\Identity\Pages\Account\Manage\PersonalData.cshtml" />
+	  <None Include="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+	  <None Include="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
 	  <None Include="compilerconfig.json" />
 	  <None Include="Views\Home\Index.cshtml" />
 	</ItemGroup>
