@@ -27,5 +27,23 @@
 @media screen and (max-width: 700px) {
     .first-section {
         padding: 3vh 0 0 0;
+
+        .panel-container {
+            padding: 20px;
+
+            form {
+                .input-field {
+                    width: auto;
+
+                    .input-text-field {
+                        width: 100%;
+                    }
+
+                    .textarea-message {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }

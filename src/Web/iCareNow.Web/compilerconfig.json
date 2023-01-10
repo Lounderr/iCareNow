@@ -26,16 +26,9 @@
   {
     "outputFile": "wwwroot/css/global.css",
     "inputFile": "wwwroot/css/global.scss"
-<<<<<<< Updated upstream
-=======
-  },
-  {
-    "outputFile": "wwwroot/css/pages/aboutUs/aboutUs.css",
-    "inputFile": "wwwroot/css/pages/aboutUs/aboutUs.scss"
   },
   {
     "outputFile": "wwwroot/css/pages/feedback/feedback.css",
     "inputFile": "wwwroot/css/pages/feedback/feedback.scss"
->>>>>>> Stashed changes
   }
 ]
