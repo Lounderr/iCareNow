@@ -27,11 +27,7 @@
 	<ItemGroup>
 		<AdditionalFiles Include="..\..\stylecop.json" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Content Include="Views\Sandbox\sandbox.css" />
-	  <Content Include="Views\Sandbox\sandbox.min.css" />
-	  <Content Include="Views\Sandbox\sandbox.scss" />
-	</ItemGroup>
+
 	
 	<ItemGroup>
 		<InternalsVisibleTo Include="iCareNow.Web.Tests" />
