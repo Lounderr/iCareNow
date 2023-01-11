@@ -543,6 +543,13 @@ input[type="radio"].-checkbox {
         }
     }
 
+    &.--disabled {
+        > input:disabled,
+        > img {
+            opacity: 0.75;
+        }
+    }
+
     &.--invert {
         > input {
             background: $white;
