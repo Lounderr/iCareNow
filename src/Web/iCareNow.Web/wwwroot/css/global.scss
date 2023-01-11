@@ -370,6 +370,16 @@ a.-button {
         border: 1px solid transparent;
     }
 
+    &.--danger {
+        background-color: $danger;
+        border-color: $danger;
+
+        &:hover {
+            background-color: #c82333;
+            color: $white;
+        }
+    }
+
     &:active {
         border: 1px solid transparent;
         transition: ease-in-out 0s;
