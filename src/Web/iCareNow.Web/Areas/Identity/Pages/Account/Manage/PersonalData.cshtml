@@ -1,26 +1,33 @@
 ﻿@page
 @model PersonalDataModel
 @{
-    ViewData["Title"] = "Personal Data";
+    ViewData["Title"] = "Лични данни";
     ViewData["ActivePage"] = ManageNavPages.PersonalData;
 }
 
-<h4>@ViewData["Title"]</h4>
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/identity/login.min.css" asp-append-version="true" />
+}
 
-<div class="row">
-    <div class="col-md-6">
-        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
-        <p>
-            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
-        </p>
-        <form id="download-data" asp-page="DownloadPersonalData" method="post" class="form-group">
-            <button class="btn btn-primary" type="submit">Download</button>
-        </form>
-        <p>
-            <a id="delete" asp-page="DeletePersonalData" class="btn btn-secondary">Delete</a>
-        </p>
-    </div>
+<div class="background">
+    <img class="background-image" src="/assets/backgroundImage.png" alt="" />
+    <div class="background-darken"></div>
 </div>
+
+<section class="first-section">
+
+    <div class="panel-container panel-centered">
+        <h2 class="panel-title">@ViewData["Title"]</h2>
+        <h4 class="panel-description">@this.User.Identity.Name</h4>
+
+        <form id="download-data" asp-page="DownloadPersonalData" method="post">
+            <div class="panel-buttons">
+                <button type="submit" class="-button --large">Изтегли данни</button>
+                <a asp-page="DeletePersonalData" class="-button --large">Изтрий профил</a>
+            </div>
+        </form>
+    </div>
+</section>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
