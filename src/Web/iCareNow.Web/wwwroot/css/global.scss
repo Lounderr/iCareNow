@@ -375,8 +375,15 @@ a.-button {
         border-color: $danger;
 
         &:hover {
-            background-color: #c82333;
+            background-color: #B01928;
+            border-color: #B01928;
             color: $white;
+        }
+
+        &:active {
+            border: 1px solid transparent;
+            transition: ease-in-out 0s;
+            box-shadow: inset 0px 0px 15px $danger;
         }
     }
 
