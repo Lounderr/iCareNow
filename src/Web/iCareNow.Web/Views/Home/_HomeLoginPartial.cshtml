@@ -1,0 +1,15 @@
+﻿@using iCareNow.Common
+@using iCareNow.Data.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (this.SignInManager.IsSignedIn(this.User))
+{
+    <a asp-area="" asp-controller="HealthAtoZ" asp-action="Index" class="-button --large">Здраве от А до Я</a>
+}
+else
+{
+    <a asp-area="" asp-controller="HealthAtoZ" asp-action="Index" class="-button --large --invert">Здраве от А до Я</a>
+    <a asp-area="Identity" asp-page="/Account/Login" class="-button --large">Впиши се</a>
+}
