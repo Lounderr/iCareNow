@@ -1,18 +1,38 @@
 ﻿@page
 @model EmailModel
 @{
-    ViewData["Title"] = "Manage Email";
+    ViewData["Title"] = "Промени имейл";
     ViewData["ActivePage"] = ManageNavPages.Email;
 }
 
-<h4>@ViewData["Title"]</h4>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
-<div class="row">
-    <div class="col-md-6">
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/identity/login.min.css" asp-append-version="true" />
+}
+
+
+
+
+<div class="background">
+    <img class="background-image" src="/assets/backgroundImage.png" alt="" />
+    <div class="background-darken"></div>
+</div>
+
+<section class="first-section">
+
+    <div class="panel-container panel-centered">
+        <h2 class="panel-title">@ViewData["Title"]</h2>
+        <h4 class="panel-description">@this.User.Identity.Name</h4>
+
         <form id="email-form" method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email"></label>
+            <div class="input-fields">
+                <div class="input-field">
+                    <div class="input-text-field -text-field-input --icon --invert-icon">
+                        <input asp-for="Email" placeholder="Стар имейл" type="text" disabled />
+                        <img src="/assets/mailIcon.svg" />
+                    </div>
+                    <span asp-validation-for="Email" class="-validation-error"></span>
+                </div>
+
                 @if (Model.IsEmailConfirmed)
                 {
                     <div class="input-group">
@@ -22,21 +42,30 @@
                         </div>
                     </div>
                 }
-                 else
+                else
                 {
-                    <input asp-for="Email" class="form-control" disabled />
-                    <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
+                    <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="-button">Send verification email</button>
                 }
+
+                <div class="input-field">
+                    <div class="input-text-field -text-field-input --icon --invert-icon">
+                        <input asp-for="Input.NewEmail" placeholder="Имейл" type="text" />
+                        <img src="/assets/mailIcon.svg" />
+                    </div>
+                    <span asp-validation-for="Input.NewEmail" class="-validation-error"></span>
+                </div>
+
+                <partial name="_StatusMessage" model="Model.StatusMessage" />
+
             </div>
-            <div class="form-group">
-                <label asp-for="Input.NewEmail"></label>
-                <input asp-for="Input.NewEmail" class="form-control" />
-                <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+
+            <div class="panel-buttons">
+                <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail"  class="-button --large">Промени</button>
+
             </div>
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary">Change email</button>
         </form>
     </div>
-</div>
+</section>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
