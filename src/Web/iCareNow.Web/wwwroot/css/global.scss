@@ -386,12 +386,6 @@ a.-button {
             box-shadow: inset 0px 0px 15px $danger;
         }
     }
-
-    &:active {
-        border: 1px solid transparent;
-        transition: ease-in-out 0s;
-        box-shadow: inset 0px 0px 15px $gray;
-    }
 }
 
 label.-checkbox-button {
