@@ -1,5 +1,13 @@
 ﻿@import "utilities/_reset.scss";
 
+.-page-section[id]::before {
+    content: '';
+    display: block;
+    height: 75px;
+    margin-top: -75px;
+    visibility: hidden;
+}
+
 .-hide {
     display: none;
 }
