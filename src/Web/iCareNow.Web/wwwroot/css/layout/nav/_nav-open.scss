@@ -1,5 +1,6 @@
 ﻿@import "../../utilities/_colors.scss";
 @import "../../utilities/_variables.scss";
+@import "../../utilities/_functions.scss";
 
 .nav-active.nav-items {
     display: flex !important;
@@ -33,9 +34,7 @@
     }
 }
 
-@media screen and (max-width: 700px) {
-
-
+@include media($bp-700) {
     .nav-active.nav-items {
         height: calc(100vh - $nav-height-tablet);
 

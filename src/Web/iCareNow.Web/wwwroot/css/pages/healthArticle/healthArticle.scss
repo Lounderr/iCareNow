@@ -1,4 +1,5 @@
 ﻿@import "../../utilities/_variables.scss";
+@import "../../utilities/_functions.scss";
 @import "../../utilities/_colors.scss";
 @import "../../components/_background.scss";
 
@@ -81,7 +82,7 @@
 }
 
 
-@media screen and (max-width: 1350px) {
+@include media($bp-1350) {
     .article-container {
         grid-template-columns: 0 600px auto;
         width: 1200px;
@@ -93,7 +94,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@include media($bp-1200) {
     .article-container {
         grid-template-columns: 45vw 45vw;
         gap: 0;
@@ -132,17 +133,14 @@
     }
 }
 
-@media screen and (max-width: 890px) {
+@include media($bp-950) {
     .article-container {
         .specialist-advice {
             justify-content: left;
             align-items: flex-start;
-
         }
     }
-}
 
-@media screen and (max-width: 700px) {
     .article-container {
         justify-content: center;
         width: 100%;
@@ -161,7 +159,7 @@
             font-size: 1rem;
         }
 
-        .subsection ul, 
+        .subsection ul,
         .subsection ol {
             margin-left: 0.5rem !important;
         }

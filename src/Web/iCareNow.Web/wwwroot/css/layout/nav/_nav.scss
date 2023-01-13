@@ -1,5 +1,6 @@
 ﻿@import "../../utilities/_colors.scss";
 @import "../../utilities/_variables.scss";
+@import "../../utilities/_functions.scss";
 @import "nav-open";
 
 header {
@@ -91,7 +92,7 @@ header {
 }
 
 
-@media screen and (max-width: 1350px) {
+@include media($bp-1100) {
     header {
         height: $nav-height-tablet;
 
@@ -135,7 +136,7 @@ header {
     }
 }
 
-@media screen and (max-width: 950px) {
+@include media($bp-950) {
     header {
         .top-nav {
             justify-content: space-between;
