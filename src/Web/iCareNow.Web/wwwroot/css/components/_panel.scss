@@ -1,4 +1,5 @@
 ﻿@import "../utilities/_colors.scss";
+@import "../utilities/_variables.scss";
 
 @mixin panel($btns-scale: 1) {
     .panel-container {
@@ -8,13 +9,13 @@
         color: $white;
 
         .panel-title {
-            font-size: 3rem;
+            font-size: $title;
             font-weight: 600;
             margin: 0 0 20px 0;
         }
 
         .panel-description {
-            font-size: 1.3rem;
+            font-size: $subtitle;
             font-weight: 400;
             margin: 0 0 40px 0;
         }
@@ -26,11 +27,10 @@
             margin-bottom: 30px;
             margin-inline: auto;
             align-items: center;
-
-/*            @include input-default();
-*/        }
-
-/*        @include checkbox-default();
+            /*            @include input-default();
+*/
+        }
+        /*        @include checkbox-default();
 */
         .forgotten-password, .create-account-question {
             display: block;
@@ -42,9 +42,9 @@
             flex-direction: column;
             gap: 20px;
             margin-bottom: 20px;
-
-/*            @include btn-default($btns-scale, true);
-*/        }
+            /*            @include btn-default($btns-scale, true);
+*/
+        }
     }
 
     .panel-container.panel-centered {

@@ -23,17 +23,17 @@
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: $title;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: $heading;
     }
 
-    p, ul {
+    p, ul, ol {
         font-weight: 500;
         color: #BBBBBB;
-        font-size: 1.2rem;
+        font-size: $p1;
         margin-bottom: 1rem;
     }
 
@@ -75,7 +75,7 @@
         grid-area: 3 / 2 / 4 / 3;
 
         p {
-            font-size: 0.9rem;
+            font-size: $legal;
             margin-top: 0.9rem;
         }
     }
@@ -148,15 +148,15 @@
         margin: 0;
 
         h1 {
-            font-size: 2.3rem;
+            font-size: $health-article-title;
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: $health-article-heading;
         }
 
         p, ol, ul {
-            font-size: 1rem;
+            font-size: $p3;
         }
 
         .subsection ul,
@@ -165,7 +165,7 @@
         }
 
         .revision-info p {
-            font-size: 0.9rem;
+            font-size: $legal;
             margin-bottom: 50px;
         }
     }

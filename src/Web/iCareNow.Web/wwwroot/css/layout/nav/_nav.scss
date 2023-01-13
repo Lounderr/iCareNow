@@ -20,7 +20,7 @@ header {
         color: $white;
 
         .logo {
-            font-size: 2rem;
+            font-size: $heading;
             font-weight: 500;
 
             a {
@@ -39,7 +39,7 @@ header {
 
                 a {
                     position: relative;
-                    font-size: 1.2rem;
+                    font-size: $nav-items;
                     font-weight: 400;
                     text-decoration: none;
                     white-space: nowrap;
@@ -61,7 +61,7 @@ header {
 
                 .account-name {
                     color: $white;
-                    white-space: nowrap; 
+                    white-space: nowrap;
                 }
             }
 
@@ -102,13 +102,13 @@ header {
             padding-inline: 0px;
 
             .logo {
-                font-size: 1.5rem;
+                font-size: calc($heading - 0.5rem);
             }
 
             .nav-items {
                 .nav-item {
                     a {
-                        font-size: 1rem;
+                        font-size: $p3;
                     }
                 }
             }
@@ -145,7 +145,7 @@ header {
             backdrop-filter: blur(4px);
 
             .logo {
-                font-size: 2rem;
+                font-size: $heading;
             }
 
             .nav-items {

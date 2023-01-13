@@ -103,7 +103,7 @@ ol.-list, ul.-list {
     border: 1px solid #{$white}AA;
     color: $white;
     padding: 10px;
-    font-size: 0.9rem;
+    font-size: $inputs-buttons;
 
     &:focus {
         outline: solid 1px $white;
@@ -159,8 +159,8 @@ details.-details {
         position: relative;
         padding-left: 1.5rem;
         user-select: none !important;
-        line-height: 1rem;
-        font-size: 1rem;
+        line-height: $p3;
+        font-size: $p3;
         list-style-type: none;
 
         &:before {
@@ -241,7 +241,7 @@ details.-details {
             padding: 0.9rem 0.8rem 0.8rem 0.8rem;
 
             p, ol, ul {
-                font-size: 0.92rem;
+                font-size: calc($p3 - 0.08rem);
                 font-weight: 600;
                 color: $black;
             }
@@ -524,7 +524,7 @@ input[type="radio"].-checkbox {
         border: 1px solid #{$white}AA;
         color: $white;
         padding: 0 10px 0 15px;
-        font-size: 0.9rem;
+        font-size: $inputs-buttons;
 
         &:focus {
             outline: solid 1px $white;
@@ -598,7 +598,7 @@ input[type="radio"].-checkbox {
         q.active {
             display: block;
             quotes: none;
-            font-size: 1.4rem;
+            font-size: $quotes-slideshow;
             font-weight: 500;
             color: $white;
         }
