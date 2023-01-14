@@ -127,6 +127,8 @@ header {
 
 @include media($bp-950) {
     header {
+        height: $nav-height-phone;
+
         .navbar {
             height: $nav-height-phone;
             justify-content: space-between;
