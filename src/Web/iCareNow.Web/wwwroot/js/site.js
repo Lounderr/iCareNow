@@ -1,5 +1,27 @@
 ﻿const navbar = document.querySelector('.navbar');
 
+function shrinkNavOnScroll() {
+    if (window.innerWidth > 950 && window.innerWidth < 1100) {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            navbar.style.height = "70px";
+        } else {
+            navbar.style.height = "90px";
+        }
+    }
+
+    else if (window.innerWidth > 950) {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            navbar.style.height = "80px";
+        } else {
+            navbar.style.height = "120px";
+        }
+    }
+    else {
+        navbar.style.height = "";
+    }
+}
+
+
 addEventListener("resize", (event) => {
     navbar.classList.remove('--mobile-active');
 });
@@ -37,6 +59,7 @@ window.onscroll = () => {
     }
 
     hideNavOnScroll();
+    shrinkNavOnScroll()
 };
 
 var currentSlide = 0;
