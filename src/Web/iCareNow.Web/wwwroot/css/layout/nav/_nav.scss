@@ -43,6 +43,10 @@ header {
                     color: $white;
                 }
             }
+
+            .nav-bottom-button {
+                display: none;
+            }
         }
 
         .account-btn-container {
@@ -97,7 +101,7 @@ header {
             padding-inline: 0px;
 
             .logo {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
 
             .nav-items {

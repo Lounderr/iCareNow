@@ -24,6 +24,7 @@ function shrinkNavOnScroll() {
 
 addEventListener("resize", (event) => {
     navbar.classList.remove('--mobile-active');
+    document.body.classList.remove('--disable-body-scroll');
 });
 
 function toggleMenu() {

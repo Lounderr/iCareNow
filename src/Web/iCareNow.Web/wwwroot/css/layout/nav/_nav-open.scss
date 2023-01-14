@@ -11,13 +11,12 @@ header {
             left: 0;
             width: 100%;
             height: auto;
+            padding: 20px 0px 40px 0px;
             max-height: calc(100vh - $nav-height-phone);
             background-color: #{$black}F0;
-            padding: 30px 40px 40px 40px;
             overflow-y: scroll;
-            display: flex;
             flex-direction: column;
-            gap: 40px;
+            justify-content: flex-start;
 
             &::before {
                 content: '';
@@ -37,13 +36,44 @@ header {
                 a {
                     width: 100%;
                     display: block;
-                    font-size: $subtitle !important;
+                    font-size: 1.2rem !important;
+                    padding: 20px 40px;
+                    font-weight: 500;
                     text-transform: uppercase;
 
-                    &:after {
-                        content: none !important;
+                    &::after {
+                        all: initial;
+                        /*                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: calc(100% - 80px);
+                        left: 0;
+                        margin-inline: 40px;
+                        height: 1px;
+                        bottom: 0;
+                        background: $white;*/
+                    }
+
+                    &::before {
+                        content: ' ';
+                        display: block;
+                        position: absolute;
+                        transform: translate(0, -50%);
+                        top: 50%;
+                        right: 40px;
+                        height: 18px;
+                        width: 18px;
+                        background: url("../../../assets/arrow.svg") no-repeat;
+                        background-size: cover;
+                        filter: invert(1);
                     }
                 }
+            }
+
+            .nav-bottom-button {
+                display: block;
+                z-index: 1;
+                margin: 30px auto 0 auto;
             }
         }
 
@@ -63,13 +93,27 @@ header {
         .navbar.--mobile-active {
             .nav-items {
                 height: calc(100vh - $nav-height-phone);
+                padding: 20px 0px 110px 0px;
 
                 .nav-item a {
                     display: block;
                     width: 100%;
                     font-size: 1.4rem !important;
                 }
+
+                .nav-bottom-button {
+                    margin-inline: auto;
+                }
             }
         }
     }
 }
+
+
+/*
+
+.nav-bottom-button {
+    margin: 0 !important;
+}
+
+*/
