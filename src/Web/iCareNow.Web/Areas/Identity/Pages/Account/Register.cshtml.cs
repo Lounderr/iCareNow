@@ -8,6 +8,7 @@
     using System.Threading.Tasks;
 
     using iCareNow.Data.Models;
+    using iCareNow.Services.Data;
 
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
@@ -25,17 +26,20 @@
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IUsersService usersService;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IUsersService usersService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            this.usersService = usersService;
         }
 
         [BindProperty]
@@ -53,9 +57,14 @@
             public string Email { get; set; }
 
             [Required]
-            [StringLength(80, ErrorMessage = "Name is too long")]
-            [Display(Name = "Name")]
-            public string Name { get; set; }
+            [StringLength(80, ErrorMessage = "FirstName is too long")]
+            [Display(Name = "FirstName")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [StringLength(80, ErrorMessage = "LastName is too long")]
+            [Display(Name = "LastName")]
+            public string LastName { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
@@ -84,7 +93,15 @@
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = Input.Email,
+                    Email = Input.Email,
+                    FirstName = Input.FirstName,
+                    LastName = Input.LastName,
+                    NormalizedFirstName = this.usersService.NormalizeFirstName(Input.FirstName),
+                    NormalizedLastName = this.usersService.NormalizeLastName(Input.LastName),
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

@@ -22,6 +22,7 @@
     <ProjectReference Include="..\..\Data\iCareNow.Data.Common\iCareNow.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\iCareNow.Data.Models\iCareNow.Data.Models.csproj" />
     <ProjectReference Include="..\iCareNow.Services.Mapping\iCareNow.Services.Mapping.csproj" />
+    <ProjectReference Include="..\iCareNow.Services\iCareNow.Services.csproj" />
   </ItemGroup>
 
 </Project>

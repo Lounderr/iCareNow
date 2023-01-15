@@ -8,12 +8,17 @@
     using iCareNow.Data.Models;
     using iCareNow.Data.Repositories;
     using iCareNow.Data.Seeding;
+using iCareNow.Services;
+    using iCareNow.Services.Data;
     using iCareNow.Services.Mapping;
     using iCareNow.Services.Messaging;
+    using iCareNow.Web.Extensions;
     using iCareNow.Web.ViewModels;
 
     using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.DataProtection.KeyManagement.Internal;
     using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
@@ -61,8 +66,16 @@
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
+            // ProtectedData and UsersData services
+            services.AddScoped<ILookupProtectorKeyRing, KeyRing>();
+            services.AddScoped<ILookupProtector, LookupProtector>();
+            services.AddScoped<IPersonalDataProtector, PersonalDataProtector>();
+
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
+            services.AddTransient<INormalizer, UserDataNormalizer>();
+
+            services.AddTransient<IUsersService, UsersService>();
         }
 
         private static void Configure(WebApplication app)
