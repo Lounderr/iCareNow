@@ -1,9 +1,6 @@
 ﻿@import "../../utilities/_variables.scss";
 @import "../../utilities/_functions.scss";
 @import "../../utilities/_colors.scss";
-@import "../../components/_background.scss";
-
-@include nature-background(fixed);
 
 .health-a-to-z {
     margin-block: 40px;

@@ -1,9 +1,6 @@
-﻿@import "../../utilities/_variables.scss";
-@import "../../utilities/_functions.scss";
-@import "../../components/_background.scss";
-
-
-@include nature-background(fixed);
+﻿@import "../../utilities/_functions.scss";
+@import "../../utilities/_variables.scss";
+@import "../../utilities/_colors.scss";
 
 .first-section {
     .about-us-heading-container {
