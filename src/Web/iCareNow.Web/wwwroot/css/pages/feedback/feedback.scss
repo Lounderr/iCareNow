@@ -1,6 +1,5 @@
 ﻿@import "../../utilities/_variables.scss";
 @import "../../utilities/_functions.scss";
-@import "../../components/_panel.scss";
 @import "../../components/_background.scss";
 
 
@@ -10,34 +9,35 @@
     position: relative;
     min-height: 600px;
     height: calc(100vh - $nav-height);
-    padding: 15vh 0 0 0;
 
-    @include panel(1);
+    .content-panel {
+        .input-field {
+            width: 100%;
 
-    .textarea-message {
-        width: 450px;
-        height: 250px;
+            .input-text-field {
+                width: 450px;
+            }
+
+            .textarea-message {
+                width: 450px;
+                height: 250px;
+            }
+        }
     }
 }
 
 @include media($bp-700) {
     .first-section {
-        padding: 3vh 0 0 0;
+        .content-panel {
+            .input-field {
+                width: 95%;
 
-        .panel-container {
-            padding: 20px;
+                .input-text-field {
+                    width: 100%;
+                }
 
-            form {
-                .input-field {
-                    width: auto;
-
-                    .input-text-field {
-                        width: 100%;
-                    }
-
-                    .textarea-message {
-                        width: 100%;
-                    }
+                .textarea-message {
+                    width: 100%;
                 }
             }
         }

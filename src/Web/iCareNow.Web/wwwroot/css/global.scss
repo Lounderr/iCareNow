@@ -1,4 +1,5 @@
 ﻿@import "utilities/_reset.scss";
+@import "utilities/_functions.scss";
 
 .-page-section[id]::before {
     content: '';
@@ -62,6 +63,24 @@
 
 .-hover-text-white-glare:hover {
     text-shadow: 0 0 0.3px $white;
+}
+
+.-primary-section {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+
+    &.--responsive-top-padding {
+        padding-top: 10vh;
+
+        @include media($bp-1100) {
+            padding-top: 8vh;
+        }
+
+        @include media($bp-950) {
+            padding-top: 6vh;
+        }
+    }
 }
 
 a.-link {
@@ -514,12 +533,12 @@ input[type="radio"].-checkbox {
 }
 
 .-text-field-input {
-    width: fit-content;
+    width: 320px;
     position: relative;
 
     > input {
         height: 45px;
-        width: 320px;
+        width: 100%;
         background: none;
         border: 1px solid #{$white}AA;
         color: $white;
@@ -576,6 +595,10 @@ input[type="radio"].-checkbox {
     margin-top: 7px;
     color: $danger;
     width: 320px;
+
+    &:empty {
+        display: none;
+    }
 }
 
 
@@ -644,6 +667,61 @@ input[type="radio"].-checkbox {
 
         span.active {
             background: $white;
+        }
+    }
+}
+
+.-content-panel {
+    height: max-content;
+    width: fit-content;
+    background-color: none;
+    color: $white;
+
+    > .panel-title {
+        font-size: $title;
+        font-weight: 600;
+        margin: 0 0 20px 0;
+    }
+
+    > .panel-description {
+        font-size: $subtitle;
+        font-weight: 400;
+        margin: 0 0 40px 0;
+    }
+
+    > .panel-column-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    > .redirect-bottom-text {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    &.--center {
+        margin-inline: auto;
+
+        > .panel-title,
+        > .panel-description {
+            text-align: center;
+        }
+
+        > .panel-column-flex {
+            align-items: center;
+        }
+    }
+}
+
+@include media($bp-1100) {
+    .-content-panel {
+        > .panel-title {
+            font-size: 2.4rem;
+        }
+
+        > .panel-description {
         }
     }
 }

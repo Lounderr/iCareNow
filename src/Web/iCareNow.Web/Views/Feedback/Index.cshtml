@@ -10,30 +10,25 @@
     <img class="background-image" src="/assets/backgroundImage.jpg" alt="" />
     <div class="background-darken"></div>
 </div>
-<section class="first-section">
-    <div class="panel-container panel-centered">
-        <h2 class="panel-title">@ViewData["Title"]</h2>
-        <h4 class="panel-description">Въведете своя имейл и съобщение</h4>
+<section class="first-section -primary-section --responsive-top-padding">
+    <div class="content-panel -content-panel --center">
+    <h2 class="panel-title">@ViewData["Title"]</h2>
+    <h4 class="panel-description">Въведете своя имейл и съобщение</h4>
 
-        <form method="post">
-            <div class="input-fields">
-                <div class="input-field">
-                    <div class="input-text-field -text-field-input --icon --invert-icon">
-                        <input placeholder="Имейл" type="text" />
-                        <img src="/assets/mailIcon.svg" />
-                    </div>
-                    <span class="-validation-error"></span>
-                </div>
-                <div class="input-field">
-                    <textarea class="textarea-message -textarea" placeholder="Вашето съобщение за нас"></textarea>
-
-                    <span class="-validation-error"></span>
-                </div>
+    <form method="post" class="panel-column-flex">
+        <div class="input-field">
+            <div class="input-text-field -text-field-input --icon --invert-icon">
+                <input placeholder="Имейл" type="text" />
+                <img src="/assets/mailIcon.svg" />
             </div>
+            <span class="-validation-error"></span>
+        </div>
+        <div class="input-field">
+            <textarea class="textarea-message -textarea" placeholder="Вашето съобщение за нас"></textarea>
+            <span class="-validation-error"></span>
+        </div>
 
-            <div class="panel-buttons">
-                <button type="submit" class="-button --large">Изпращане</button>
-            </div>
-        </form>
+        <button type="submit" class="-button --large">Изпращане</button>
+    </form>
     </div>
 </section>

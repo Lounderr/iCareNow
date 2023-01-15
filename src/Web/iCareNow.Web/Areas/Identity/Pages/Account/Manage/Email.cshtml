@@ -17,52 +17,31 @@
     <div class="background-darken"></div>
 </div>
 
-<section class="first-section">
+<section class="first-section -primary-section --responsive-top-padding">
 
-    <div class="panel-container panel-centered">
+    <div class="-content-panel --center">
         <h2 class="panel-title">@ViewData["Title"]</h2>
-        <h4 class="panel-description">@this.User.Identity.Name</h4>
+        <h4 class="panel-description">Променете своя имейл</h4>
 
-        <form id="email-form" method="post">
-            <div class="input-fields">
-                <div class="input-field">
-                    <div class="input-text-field -text-field-input --icon --disabled --invert-icon">
-                        <input asp-for="Email" placeholder="Стар имейл" type="text" disabled />
-                        <img src="/assets/mailIcon.svg" />
-                    </div>
-                    <span asp-validation-for="Email" class="-validation-error"></span>
+        <form id="email-form" method="post" class="panel-column-flex">
+            <div class="input-field">
+                <div class="input-text-field -text-field-input --icon --disabled --invert-icon">
+                    <input asp-for="Email" type="text" disabled />
+                    <img src="/assets/mailIcon.svg" />
                 </div>
-
-                @if (Model.IsEmailConfirmed)
-                {
-                    <div class="input-group">
-                        <input asp-for="Email" class="form-control" disabled />
-                        <div class="input-group-append">
-                            <span class="input-group-text text-success font-weight-bold">✓</span>
-                        </div>
-                    </div>
-                }
-                else
-                {
-                    <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="-button">Send verification email</button>
-                }
-
-                <div class="input-field">
-                    <div class="input-text-field -text-field-input --icon --invert-icon">
-                        <input asp-for="Input.NewEmail" placeholder="Имейл" type="text" />
-                        <img src="/assets/mailIcon.svg" />
-                    </div>
-                    <span asp-validation-for="Input.NewEmail" class="-validation-error"></span>
-                </div>
-
-                <partial name="_StatusMessage" model="Model.StatusMessage" />
-
+                <span asp-validation-for="Email" class="-validation-error"></span>
             </div>
 
-            <div class="panel-buttons">
-                <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail"  class="-button --large">Промени</button>
-
+            <div class="input-field">
+                <div class="input-text-field -text-field-input --icon --invert-icon">
+                    <input asp-for="Input.NewEmail" placeholder="Нов имейл" type="text" />
+                    <img src="/assets/mailIcon.svg" />
+                </div>
+                <span asp-validation-for="Input.NewEmail" class="-validation-error"></span>
             </div>
+            <partial name="_StatusMessage" model="Model.StatusMessage" />
+
+            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="-button --large">Промени</button>
         </form>
     </div>
 </section>

@@ -1,6 +1,5 @@
 ﻿@import "../../utilities/_variables.scss";
 @import "../../utilities/_functions.scss";
-@import "../../components/_panel.scss";
 @import "../../components/_background.scss";
 
 
@@ -12,7 +11,7 @@
     height: calc(100vh - $nav-height);
     padding: 15vh 0 0 0;
 
-    @include panel(1);
+     
 
     .name-input {
         img {

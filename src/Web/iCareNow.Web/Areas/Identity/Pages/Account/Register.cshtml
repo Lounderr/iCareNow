@@ -12,55 +12,51 @@
     <img class="background-image" src="/assets/backgroundImage.jpg" alt="" />
     <div class="background-darken"></div>
 </div>
-<section class="first-section">
+<section class="first-section -primary-section --responsive-top-padding">
 
-    <div class="panel-container panel-centered">
+    <div class="-content-panel --center">
         <h2 class="panel-title">@ViewData["Title"]</h2>
         <h4 class="panel-description">Въведете своите данни</h4>
 
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <div class="input-fields">
-                <div class="input-field">
-                    <div class="input-text-field -text-field-input --icon --invert-icon">
-                        <input asp-for="Input.Email" placeholder="Имейл" type="text" />
-                        <img src="/assets/mailIcon.svg" />
-                    </div>
-                    <span asp-validation-for="Input.Email" class="-validation-error"></span>
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post" class="panel-column-flex">
+            <div class="input-field">
+                <div class="input-text-field -text-field-input --icon --invert-icon">
+                    <input asp-for="Input.Email" placeholder="Имейл" type="text" />
+                    <img src="/assets/mailIcon.svg" />
                 </div>
-
-                <div class="input-field">
-                    <div class="name-input input-text-field -text-field-input --icon --invert-icon">
-                        <input asp-for="Input.Name" placeholder="Име" type="text" />
-                        <img src="/assets/person.svg" />
-                    </div>
-                    <span asp-validation-for="Input.Name" class="-validation-error"></span>
-                </div>
-
-                <div class="input-field">
-                    <div class="input-text-field -text-field-input --icon --invert-icon">
-                        <input asp-for="Input.Password" placeholder="Парола" type="password" />
-                        <img src="/assets/keyIcon.svg" />
-                    </div>
-                    <span asp-validation-for="Input.Password" class="-validation-error"></span>
-                </div>
-
-                <div class="input-field">
-                    <div class="input-text-field -text-field-input --icon --invert-icon">
-                        <input asp-for="Input.ConfirmPassword" placeholder="Потвърди парола" type="password" />
-                        <img src="/assets/keyIcon.svg" />
-                    </div>
-                    <span asp-validation-for="Input.ConfirmPassword" class="-validation-error"></span>
-                </div>
-
-                <label class="-checkbox-label" asp-for="Input.AcceptTos">
-                    <input asp-for="Input.AcceptTos" class="-checkbox" type="checkbox" />
-                    <span>@Html.DisplayNameFor(m => m.Input.AcceptTos)</span>
-                </label>
+                <span asp-validation-for="Input.Email" class="-validation-error"></span>
             </div>
 
-            <div class="panel-buttons">
-                <button type="submit" class="-button --large">@ViewData["Title"]</button>
+            <div class="input-field">
+                <div class="name-input input-text-field -text-field-input --icon --invert-icon">
+                    <input asp-for="Input.Name" placeholder="Име" type="text" />
+                    <img src="/assets/person.svg" />
+                </div>
+                <span asp-validation-for="Input.Name" class="-validation-error"></span>
             </div>
+
+            <div class="input-field">
+                <div class="input-text-field -text-field-input --icon --invert-icon">
+                    <input asp-for="Input.Password" placeholder="Парола" type="password" />
+                    <img src="/assets/keyIcon.svg" />
+                </div>
+                <span asp-validation-for="Input.Password" class="-validation-error"></span>
+            </div>
+
+            <div class="input-field">
+                <div class="input-text-field -text-field-input --icon --invert-icon">
+                    <input asp-for="Input.ConfirmPassword" placeholder="Потвърди парола" type="password" />
+                    <img src="/assets/keyIcon.svg" />
+                </div>
+                <span asp-validation-for="Input.ConfirmPassword" class="-validation-error"></span>
+            </div>
+
+            <label class="-checkbox-label" asp-for="Input.AcceptTos">
+                <input asp-for="Input.AcceptTos" class="-checkbox" type="checkbox" />
+                <span>@Html.DisplayNameFor(m => m.Input.AcceptTos)</span>
+            </label>
+
+            <button type="submit" class="-button --large">@ViewData["Title"]</button>
         </form>
     </div>
 </section>

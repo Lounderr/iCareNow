@@ -13,22 +13,18 @@
     <img class="background-image" src="/assets/backgroundImage.jpg" alt="" />
     <div class="background-darken"></div>
 </div>
-<section class="first-section">
+<section class="first-section -primary-section --responsive-top-padding">
 
-    <div class="panel-container panel-centered">
+    <div class="-content-panel --center">
         <h2 class="panel-title">@ViewData["Title"]</h2>
         <h4 class="panel-description">@this.User.Identity.Name</h4>
 
-        <form method="post">
-            <div class="input-fields">
-                <a class="-button --large @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Промени имейл</a>
-                <a class="-button --large @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Промени парола</a>
-                <a class="-button --large @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Лични данни</a>
-            </div>
+        <form method="post" class="panel-column-flex">
+            <a class="-button --large @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Промени имейл</a>
+            <a class="-button --large @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Промени парола</a>
+            <a class="-button --large @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Лични данни</a>
 
-            <div class="panel-buttons">
-                <button asp-controller="Account" asp-action="Logout" type="submit" class="-button --danger --large">Изход</button>
-            </div>
+            <button asp-controller="Account" asp-action="Logout" type="submit" class="-button --danger --large">Изход</button>
         </form>
     </div>
 </section>

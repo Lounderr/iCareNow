@@ -14,17 +14,15 @@
     <div class="background-darken"></div>
 </div>
 
-<section class="first-section">
+<section class="first-section -primary-section --responsive-top-padding">
 
-    <div class="panel-container panel-centered">
+    <div class="-content-panel --center">
         <h2 class="panel-title">@ViewData["Title"]</h2>
         <h4 class="panel-description">@this.User.Identity.Name</h4>
 
-        <form id="download-data" asp-page="DownloadPersonalData" method="post">
-            <div class="panel-buttons">
-                <button type="submit" class="-button --large">Изтегли данни</button>
-                <a asp-page="DeletePersonalData" class="-button --danger --large">Изтрий профил</a>
-            </div>
+        <form id="download-data" asp-page="DownloadPersonalData" method="post" class="panel-column-flex">
+            <button type="submit" class="-button --large">Изтегли данни</button>
+            <a asp-page="DeletePersonalData" class="-button --danger --large">Изтрий профил</a>
         </form>
     </div>
 </section>

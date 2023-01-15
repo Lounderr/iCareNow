@@ -27,6 +27,10 @@ body {
     min-height: 100vh;
 }
 
+main {
+    min-height: 100vh;
+}
+
 .--disable-body-scroll {
     height: 100%;
     overflow: hidden;

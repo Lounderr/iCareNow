@@ -1,6 +1,5 @@
 ﻿@import "../../utilities/_variables.scss";
 @import "../../utilities/_functions.scss";
-@import "../../components/_panel.scss";
 @import "../../components/_background.scss";
 
 
@@ -8,27 +7,28 @@
 @include nature-background(fixed);
 
 .first-section {
-    position: relative;
-    min-height: 600px;
-    height: calc(100vh - $nav-height);
-    padding: 15vh 0 0 0vw;
     display: flex;
     justify-content: space-around;
-
-    @include panel(1);
-}
-
-.greeting-quote {
-    margin-top: 50px;
+    align-items: flex-start;
+    padding-top: 15vh;
 }
 
 @include media($bp-1100) {
     .first-section {
-        display: block;
-        padding: 15vh 0 0 10vw;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-top: 10vh;
+        padding-left: 5vw;
     }
 
     .greeting-quote {
         display: none;
+    }
+}
+
+@include media($bp-950) {
+    .first-section {
+        padding-top: 8vh;
+        padding-left: 10vw;
     }
 }
