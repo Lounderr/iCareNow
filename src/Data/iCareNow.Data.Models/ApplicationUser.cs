@@ -3,6 +3,7 @@ namespace iCareNow.Data.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using iCareNow.Data.Common.Models;
 
@@ -17,6 +18,24 @@ namespace iCareNow.Data.Models
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
         }
+
+        [Required]
+        [StringLength(80)]
+        [ProtectedPersonalData]
+        public string FirstName { get; set; }
+
+        [Required]
+        [StringLength(80)]
+        public string NormalizedFirstName { get; set; }
+
+        [Required]
+        [StringLength(80)]
+        [ProtectedPersonalData]
+        public string LastName { get; set; }
+
+        [Required]
+        [StringLength(80)]
+        public string NormalizedLastName { get; set; }
 
         // Audit info
         public DateTime CreatedOn { get; set; }
