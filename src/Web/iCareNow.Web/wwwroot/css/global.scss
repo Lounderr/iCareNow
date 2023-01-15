@@ -520,7 +520,10 @@ input[type="radio"].-checkbox {
             display: flex;
             justify-content: center;
             width: 10px;
-            content: url(/assets/checkmark.svg);
+            background-image: url(/assets/checkmark.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            content: ' ';
         }
     }
 }
