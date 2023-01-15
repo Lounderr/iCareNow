@@ -1,38 +1,56 @@
-﻿[
+[
   {
     "outputFile": "wwwroot/css/pages/index/index.css",
-    "inputFile": "wwwroot/css/pages/index/index.scss"
+    "inputFile": "wwwroot/css/pages/index/index.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/layout/layout.css",
-    "inputFile": "wwwroot/css/layout/layout.scss"
+    "inputFile": "wwwroot/css/layout/layout.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.css",
-    "inputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.scss"
+    "inputFile": "wwwroot/css/pages/HealthAtoZ/healthAtoZ.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/pages/identity/login.css",
-    "inputFile": "wwwroot/css/pages/identity/login.scss"
+    "inputFile": "wwwroot/css/pages/identity/login.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/pages/identity/register.css",
-    "inputFile": "wwwroot/css/pages/identity/register.scss"
+    "inputFile": "wwwroot/css/pages/identity/register.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/pages/healthArticle/healthArticle.css",
-    "inputFile": "wwwroot/css/pages/healthArticle/healthArticle.scss"
+    "inputFile": "wwwroot/css/pages/healthArticle/healthArticle.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/global.css",
-    "inputFile": "wwwroot/css/global.scss"
+    "inputFile": "wwwroot/css/global.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/pages/feedback/feedback.css",
-    "inputFile": "wwwroot/css/pages/feedback/feedback.scss"
+    "inputFile": "wwwroot/css/pages/feedback/feedback.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   },
   {
     "outputFile": "wwwroot/css/pages/aboutUs/aboutUs.css",
-    "inputFile": "wwwroot/css/pages/aboutUs/aboutUs.scss"
+    "inputFile": "wwwroot/css/pages/aboutUs/aboutUs.scss",
+    "sourceMap": false,
+    "useNodeSass": false
   }
 ]

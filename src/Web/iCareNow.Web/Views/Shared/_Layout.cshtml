@@ -12,25 +12,24 @@
 </head>
 <body>
     <header>
-        <nav class="top-nav">
+        <nav class="navbar">
             <h1 class="logo"><a asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a></h1>
-            <!-- class: nav-active -->
+
             <ul class="nav-items">
                 <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
                 <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="HealthAtoZ" asp-action="Index">Здраве от А до Я</a></li>
-                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Свържи се с лекар</a></li>*@
-                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Моите запитвания</a></li>*@
-                @*<li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" href="#">Медицински статии</a></li>*@
                 <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index">За нас</a></li>
+                @*<li style="height: 40px;"></li>*@
+                @*<li class="nav-item"><a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Register">Впиши се</a></li>*@
+                @*<li class="nav-item"><a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Login">Регистрирай се</a></li>*@
+                
+                <li style="margin-top: auto;"></li>
+                <partial name="_NavPartial" />
             </ul>
-            <div class="controls">
-                <partial name="_LoginPartial" />
-                <!-- class: menu-active -->
-                <div class="menu-controls">
-                    <img class="menu-btn" onclick="toggleMenu()" src="/assets/menuBtn.svg" alt="" />
-                    <img class="close-btn" onclick="toggleMenu()" src="/assets/closeBtn.svg" alt="" />
-                </div>
-            </div>
+
+            <partial name="_LoginPartial" />
+            <img class="menu-btn" onclick="toggleMenu()" src="/assets/menuBtn.svg" alt="" />
+            <img class="close-btn" onclick="toggleMenu()" src="/assets/closeBtn.svg" alt="" />
         </nav>
     </header>
 

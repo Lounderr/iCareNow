@@ -1,4 +1,6 @@
 ﻿@import "../utilities/_colors.scss";
+@import "../utilities/_variables.scss";
+@import "../utilities/_functions.scss";
 
 footer {
     width: 100%;
@@ -20,7 +22,7 @@ footer {
             width: 30%;
 
             h2 {
-                font-size: 2rem;
+                font-size: $heading;
                 font-weight: 400;
                 height: 80px;
             }
@@ -32,7 +34,7 @@ footer {
 
         .sitemap-container {
             h3 {
-                font-size: 1.3rem;
+                font-size: $subtitle;
                 font-weight: 500;
                 height: 80px;
             }
@@ -48,7 +50,7 @@ footer {
 
         .feedback-container {
             h3 {
-                font-size: 1.3rem;
+                font-size: $subtitle;
                 font-weight: 500;
                 height: 80px;
             }
@@ -61,14 +63,14 @@ footer {
         gap: 15px;
 
         a {
-            font-size: 0.8rem;
+            font-size: calc($legal - 0.1rem);
             font-weight: 400;
             color: $gray;
         }
     }
 }
 
-@media screen and (max-width: 900px) {
+@include media($bp-950) {
     footer {
         padding: 50px 10px 20px 6%;
 
@@ -93,7 +95,7 @@ footer {
             align-items: center;
 
             a {
-                font-size: 0.7rem;
+                font-size: calc($legal - 0.1rem);
             }
         }
     }

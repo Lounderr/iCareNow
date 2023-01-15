@@ -1,6 +1,8 @@
 ﻿@import "../../utilities/_variables.scss";
+@import "../../utilities/_functions.scss";
 @import "../../components/_panel.scss";
 @import "../../components/_background.scss";
+
 
 
 @include nature-background(fixed);
@@ -20,19 +22,13 @@
     margin-top: 50px;
 }
 
-@media screen and (max-width: 1350px) {
+@include media($bp-1100) {
     .first-section {
-        height: calc(100vh - $nav-height-tablet);
         display: block;
         padding: 15vh 0 0 10vw;
     }
+
     .greeting-quote {
         display: none;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .first-section {
-        /*        padding-top: $nav-height !important;*/
     }
 }

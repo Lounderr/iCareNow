@@ -1,4 +1,5 @@
 ﻿@import "../../utilities/_variables.scss";
+@import "../../utilities/_functions.scss";
 @import "../../components/_panel.scss";
 @import "../../components/_background.scss";
 
@@ -17,7 +18,7 @@
         padding-inline: 100px;
 
         h1 {
-            font-size: 4rem;
+            font-size: $title;
             font-weight: 600;
             color: $white;
         }
@@ -46,7 +47,7 @@
                 width: 100%;
                 text-align: center;
                 color: $white;
-                font-size: 2rem;
+                font-size: $heading;
                 font-weight: 500;
             }
 
@@ -75,7 +76,7 @@
                         display: block;
                         color: $white;
                         width: 100%;
-                        font-size: 1.2rem;
+                        font-size: $p1;
                         font-weight: 500;
                         text-align: center;
 
@@ -108,13 +109,13 @@
 
     h3 {
         color: $white;
-        font-size: 2rem;
+        font-size: $heading;
         margin-bottom: 50px;
     }
 
     p {
         margin-top: 10px;
-        font-size: 1.1rem;
+        font-size: $p2;
         color: $white;
     }
 }
@@ -125,7 +126,7 @@
     background-color: $white;
 }
 
-@media screen and (max-width: 1600px) {
+@include media($bp-1600) {
     .first-section {
         .about-us-heading-container {
             width: 100%;
@@ -149,7 +150,7 @@
     }
 }
 
-@media screen and (max-width: 1100px) {
+@include media($bp-1100) {
     .first-section {
         .about-us-heading-container {
             height: 200px;
@@ -191,7 +192,7 @@
                             display: block;
                             color: $white;
                             width: 100%;
-                            font-size: 1.2rem;
+                            font-size: $p1;
                             font-weight: 500;
                             text-align: center;
 
@@ -222,7 +223,4 @@
             margin-bottom: 30px;
         }
     }
-}
-
-@media screen and (max-width: 700px) {
 }
