@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
-    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />*@
     <link rel="stylesheet" href="~/css/global.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/layout/layout.min.css" asp-append-version="true" />
     @await this.RenderSectionAsync("Styles", required: false)
@@ -18,11 +17,7 @@
             <ul class="nav-items">
                 <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
                 <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="HealthAtoZ" asp-action="Index">Здраве от А до Я</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index">За нас</a></li>
-                @*<li style="height: 40px;"></li>*@
-                @*<li class="nav-item"><a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Register">Впиши се</a></li>*@
-                @*<li class="nav-item"><a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Login">Регистрирай се</a></li>*@
-                
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index">За нас</a></li>                
                 <li style="margin-top: auto;"></li>
                 <partial name="_NavPartial" />
             </ul>
@@ -64,20 +59,6 @@
             <a class="-hover-text-white-glare" href="#">Политика за поверителност</a>
         </div>
     </footer>
-
-
-    @*
-    <div class="container">
-    <partial name="_CookieConsentPartial" />
-    </div>*@
-
-    @*
-    <footer class="border-top footer text-muted">
-    <div class="container">
-    &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-    </footer>
-    *@
 
     <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>

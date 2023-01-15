@@ -19,28 +19,21 @@
             <div class="input-fields">
                 <div class="input-field">
                     <div class="input-text-field -text-field-input --icon --invert-icon">
-                        <input placeholder="Имейл" type="text" />@*asp-for="Input.Email"*@
+                        <input placeholder="Имейл" type="text" />
                         <img src="/assets/mailIcon.svg" />
                     </div>
-                    <span class="-validation-error"></span>@*asp-validation-for="Input.Email"*@
+                    <span class="-validation-error"></span>
                 </div>
                 <div class="input-field">
                     <textarea class="textarea-message -textarea" placeholder="Вашето съобщение за нас"></textarea>
 
-                    <span class="-validation-error"></span> @*asp-validation-for="Input.Password"*@
+                    <span class="-validation-error"></span>
                 </div>
-
-@*                <label class="-checkbox-label">
-                    <input class="-checkbox" type="checkbox" />
-                    <span>Запомни ме</span>
-                </label>*@
             </div>
 
             <div class="panel-buttons">
                 <button type="submit" class="-button --large">Изпращане</button>
             </div>
         </form>
-        @*<a class="-link forgotten-password">Забравена парола?</a> @*asp-page="./ForgotPassword"*@
-        @*<span class="create-account-question">Не разполагате с акаунт? <a class="-link">Създайте го!</a></span> @*asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"*@
     </div>
 </section>

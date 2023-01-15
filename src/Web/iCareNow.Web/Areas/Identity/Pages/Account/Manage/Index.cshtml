@@ -20,18 +20,10 @@
         <h4 class="panel-description">@this.User.Identity.Name</h4>
 
         <form method="post">
-            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
-            @*<div class="form-group">
-            <label asp-for="Input.PhoneNumber"></label>
-            <input asp-for="Input.PhoneNumber" class="form-control" />
-            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>*@
-
             <div class="input-fields">
                 <a class="-button --large @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Промени имейл</a>
                 <a class="-button --large @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Промени парола</a>
                 <a class="-button --large @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Лични данни</a>
-
             </div>
 
             <div class="panel-buttons">
@@ -44,22 +36,3 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-
-@*<h4>@ViewData["Title"]</h4>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
-<div class="row">
-    <div class="col-md-6">
-        <form id="profile-form" method="post">
-            <div class="form-group">
-                <label asp-for="Username"></label>
-                <input asp-for="Username" class="form-control" disabled />
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.PhoneNumber"></label>
-                <input asp-for="Input.PhoneNumber" class="form-control" />
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-            <button id="update-profile-button" type="submit" class="btn btn-primary">Save</button>
-        </form>
-    </div>
-</div>*@

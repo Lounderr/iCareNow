@@ -27,11 +27,8 @@
             margin-bottom: 30px;
             margin-inline: auto;
             align-items: center;
-            /*            @include input-default();
-*/
         }
-        /*        @include checkbox-default();
-*/
+
         .forgotten-password, .create-account-question {
             display: block;
             margin-bottom: 25px;
@@ -42,8 +39,6 @@
             flex-direction: column;
             gap: 20px;
             margin-bottom: 20px;
-            /*            @include btn-default($btns-scale, true);
-*/
         }
     }
 
