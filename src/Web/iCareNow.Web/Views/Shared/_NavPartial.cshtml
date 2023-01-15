@@ -6,9 +6,9 @@
 
 @if (this.SignInManager.IsSignedIn(this.User))
 {
-    <li class="nav-bottom-button"><a asp-area="Identity" asp-page="/Account/Manage/Index" class="-button --large">Впиши се</a></li>
+    <li class="nav-bottom-button"><a asp-area="Identity" asp-page="/Account/Manage/Index" class="-button --large">Профил</a></li>
 }
 else
 {
-    <li class="nav-bottom-button"><a asp-area="Identity" asp-page="/Account/Login" class="-button --large">Профил</a></li>
+    <li class="nav-bottom-button"><a asp-area="Identity" asp-page="/Account/Login" class="-button --large">Впиши се</a></li>
 }
