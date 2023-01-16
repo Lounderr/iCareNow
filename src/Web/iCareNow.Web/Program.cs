@@ -101,6 +101,8 @@ using iCareNow.Services;
                 app.UseHsts();
             }
 
+            app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
