@@ -1,4 +1,5 @@
 ﻿@using iCareNow.Common
+@model iCareNow.Web.ViewModels.Home.HomeIndexViewModel
 @{
     this.ViewData["Title"] = "Home Page";
 }
@@ -11,7 +12,7 @@
     <div class="background-darken"></div>
 </div>
 <section class="first-section -primary-section">
-    <partial name="_HomePanelPartial" />
+    <partial name="_HomePanelPartial" model="@Model" />
 
     <div class="-quotes-slideshow greeting-quote">
         <div class="content">

@@ -1,16 +1,33 @@
 ﻿namespace iCareNow.Web.Controllers
 {
     using System.Diagnostics;
+    using System.Threading.Tasks;
 
+    using iCareNow.Data.Models;
     using iCareNow.Web.ViewModels;
-
+    using iCareNow.Web.ViewModels.Home;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController
     {
-        public IActionResult Index()
+        private readonly UserManager<ApplicationUser> userManager;
+
+        public HomeController(UserManager<ApplicationUser> userManager)
         {
-            return this.View();
+            this.userManager = userManager;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var user = await this.userManager.GetUserAsync(User);
+
+            var model = new HomeIndexViewModel
+            {
+                User = user,
+            };
+
+            return this.View(model);
         }
 
         public IActionResult Privacy()

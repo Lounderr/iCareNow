@@ -29,10 +29,18 @@
 
             <div class="input-field">
                 <div class="name-input input-text-field -text-field-input --icon --invert-icon">
-                    <input asp-for="Input.Name" placeholder="Име" type="text" />
+                    <input asp-for="Input.FirstName" placeholder="Име" type="text" />
                     <img src="/assets/person.svg" />
                 </div>
-                <span asp-validation-for="Input.Name" class="-validation-error"></span>
+                <span asp-validation-for="Input.FirstName" class="-validation-error"></span>
+            </div>
+
+            <div class="input-field">
+                <div class="name-input input-text-field -text-field-input --icon --invert-icon">
+                    <input asp-for="Input.LastName" placeholder="Фамилия" type="text" />
+                    <img src="/assets/person.svg" />
+                </div>
+                <span asp-validation-for="Input.LastName" class="-validation-error"></span>
             </div>
 
             <div class="input-field">
