@@ -6,7 +6,7 @@
 
 @if (this.SignInManager.IsSignedIn(this.User))
 {
-    <a class="account-btn-container" asp-area="Identity" asp-page="/Account/Manage/Index"><span class="account-name">@this.User.Identity.Name</span><img class="profile-btn" src="/assets/profileBtn.svg" alt="" /></a>
+    <a class="account-btn-container" asp-area="Identity" asp-page="/Account/Manage/Index"><span class="account-name">@Model.User?.FirstName @Model.User?.LastName</span><img class="profile-btn" src="/assets/profileBtn.svg" alt="" /></a>
 }
 else
 {
