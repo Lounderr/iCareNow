@@ -624,7 +624,7 @@ input[type="radio"].-checkbox {
         q.active {
             display: block;
             quotes: none;
-            font-size: $quotes-slideshow;
+            font-size: 1.4rem;
             font-weight: 500;
             color: $white;
         }
@@ -670,6 +670,42 @@ input[type="radio"].-checkbox {
 
         span.active {
             background: $white;
+        }
+    }
+}
+
+@include media($bp-1100) {
+    .-quotes-slideshow {
+        width: 500px;
+        height: 210px;
+
+        .content {
+            padding: 60px 40px 0 60px;
+
+            q.active {
+                font-size: 1.1rem;
+            }
+
+            .quotation-mark {
+                &:first-of-type {
+                    font-size: 96px;
+                }
+
+                &:last-of-type {
+                    font-size: 64px;
+                }
+            }
+        }
+
+        .dots {
+            height: 30px;
+
+            span {
+                height: 13px;
+                width: 13px;
+                margin: 6px;
+                border: 3px solid $white;
+            }
         }
     }
 }

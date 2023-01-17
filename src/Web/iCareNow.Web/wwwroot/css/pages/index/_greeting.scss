@@ -11,19 +11,23 @@
 @include media($bp-1100) {
     .first-section {
         flex-direction: row;
-        justify-content: flex-start;
         padding-top: 10vh;
         padding-left: 5vw;
     }
-
+/*
     .greeting-quote {
         display: none;
-    }
+    }*/
 }
 
 @include media($bp-950) {
     .first-section {
+        justify-content: flex-start;
         padding-top: 8vh;
         padding-left: 10vw;
+    }
+
+    .greeting-quote {
+        display: none;
     }
 }
