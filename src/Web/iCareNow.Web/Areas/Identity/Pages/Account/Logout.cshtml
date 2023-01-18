@@ -1,11 +1,20 @@
 ﻿@page
 @model LogoutModel
 @{
-    ViewData["Title"] = "Log out";
+    ViewData["Title"] = "Изход";
 }
 
-<header>
-    <h1>@ViewData["Title"]</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/index/index.min.css" asp-append-version="true" />
+}
+
+
+<div class="page-background">
+    <img class="background-image" src="/assets/backgroundImage.jpg" alt="" />
+    <div class="background-darken"></div>
+</div>
+
+<section class="first-section -primary-section">
     @{
         if (User.Identity.IsAuthenticated)
         {
@@ -15,7 +24,12 @@
         }
         else
         {
-            <p>You have successfully logged out of the application.</p>
+            <div class="-content-panel --center">
+                <h2 class="panel-title">Успешно излязохте от профила си<br></h2>
+                <h4 class="panel-description">Ще бъдете пренасочени след момент...</h4>
+                <div class="panel-column-flex">
+                </div>
+            </div>
         }
     }
-</header>
+</section>
