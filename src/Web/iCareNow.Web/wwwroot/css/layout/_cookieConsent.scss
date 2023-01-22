@@ -11,7 +11,8 @@
     right: 15px;
     width: auto;
     height: fit-content;
-    background: #{$black}EE;
+    background: #{$dark-gray}90;
+    backdrop-filter: blur(3px);
     border-radius: 5px;
     padding: 10px 20px;
 

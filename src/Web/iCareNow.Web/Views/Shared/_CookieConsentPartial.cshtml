@@ -17,11 +17,9 @@
             var button = document.querySelector("#cookieConsent button[data-cookie-string]");
             button.addEventListener("click", function () {
                 document.cookie = button.dataset.cookieString;
+                button.parentNode.style.display = "none";
             }, false);
         })();
-
-
-
     </script>
 
 @*    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
