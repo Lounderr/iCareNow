@@ -1,1 +1,20 @@
-﻿<h1>Custom 404 page</h1>
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/pages/notFound/notFound.min.css" asp-append-version="true" />
+}
+
+
+<div class="page-background">
+    <img class="background-image" src="/assets/backgroundImage.jpg" alt="" />
+    <div class="background-darken"></div>
+</div>
+
+<section class="first-section -primary-section --responsive-top-padding">
+    <div class="-content-panel --center">
+        <h2 class="panel-title error-number">404</h2>
+        <h3 class="panel-description">Страницата не бе намерена</h3>
+        <br />
+        <div class="panel-column-flex">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="-button --large">Разбрах</a>
+        </div>
+    </div>
+</section>
