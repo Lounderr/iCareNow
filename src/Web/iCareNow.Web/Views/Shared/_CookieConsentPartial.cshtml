@@ -8,11 +8,9 @@
 
 @if (showBanner)
 {
-    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
-        We use cookies to understand how you use our site and to improve your experience. <a asp-area="" asp-controller="Home" asp-action="Privacy">Learn More</a>.
-        <button type="button" class="btn btn-primary accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
-            <span aria-hidden="true">Accept</span>
-        </button>
+    <div id="cookieConsent" class="cookie-consent" role="alert">
+        <span class="cookieConsentText">Ние използваме „бисквитки“, за показване съдържанието на сайта и подобряване на потребителското изживяване. <a class="-link privacy-link" asp-area="" asp-controller="Home" asp-action="Privacy">Научете повече</a>.</span>
+        <button class="cookieConsentButton -button --small" type="button" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">Разбрах</button>
     </div>
     <script>
         (function () {
@@ -21,5 +19,23 @@
                 document.cookie = button.dataset.cookieString;
             }, false);
         })();
+
+
+
     </script>
+
+@*    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+    <script type="text/javascript" charset="UTF-8">
+        document.addEventListener('DOMContentLoaded', function () {
+            cookieconsent.run({ "notice_banner_type": "interstitial", "consent_type": "implied", "palette": "dark", "language": "bg", "page_load_consent_levels": ["strictly-necessary", "functionality", "tracking", "targeting"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "page_refresh_confirmation_buttons": false, "website_privacy_policy_url": "" });
+        });
+    </script>
+
+    <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/" rel="nofollow noopener">TermsFeed Privacy Suite</a></noscript>
+    <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+    <a href="#" id="open_preferences_center">Update cookies preferences</a>*@
+
 }
