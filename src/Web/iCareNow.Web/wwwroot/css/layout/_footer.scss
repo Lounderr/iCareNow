@@ -7,7 +7,7 @@ footer {
     height: min-content;
     background-color: #{$black}A0;
     color: $white;
-    padding: 50px 10px 20px 5%;
+    padding: 50px 5% 20px 5%;
 
 
     .footer-info-container {
@@ -60,7 +60,7 @@ footer {
     .legal-content-container {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 25px;
 
         a {
             font-size: calc($legal - 0.1rem);
