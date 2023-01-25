@@ -4,8 +4,10 @@
 
 header {
     .navbar.--mobile-active {
+        background-color: #{$black}E0 !important;
+
         .nav-items {
-            display: flex !important;
+            opacity: 1;
             position: absolute;
             top: $nav-height-phone;
             left: 0;
@@ -13,7 +15,7 @@ header {
             height: auto;
             padding: 20px 0px 40px 0px;
             max-height: calc(100vh - $nav-height-phone);
-            background-color: #{$black}F0;
+            background-color: #{$black}E0;
             overflow-y: scroll;
             flex-direction: column;
             justify-content: flex-start;
@@ -30,8 +32,8 @@ header {
                 backdrop-filter: blur(4px);
             }
 
-            .nav-item {
-                display: block !important;
+            li.nav-item {
+                display: block;
 
                 a {
                     width: 100%;

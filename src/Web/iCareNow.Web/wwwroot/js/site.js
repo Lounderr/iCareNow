@@ -60,7 +60,7 @@ window.onscroll = () => {
         navbar.classList.remove('scrolled');
     }
 
-    hideNavOnScroll();
+    //hideNavOnScroll();
     shrinkNavOnScroll()
 };
 
