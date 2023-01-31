@@ -20,10 +20,11 @@
     </div>
     <script>
         (function () {
-            var button = document.querySelector("#cookieConsent img[data-cookie-string]");
+            var consentWindow = document.querySelector("#cookieConsent");
+            var button = document.querySelector("#cookieConsent .cookieConsentButton");
             button.addEventListener("click", function () {
                 document.cookie = button.dataset.cookieString;
-                button.parentNode.style.display = "none";
+                consentWindow.style.display = "none";
             }, false);
         })();
     </script>
