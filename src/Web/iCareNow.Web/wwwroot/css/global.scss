@@ -94,6 +94,15 @@ a.-link {
     &:hover {
         text-decoration: underline;
     }
+
+    &.--white {
+        color: $white;
+        font-weight: 700;
+
+        &:link, &:visited, &:hover {
+            color: $white;
+        }
+    }
 }
 
 ol.-list, ul.-list {
