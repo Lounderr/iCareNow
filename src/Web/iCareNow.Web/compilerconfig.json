@@ -38,5 +38,9 @@
   {
     "outputFile": "wwwroot/css/pages/notFound/notFound.css",
     "inputFile": "wwwroot/css/pages/notFound/notFound.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/privacy/privacy.css",
+    "inputFile": "wwwroot/css/pages/privacy/privacy.scss"
   }
 ]

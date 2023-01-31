@@ -1,0 +1,85 @@
+﻿@import "../../utilities/_variables.scss";
+@import "../../utilities/_functions.scss";
+@import "../../utilities/_colors.scss";
+
+.first-section {
+
+    .privacy-article-container {
+        height: fit-content;
+        width: 1350px;
+        margin: 20px auto 50px auto;
+        padding: 80px 100px 80px 100px;
+        background: #{$black}C0;
+        color: $white;
+        min-height: 400px;
+
+        h1, h2 {
+            font-weight: 600;
+            margin: 0 0 40px 0;
+        }
+
+        h1 {
+            font-size: $title;
+        }
+
+        h2 {
+            font-size: $heading;
+        }
+
+        p, ul, ol {
+            font-weight: 500;
+            color: #BBBBBB;
+            font-size: $p1;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: disc;
+            list-style-position: outside;
+            margin-block: 1rem;
+
+            li {
+                margin-block: 0.8rem;
+            }
+        }
+
+        .subsection {
+            margin-block: 50px;
+        }
+    }
+}
+
+@include media($bp-1350) {
+    .first-section {
+
+        .privacy-article-container {
+            width: 100%;
+        }
+    }
+}
+
+@include media($bp-1100) {
+    .first-section {
+        .privacy-article-container {
+            margin-top: 50px;
+            padding: 50px 30px 10px 30px;
+
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p, ol, ul {
+                font-size: $p3;
+            }
+
+            .subsection ul,
+            .subsection ol {
+                margin-left: 0.5rem !important;
+            }
+        }
+    }
+}
