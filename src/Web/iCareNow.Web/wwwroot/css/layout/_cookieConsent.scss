@@ -4,22 +4,30 @@
 .cookie-consent {
     position: fixed;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
     bottom: 15px;
-    left: 15px;
-    right: 15px;
-    width: auto;
+    width: 400px;
     height: fit-content;
-    background: #{$dark-gray}90;
-    backdrop-filter: blur(3px);
-    border-radius: 5px;
-    padding: 10px 20px;
+    background: #{$black}90;
+    padding: 20px 30px;
+    backdrop-filter: blur(2px);
+
+    .cookies-close-btn {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+    }
 
     .cookieConsentText {
         color: $white;
         font-weight: 500;
         margin-right: 2%;
+
         .privacy-link {
             font-weight: 600;
         }
