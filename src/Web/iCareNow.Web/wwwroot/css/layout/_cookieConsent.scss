@@ -1,0 +1,32 @@
+﻿@import "../utilities/_colors.scss";
+@import "../utilities/_variables.scss";
+
+.cookie-consent {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    width: auto;
+    height: fit-content;
+    background: #{$dark-gray}90;
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    padding: 10px 20px;
+
+    .cookieConsentText {
+        color: $white;
+        font-weight: 500;
+        margin-right: 2%;
+        .privacy-link {
+            font-weight: 600;
+        }
+    }
+
+    .cookieConsentButton {
+        /*        background: #{$green}BE;
+        border: none;*/
+    }
+}
