@@ -6,24 +6,23 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
+    right: 15px;
     bottom: 15px;
-    width: 400px;
+    width: 430px;
     height: fit-content;
     background: #{$black}90;
     padding: 20px 30px;
     backdrop-filter: blur(2px);
 
-    .cookies-close-btn {
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        top: 5px;
-        right: 5px;
-        cursor: pointer;
+    .cookie-consent-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $white;
     }
 
     .cookieConsentText {
+        font-size: 0.95rem;
         color: $white;
         font-weight: 500;
         margin-right: 2%;
@@ -33,8 +32,25 @@
         }
     }
 
-    .cookieConsentButton {
-        /*        background: #{$green}BE;
-        border: none;*/
+    .buttons-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+
+        button, a {
+            padding-inline: 15px;
+        }
+    }
+}
+
+
+@include media($bp-700) {
+    .cookie-consent {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 50px;
     }
 }

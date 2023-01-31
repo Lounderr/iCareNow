@@ -9,9 +9,14 @@
 @if (showBanner)
 {
     <div id="cookieConsent" class="cookie-consent" role="alert">
-        <img class="cookies-close-btn" src="~/assets/closeBtn.svg" aria-label="Close" data-cookie-string="@cookieString">
-        <span class="cookieConsentText">Този сайт използва бисквитки, тъй като са важни за работата му.</span>
-        <a class="-link privacy-link" asp-area="" asp-controller="Home" asp-action="Privacy"><u>Научете повече</u></a>
+        <span class="cookie-consent-title">Този сайт използва бисквитки</span>
+        <span class="cookieConsentText">С Ваше съгласие, използваме бисквитки или подобни технологии за съхраняване, достъп и обработка на лични данни като Вашето посещение на този уебсайт, тъй като те са важни за работата му.</span>
+
+        <div class="buttons-container">
+            <button class="cookieConsentButton -button --invert" type="button" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">Приемане</button>
+            <a class="-button" asp-area="" asp-controller="Home" asp-action="Privacy">Научете повече</a>
+        </div>
+
     </div>
     <script>
         (function () {
