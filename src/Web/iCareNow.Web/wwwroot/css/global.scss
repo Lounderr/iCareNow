@@ -123,6 +123,7 @@ ol.-list, ul.-list {
     color: $white;
     padding: 10px;
     font-size: $inputs-buttons;
+    backdrop-filter: blur(2px);
 
     &:focus {
         outline: solid 1px $white;
@@ -370,6 +371,7 @@ a.-button {
     line-height: 35px;
     white-space: nowrap;
     transition: ease-in-out 0.2s;
+    backdrop-filter: blur(2px);
 
 
     &:hover {
@@ -464,6 +466,7 @@ label.-checkbox-button {
         white-space: nowrap;
         transition: ease-in-out 0.2s;
         cursor: pointer;
+        backdrop-filter: blur(2px);
 
         &:hover {
             background-color: $white;
@@ -547,6 +550,7 @@ input[type="radio"].-checkbox {
         color: $white;
         padding: 0 10px 0 15px;
         font-size: $inputs-buttons;
+        backdrop-filter: blur(2px);
 
         &:focus {
             outline: solid 1px $white;
@@ -764,7 +768,6 @@ input[type="radio"].-checkbox {
         }
     }
 }
-
 
 .page-background {
     z-index: -99;
