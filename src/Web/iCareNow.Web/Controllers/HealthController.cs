@@ -2,12 +2,8 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    public class HealthAtoZController : BaseController
+    public class HealthController : BaseController
     {
-        public HealthAtoZController()
-        {
-        }
-
         public IActionResult Index()
         {
             return this.View();
