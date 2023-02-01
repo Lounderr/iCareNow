@@ -1,5 +1,5 @@
 ﻿window.onload = () => {
-    HTMLBodyElement.classList.toggle("preload");
+    document.body.classList.toggle("preload");
 }
 
 const navbar = document.querySelector('.navbar');
@@ -45,8 +45,6 @@ function toggleFilters() {
 var prevScrollpos = window.pageYOffset;
 function hideNavOnScroll() {
     if (!navbar.classList.contains('--mobile-active') && window.innerWidth <= 950) {
-
-
         currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             document.querySelector(".navbar").style.top = "0";
@@ -68,32 +66,11 @@ window.onscroll = () => {
     shrinkNavOnScroll()
 };
 
-var currentSlide = 0;
-const userQuotes = document.querySelectorAll('.user-quote');
-const userQuotesDots = document.querySelectorAll('.user-quote-dot');
-function showSlide(n) {
-    userQuotes[currentSlide].classList.toggle('active');
-    userQuotes[n].classList.toggle('active');
-
-    userQuotesDots[currentSlide].classList.toggle('active');
-    userQuotesDots[n].classList.toggle('active');
-    currentSlide = n;
-}
-
-let cycleTimeout = setTimeout(cycleNext, 8000);
-
-function cycleNext() {
-    let nextQuote = currentSlide + 1;
-    if (nextQuote > userQuotes.length - 1) {
-        nextQuote = 0;
-    }
-
-    showSlide(nextQuote);
-
-    cycleTimeout = setTimeout(cycleNext, 8000);
-}
-
-function userClickSlide(n) {
-    clearTimeout(cycleTimeout);
-    showSlide(n);
+if (document.cookie.indexOf('.AspNet.Consent=') == -1) {
+    var consentWindow = document.querySelector("#cookieConsent");
+    var button = document.querySelector("#cookieConsent .cookieConsentButton");
+    button.addEventListener("click", function () {
+        document.cookie = button.dataset.cookieString;
+        consentWindow.style.display = "none";
+    }, false);
 }

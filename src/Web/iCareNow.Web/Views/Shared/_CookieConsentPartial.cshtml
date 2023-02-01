@@ -16,16 +16,5 @@
             <button class="cookieConsentButton -button --invert" type="button" data-dismiss="alert" aria-label="Accept use of cookies" tabindex="1" data-cookie-string="@cookieString">Приемане</button>
             <a class="-button" asp-area="" asp-controller="Policies" asp-action="Privacy" tabindex="2">Научете повече</a>
         </div>
-
     </div>
-    <script>
-        (function () {
-            var consentWindow = document.querySelector("#cookieConsent");
-            var button = document.querySelector("#cookieConsent .cookieConsentButton");
-            button.addEventListener("click", function () {
-                document.cookie = button.dataset.cookieString;
-                consentWindow.style.display = "none";
-            }, false);
-        })();
-    </script>
 }
