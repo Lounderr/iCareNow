@@ -1,12 +1,13 @@
 ﻿@import "utilities/_reset.scss";
 @import "utilities/_functions.scss";
 
-.-page-section[id]::before {
+a.-page-section[id] {
     content: '';
     display: block;
-    height: 75px;
-    margin-top: -75px;
-    visibility: hidden;
+    position: relative;
+    width: 0;
+    height: 100px;
+    margin-top: -100px;
 }
 
 .-hide {
