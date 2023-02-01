@@ -96,29 +96,24 @@
                 margin-bottom: 10px;
             }
 
-            ul {
-
-                li {
-                    a {
-                        display: block;
-                        background: $white;
-                        width: 100%;
-                        margin-bottom: 10px;
-                        padding-inline: 30px;
-                        padding-block: 10px;
-                        color: $black;
-                        font-size: $p1;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        cursor: pointer;
-                        transition: ease-out 0.1s;
+            ul li a {
+                display: block;
+                background: $white;
+                width: 100%;
+                margin-bottom: 10px;
+                padding-inline: 30px;
+                padding-block: 10px;
+                color: $black;
+                font-size: $p1;
+                font-weight: 600;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: ease-out 0.1s;
 
 
-                        &:hover {
-                            background: $green;
-                            color: $white;
-                        }
-                    }
+                &:hover {
+                    background: $green;
+                    color: $white;
                 }
             }
         }
@@ -146,12 +141,6 @@
                     input {
                         width: 100%;
                         font-size: $inputs-buttons;
-
-                        &:focus {
-                        }
-
-                        &::placeholder {
-                        }
                     }
 
                     .search-button {
@@ -176,64 +165,8 @@
         .results {
             width: auto;
 
-            .filters-disclosure {
-
-                .-content {
-                    padding-left: 10px;
-
-                    .category-disclosure {
-
-
-                        .category-disclosure-summary {
-
-
-                            span {
-                            }
-
-                            &:before {
-                            }
-                        }
-
-                        &:not([open]) {
-                        }
-
-                        &[open] summary {
-
-                            &:before {
-                            }
-                        }
-
-                        .category-disclosure-content {
-
-
-                            button {
-
-                                &:hover {
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-
-            .result {
-
-
-                span {
-                }
-
-                ul {
-
-                    li {
-                        a {
-
-
-                            &:hover {
-                            }
-                        }
-                    }
-                }
+            .filters-disclosure.-content {
+                padding-left: 10px;
             }
         }
     }

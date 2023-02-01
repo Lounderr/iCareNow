@@ -474,7 +474,13 @@ label.-checkbox-button {
     }
 
     input[type="checkbox"] {
-        display: none;
+        position: absolute;
+        opacity: 0;
+
+        &:focus-visible + span {
+            z-index: 99;
+            outline: dashed 4px crimson;
+        }
     }
 
     input:checked + span {

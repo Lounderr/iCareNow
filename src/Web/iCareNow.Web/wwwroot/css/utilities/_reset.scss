@@ -7,6 +7,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: $base-font-size;
     font-weight: 400;
+    font-feature-settings: 'locl' 0; // Changes how fonts look depending on localization
 }
 
 *,
@@ -17,6 +18,11 @@
     padding: 0;
     font: inherit;
     /*outline: 1px dotted red;*/
+}
+
+*:focus-visible {
+    z-index: 99;
+    outline: dashed 4px crimson;
 }
 
 html:focus-within {
