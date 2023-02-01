@@ -131,7 +131,7 @@ ol.-list, ul.-list {
     color: $white;
     padding: 10px;
     font-size: $inputs-buttons;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px); // textarea cannot contain elements (incl. :before and :after)
 
     &:focus {
         outline: solid 1px $white;
@@ -365,6 +365,7 @@ details.-details {
 
 button.-button,
 a.-button {
+    position: relative;
     display: inline-block;
     height: 36px;
     width: fit-content;
@@ -379,8 +380,17 @@ a.-button {
     line-height: 35px;
     white-space: nowrap;
     transition: ease-in-out 0.2s;
-    backdrop-filter: blur(2px);
 
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(2px);
+    }
 
     &:hover {
         background-color: $white;
@@ -459,6 +469,7 @@ label.-checkbox-button {
     }
 
     span {
+        position: relative;
         display: inline-block;
         height: 36px;
         width: fit-content;
@@ -474,7 +485,17 @@ label.-checkbox-button {
         white-space: nowrap;
         transition: ease-in-out 0.2s;
         cursor: pointer;
-        backdrop-filter: blur(2px);
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            backdrop-filter: blur(2px);
+        }
 
         &:hover {
             background-color: $white;
@@ -558,11 +579,21 @@ input[type="radio"].-checkbox {
         color: $white;
         padding: 0 10px 0 15px;
         font-size: $inputs-buttons;
-        backdrop-filter: blur(2px);
 
         &:focus {
             outline: solid 1px $white;
         }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(2px);
     }
 
     &.--icon {
