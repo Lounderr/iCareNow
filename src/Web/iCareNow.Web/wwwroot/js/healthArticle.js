@@ -14,11 +14,19 @@ function clickTtsBtn() {
         const utterThis = new SpeechSynthesisUtterance(inputTxt);
         utterThis.lang = 'bg-BG';
         synth.speak(utterThis);
-    }
 
+        utterThis.onstart = (event) => {
+            toggleButtonState()
+        }
+
+        utterThis.onend = (event) => {
+            toggleButtonState()
+        }
+    }
+}
+
+function toggleButtonState() {
     for (var i = 0; i < readArticleButton.children.length; i++) {
         readArticleButton.children[i].classList.toggle("active");
     }
 }
-
-//readArticleButton.addEventListener("click", clickTtsBtn);
