@@ -656,6 +656,10 @@ input[type="radio"].-checkbox {
             border: 1px solid #{$black}AA;
             color: $black;
 
+            &::placeholder {
+                color: $dark-gray;
+            }
+
             &:focus {
                 outline: solid 1px $black;
             }
