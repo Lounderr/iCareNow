@@ -9,7 +9,7 @@
 }
 
 <div class="page-background">
-    <img class="background-image" src="/assets/backgroundImage.jpg" alt="" />
+    <img class="background-image" src="/assets/backgroundImage.jpg" alt="Background image" />
     <div class="background-darken"></div>
 </div>
 <section class="first-section -primary-section --responsive-top-padding">
@@ -22,7 +22,7 @@
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.Email" placeholder="Имейл" type="text" />
-                    <img src="/assets/mailIcon.svg" />
+                    <img src="/assets/mailIcon.svg" alt="Icon of email input field" />
                 </div>
                 <span asp-validation-for="Input.Email" class="-validation-error"></span>
             </div>
@@ -30,7 +30,7 @@
             <div class="input-field">
                 <div class="name-input input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.FirstName" placeholder="Име" type="text" />
-                    <img src="/assets/person.svg" />
+                    <img src="/assets/person.svg" alt="Icon of first name input field" />
                 </div>
                 <span asp-validation-for="Input.FirstName" class="-validation-error"></span>
             </div>
@@ -38,7 +38,7 @@
             <div class="input-field">
                 <div class="name-input input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.LastName" placeholder="Фамилия" type="text" />
-                    <img src="/assets/person.svg" />
+                    <img src="/assets/person.svg" alt="Icon of last name input field" />
                 </div>
                 <span asp-validation-for="Input.LastName" class="-validation-error"></span>
             </div>
@@ -46,7 +46,7 @@
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.Password" placeholder="Парола" type="password" />
-                    <img src="/assets/keyIcon.svg" />
+                    <img src="/assets/keyIcon.svg" alt="Icon of password input field" />
                 </div>
                 <span asp-validation-for="Input.Password" class="-validation-error"></span>
             </div>
@@ -54,7 +54,7 @@
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.ConfirmPassword" placeholder="Потвърди парола" type="password" />
-                    <img src="/assets/keyIcon.svg" />
+                    <img src="/assets/keyIcon.svg" alt="Icon of confirm password input field" />
                 </div>
                 <span asp-validation-for="Input.ConfirmPassword" class="-validation-error"></span>
             </div>
