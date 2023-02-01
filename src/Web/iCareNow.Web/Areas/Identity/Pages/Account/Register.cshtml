@@ -21,42 +21,42 @@
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post" class="panel-column-flex">
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
-                    <input asp-for="Input.Email" placeholder="Имейл" type="text" />
+                    <input asp-for="Input.Email" placeholder="Имейл" type="text" autocomplete="email" aria-describedby="email-validation-error" aria-required="true" required />
                     <img src="/assets/mailIcon.svg" alt="Icon of email input field" />
                 </div>
-                <span asp-validation-for="Input.Email" class="-validation-error"></span>
+                <span asp-validation-for="Input.Email" class="-validation-error" id="email-validation-error" role="alert"></span>
             </div>
 
             <div class="input-field">
                 <div class="name-input input-text-field -text-field-input --icon --invert-icon">
-                    <input asp-for="Input.FirstName" placeholder="Име" type="text" />
+                    <input asp-for="Input.FirstName" placeholder="Име" type="text" autocomplete="firstName" aria-describedby="firstName-validation-error" aria-required="true" required />
                     <img src="/assets/person.svg" alt="Icon of first name input field" />
                 </div>
-                <span asp-validation-for="Input.FirstName" class="-validation-error"></span>
+                <span asp-validation-for="Input.FirstName" class="-validation-error" id="firstName-validation-error" role="alert"></span>
             </div>
 
             <div class="input-field">
                 <div class="name-input input-text-field -text-field-input --icon --invert-icon">
-                    <input asp-for="Input.LastName" placeholder="Фамилия" type="text" />
+                    <input asp-for="Input.LastName" placeholder="Фамилия" type="text" autocomplete="lastName" aria-describedby="lastName-validation-error" aria-required="true" required />
                     <img src="/assets/person.svg" alt="Icon of last name input field" />
                 </div>
-                <span asp-validation-for="Input.LastName" class="-validation-error"></span>
+                <span asp-validation-for="Input.LastName" class="-validation-error" id="lastName-validation-error" role="alert"></span>
             </div>
 
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
-                    <input asp-for="Input.Password" placeholder="Парола" type="password" />
+                    <input asp-for="Input.Password" placeholder="Парола" type="password" autocomplete="password" aria-describedby="password-validation-error" aria-required="true" required />
                     <img src="/assets/keyIcon.svg" alt="Icon of password input field" />
                 </div>
-                <span asp-validation-for="Input.Password" class="-validation-error"></span>
+                <span asp-validation-for="Input.Password" class="-validation-error" id="password-validation-error" role="alert"></span>
             </div>
 
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
-                    <input asp-for="Input.ConfirmPassword" placeholder="Потвърди парола" type="password" />
+                    <input asp-for="Input.ConfirmPassword" placeholder="Потвърди парола" type="password" autocomplete="password" aria-describedby="confirmPassword-validation-error" aria-required="true" required />
                     <img src="/assets/keyIcon.svg" alt="Icon of confirm password input field" />
                 </div>
-                <span asp-validation-for="Input.ConfirmPassword" class="-validation-error"></span>
+                <span asp-validation-for="Input.ConfirmPassword" class="-validation-error" id="confirmPassword-validation-error" role="alert"></span>
             </div>
 
             <label class="-checkbox-label" asp-for="Input.AcceptTos">
