@@ -65,6 +65,21 @@
     text-shadow: 0 0 0.3px $white;
 }
 
+.-backdrop-blur {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(2px);
+    }
+}
+
 .-primary-section {
     position: relative;
     margin-bottom: 40px;
