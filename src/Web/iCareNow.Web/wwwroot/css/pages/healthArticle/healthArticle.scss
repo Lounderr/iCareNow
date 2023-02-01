@@ -16,7 +16,7 @@
 
     h1, h2 {
         font-weight: 600;
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
     }
 
     h1 {
@@ -25,6 +25,27 @@
 
     h2 {
         font-size: $heading;
+    }
+
+    .tts-speaker-container {
+        background: none;
+        color: $white;
+        display: inline-flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+        cursor: pointer;
+
+        .tts-text {
+            text-decoration: underline;
+        }
+
+        .tts-speaker, .tts-text {
+            display: none;
+        }
+
+        .active {
+            display: inline-block;
+        }
     }
 
     p, ul, ol {

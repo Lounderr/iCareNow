@@ -13,8 +13,14 @@
 <section class="article-container -primary-section" aria-label="Раздел информация за болестта">
     <div class="vertical-line"></div>
     <div class="article-summary">
-        <h1>Болно гърло</h1>
-        <p>Болките в гърлото са много често срещани и обикновено няма повод за притеснение. Най-често гърлото се подобрява в рамките на една седмица.</p>
+        <h1 class="article-title">Болно гърло</h1>
+        <button class="tts-speaker-container" onclick="clickTtsBtn()" aria-label="Click to listen to the article" tabindex="1" >
+            <span class="tts-speaker active">🔊</span>
+            <span class="tts-speaker">🔇</span>
+            <span class="tts-text active">Изслушай статията</span>
+            <span class="tts-text">Спри слушането</span>
+        </button>
+        <p class="article-description">Болките в гърлото са много често срещани и обикновено няма повод за притеснение. Най-често гърлото се подобрява в рамките на една седмица.</p>
     </div>
     <div class="specialist-advice">
         <details open class="-details --box --box-red" aria-label="Кога да позвъните на 112">
@@ -95,3 +101,7 @@
         <p>Последна проверка на информацията: 05 февруари 2021 г.<br />Следващият срок за преглед: 05 февруари 2024 г.</p>
     </article>
 </section>
+
+@section Scripts {
+    <script src="~/js/healthArticle.js" asp-append-version="true"></script>
+}
