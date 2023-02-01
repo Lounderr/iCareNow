@@ -63,6 +63,9 @@ header {
 
             .account-name {
                 color: $white;
+                text-align: right;
+                white-space: nowrap;
+                font-size: 1rem;
             }
 
             .profile-btn {
@@ -119,9 +122,9 @@ header {
                 }
             }
 
-            a {
+            .account-btn-container {
                 .account-name {
-                    display: none; // Try with block and first name when ready
+                    font-size: 0.9rem;
                 }
             }
 
@@ -160,9 +163,6 @@ header {
                 backdrop-filter: blur(4px);
             }
 
-            .logo {
-            }
-
             .nav-items {
                 display: flex;
                 height: 0;
@@ -174,8 +174,10 @@ header {
                 }
             }
 
-            .account-btn-container .profile-btn {
-                display: none !important;
+            .account-btn-container {
+                .account-name, .profile-btn {
+                    display: none;
+                }
             }
 
             .menu-btn,
