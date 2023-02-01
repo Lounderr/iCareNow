@@ -609,6 +609,10 @@ input[type="radio"].-checkbox {
         padding: 0 10px 0 15px;
         font-size: $inputs-buttons;
 
+        &::placeholder {
+            color: $gray;
+        }
+
         &:focus {
             outline: solid 1px $white;
         }
@@ -670,6 +674,7 @@ input[type="radio"].-checkbox {
     margin-top: 7px;
     color: $danger;
     width: 320px;
+    font-weight: 800;
 
     &:empty {
         display: none;
