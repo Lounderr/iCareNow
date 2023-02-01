@@ -4,7 +4,7 @@
 
 header {
     .navbar.--mobile-active {
-        background-color: #{$black}E0 !important;
+        background-color: #{$black}E0;
 
         .nav-items {
             opacity: 1;
@@ -38,7 +38,7 @@ header {
                 a {
                     width: 100%;
                     display: block;
-                    font-size: 1.2rem !important;
+                    font-size: 1.2rem;
                     padding: 20px 40px;
                     font-weight: 500;
                     text-transform: uppercase;
@@ -80,11 +80,11 @@ header {
         }
 
         .menu-btn {
-            display: none !important;
+            display: none;
         }
 
         .close-btn {
-            display: block !important;
+            display: block;
         }
     }
 }
@@ -97,10 +97,10 @@ header {
                 height: calc(100vh - $nav-height-phone);
                 padding: 20px 0px 110px 0px;
 
-                .nav-item a {
+                li.nav-item a {
                     display: block;
                     width: 100%;
-                    font-size: 1.4rem !important;
+                    font-size: 1.4rem;
                 }
 
                 .nav-bottom-button {

@@ -158,7 +158,7 @@
 
         .subsection ul,
         .subsection ol {
-            margin-left: 0.5rem !important;
+            margin-left: 0.5rem;
         }
 
         .revision-info p {
@@ -167,7 +167,7 @@
         }
     }
 
-    details {
-        width: 100% !important;
+    details.-details.--box {
+        width: 100%;
     }
 }
