@@ -23,6 +23,13 @@ html:focus-within {
     scroll-behavior: smooth;
 }
 
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
 body {
     overflow-x: hidden;
     min-height: 100vh;
@@ -117,12 +124,18 @@ details {
         scroll-behavior: auto;
     }
 
-    *,
+
+    *, //:not(.navbar):not(.nav-items),
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+
+    .navbar,
+    .nav-items {
+        transition-duration: 0.06s !important;
     }
 }

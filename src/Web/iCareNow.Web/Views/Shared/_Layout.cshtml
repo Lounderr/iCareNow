@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="~/css/layout/layout.min.css" asp-append-version="true" />
     @await this.RenderSectionAsync("Styles", required: false)
 </head>
-<body>
+<body class="preload">
     <header>
         <nav class="navbar">
             <h1 class="logo"><a asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a></h1>

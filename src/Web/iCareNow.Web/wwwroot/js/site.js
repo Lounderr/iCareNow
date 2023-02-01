@@ -1,4 +1,8 @@
-﻿const navbar = document.querySelector('.navbar');
+﻿window.onload = () => {
+    HTMLBodyElement.classList.toggle("preload");
+}
+
+const navbar = document.querySelector('.navbar');
 
 function shrinkNavOnScroll() {
     if (window.innerWidth > 950 && window.innerWidth < 1100) {
