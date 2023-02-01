@@ -61,7 +61,7 @@
 
             <label class="-checkbox-label" asp-for="Input.AcceptTos">
                 <input asp-for="Input.AcceptTos" class="-checkbox" type="checkbox" />
-                <span>Приемам <a class="-link --white" href="#">условията за ползване</a></span>
+                <span>Приемам <a class="-link --white" asp-area="" asp-controller="Policies" asp-action="Tos">условията за ползване</a>.</span>
             </label>
 
             <button type="submit" class="-button --large">@ViewData["Title"]</button>
