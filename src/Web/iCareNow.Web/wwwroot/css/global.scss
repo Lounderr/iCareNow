@@ -202,7 +202,6 @@ details.-details {
     summary {
         position: relative;
         padding-left: 1.5rem;
-        user-select: none !important;
         line-height: $p3;
         font-size: $p3;
         list-style-type: none;
@@ -224,7 +223,6 @@ details.-details {
         span {
             display: inline-block;
             font-weight: 600;
-            user-select: none !important;
             color: $black;
         }
     }
@@ -503,7 +501,6 @@ label.-checkbox-button {
         background-color: transparent;
         border: 1px solid $white;
         text-transform: uppercase;
-        user-select: none !important;
         font-weight: 700;
         font-size: 0.8rem;
         line-height: 35px;

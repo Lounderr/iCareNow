@@ -116,11 +116,9 @@ textarea {
 details {
     summary {
         list-style-type: none;
-        user-select: none !important;
         cursor: pointer;
 
         span {
-            user-select: none !important;
         }
     }
 }
