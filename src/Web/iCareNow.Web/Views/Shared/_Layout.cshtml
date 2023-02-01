@@ -13,12 +13,12 @@
 <body class="preload">
     <header>
         <nav class="navbar">
-            <h1 class="logo"><a asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a></h1>
+            <h1 class="logo"><a asp-area="" asp-controller="Home" asp-action="Index" tabindex="-1">@GlobalConstants.SystemName</a></h1>
 
             <ul class="nav-items">
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Health" asp-action="Index">Здраве от А до Я</a></li>
-                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index">За нас</a></li>                
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index" tabindex="-1">Начало</a></li>
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="Health" asp-action="Index" tabindex="-1">Здраве от А до Я</a></li>
+                <li class="nav-item"><a class="-underline-anim-white -hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index" tabindex="-1">За нас</a></li>
                 <li style="margin-top: auto;"></li>
                 <partial name="_NavPartial" />
             </ul>
@@ -37,17 +37,17 @@
         <div class="footer-info-container">
             <div class="description-container">
                 <h2>@GlobalConstants.SystemName</h2>
-                <p>Приложението @GlobalConstants.SystemName е медицински наръчник, който помага  да се справиш със симптомите на често срещаните болести чрез доказани и безопасни методи за лечение.</p>
+                <p aria-label="Какво е iCareNow?">Приложението @GlobalConstants.SystemName е медицински наръчник, който помага  да се справиш със симптомите на често срещаните болести чрез доказани и безопасни методи за лечение.</p>
                 <p>Нашето приложение предоставя и опцията за онлайн консултация с квалифицирани медицински лица.</p>
             </div>
             <div class="sitemap-container">
                 <h3>Карта на сайта</h3>
                 <nav>
-                    <a class="-hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index">Начало</a>
-                    <a class="-hover-text-white-glare" asp-area="" asp-controller="Health" asp-action="Index">Здраве от А до Я</a>
-                    <a class="-hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index">За нас</a>
-                    <a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Register">Регистрирай се</a>
-                    <a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Login">Впиши се</a>
+                    <a class="-hover-text-white-glare" asp-area="" asp-controller="Home" asp-action="Index" tabindex="3">Начало</a>
+                    <a class="-hover-text-white-glare" asp-area="" asp-controller="Health" asp-action="Index" tabindex="3">Здраве от А до Я</a>
+                    <a class="-hover-text-white-glare" asp-area="" asp-controller="AboutUs" asp-action="Index" tabindex="3">За нас</a>
+                    <a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Register" tabindex="3">Регистрирай се</a>
+                    <a class="-hover-text-white-glare" asp-area="Identity" asp-controller="Account" asp-action="Login" tabindex="3">Впиши се</a>
                 </nav>
             </div>
             <div class="feedback-container">
