@@ -8,7 +8,7 @@
 @if (this.SignInManager.IsSignedIn(this.User))
 {
     <div class="-content-panel">
-        <h2 class="panel-title">Добре дошъл, <br>@Model.User.FirstName</h2>
+        <h2 class="panel-title">Добре дошъл, <br><vc:user></vc:user></h2>
         <h4 class="panel-description">Информация, на която <br>можеш да се довериш</h4>
         <div class="panel-column-flex">
             <a asp-area="" asp-controller="Health" asp-action="Index" class="-button --large">Здраве от А до Я</a>

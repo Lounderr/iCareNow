@@ -11,23 +11,13 @@
 
     public class HomeController : BaseController
     {
-        private readonly UserManager<ApplicationUser> userManager;
-
-        public HomeController(UserManager<ApplicationUser> userManager)
+        public HomeController()
         {
-            this.userManager = userManager;
         }
 
         public async Task<IActionResult> Index()
         {
-            var user = await this.userManager.GetUserAsync(User);
-
-            var model = new HomeIndexViewModel
-            {
-                User = user,
-            };
-
-            return this.View(model);
+            return this.View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
