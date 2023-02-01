@@ -23,7 +23,7 @@
             <a class="-button --large @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Промени парола</a>
             <a class="-button --large @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Лични данни</a>
 
-            <button asp-controller="Account" asp-action="Logout" type="submit" class="-button --danger --large">Изход</button>
+            <button asp-controller="Account" asp-action="Logout" type="submit" role="alert" class="-button --danger --large">Изход</button>
         </form>
     </div>
 </section>
