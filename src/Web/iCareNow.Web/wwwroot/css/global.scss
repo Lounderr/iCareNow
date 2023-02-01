@@ -431,6 +431,10 @@ a.-button {
         color: $black;
         background-color: $white;
         border: 1px solid transparent;
+
+        &:hover {
+            background: #{$white}E0;
+        }
     }
 
     &.--danger {
