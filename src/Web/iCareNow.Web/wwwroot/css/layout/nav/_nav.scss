@@ -21,7 +21,7 @@ header {
         transition: 0.2s ease-in-out !important;
 
         .logo {
-            flex-grow: 1;
+            flex-basis: 160px;
             font-size: 2rem;
             font-weight: 500;
 
@@ -31,7 +31,7 @@ header {
         }
 
         .nav-items {
-            flex-grow: 3;
+            flex-basis: auto;
             display: flex;
             justify-content: center;
 
@@ -55,7 +55,7 @@ header {
         }
 
         .account-btn-container {
-            flex-grow: 1;
+            flex-basis: 160px;
             display: flex;
             justify-content: flex-end;
             gap: 15px;
@@ -105,7 +105,7 @@ header {
         .navbar {
             height: $nav-height-tablet;
             justify-content: space-around;
-            /*padding-inline: 0px;*/
+            padding-inline: 0;
 
             .logo {
                 font-size: 1.7rem;
