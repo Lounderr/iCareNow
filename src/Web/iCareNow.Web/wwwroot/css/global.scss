@@ -295,6 +295,11 @@ details.-details {
                 color: $black;
             }
 
+            strong {
+                font-size: calc($p3);
+                font-weight: 700;
+            }
+
             & *:first-child {
                 margin-top: 0;
 
