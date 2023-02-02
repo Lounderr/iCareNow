@@ -6,8 +6,10 @@
     using iCareNow.Data.Models;
     using iCareNow.Services.Mapping;
 
-    public class ArticleInputModel : IHaveCustomMappings
+    public class ArticleInputModel : IMapFrom<Article>, IHaveCustomMappings
     {
+        public string Title { get; set; }
+
         public string Content { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
