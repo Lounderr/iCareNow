@@ -18,14 +18,20 @@
 
         public IActionResult Index()
         {
-            return this.View();
+            var viewModel = new ArticlesListViewModel
+            {
+                Articles = this.articlesService.GetAll<ArticleInListViewModel>(),
+                ArticlesLetters = this.articlesService.GetAllArticlesLetters(),
+            };
+
+            return this.View(viewModel);
         }
 
         public async Task<IActionResult> HealthArticle(string id)
         {
-            var article = await this.articlesService.GetArticleByIdAsync<ArticleInputModel>(id);
+            var viewModel = await this.articlesService.GetArticleByIdAsync<ArticleInputModel>(id);
 
-            return this.View(article);
+            return this.View(viewModel);
         }
     }
 }

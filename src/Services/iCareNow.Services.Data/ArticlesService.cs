@@ -1,5 +1,6 @@
 ﻿namespace iCareNow.Services.Data
 {
+    using System.Collections.Generic;
     using System.Linq;
     using System.Net;
     using System.Threading.Tasks;
@@ -45,6 +46,36 @@
 
             await this.articlesRepository.AddAsync(article);
             await this.articlesRepository.SaveChangesAsync();
+        }
+
+        public IEnumerable<T> GetAll<T>()
+        {
+            return this.articlesRepository.AllAsNoTracking()
+                .To<T>()
+                .ToList();
+        }
+
+        public IEnumerable<ArticleLetter> GetAllArticlesLetters()
+        {
+            var articleLetters = new List<ArticleLetter>();
+
+            var letters = this.articlesRepository.AllAsNoTracking()
+                .Select(x => x.Title.FirstOrDefault())
+                .Distinct()
+                .ToList();
+
+            foreach (var letter in letters)
+            {
+                var articleLetter = new ArticleLetter
+                {
+                    Letter = letter,
+                    LetterSearchId = (int)letter - 1039,
+                };
+
+                articleLetters.Add(articleLetter);
+            }
+
+            return articleLetters;
         }
 
         public Task<T> GetArticleByIdAsync<T>(string id)
