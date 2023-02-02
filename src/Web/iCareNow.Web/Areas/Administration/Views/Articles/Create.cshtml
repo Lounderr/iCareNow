@@ -5,15 +5,19 @@
 
 <form method="post">
     <label asp-for="Title"></label>
-    <textarea asp-for="Title"></textarea>
+    <input asp-for="Title" />
     <span asp-validation-for="Title"></span>
 
     <label asp-for="Content"></label>
     <textarea asp-for="Content"></textarea>
     <span asp-validation-for="Content"></span>
 
+    <label asp-for="BioSystem"></label>
+    <input asp-for="BioSystem" />
+    <span asp-validation-for="BioSystem"></span>
+
     <label asp-for="Keywords"></label>
-    <textarea asp-for="Keywords"></textarea>
+    <input asp-for="Keywords"/>
     <span asp-validation-for="Keywords"></span>
 
     <input type="submit" value="Create" />
