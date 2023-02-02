@@ -76,6 +76,7 @@ using iCareNow.Services;
             services.AddTransient<INormalizer, UserDataNormalizer>();
 
             services.AddTransient<IUsersService, UsersService>();
+            services.AddTransient<IArticlesService, ArticlesService>();
         }
 
         private static void Configure(WebApplication app)
