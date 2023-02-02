@@ -15,13 +15,13 @@
 <section class="health-a-to-z -primary-section" aria-label="Раздел търсене на болест">
     <div class="searchbar-area">
         <h1 class="search-heading">Търси</h1>
-        <div class="search-input-field">
+        <form method="get" asp-controller="Health" asp-action="Index" class="search-input-field">
             <div class="search-text-field-input -text-field-input --icon --invert">
-                <input type="search" placeholder="Търси болест или симптом" role="search" />
+                <input type="search" asp-for="SearchModel.Search" placeholder="Търси болест или симптом" role="search" />
                 <img class="-input-icon" src="/assets/mag-glass.svg" aria-hidden="true" />
             </div>
-            <button class="search-button">ТЪРСИ</button>
-        </div>
+            <button class="search-button" type="submit">ТЪРСИ</button>
+        </form>
         <div class="letters" aria-label="Бутони за скок към буква">
             <a href="#Letter1" class="-hover-text-white-glare">А</a>
             <a href="#Letter2" class="-hover-text-white-glare">Б</a>
