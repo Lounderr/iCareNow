@@ -120,6 +120,10 @@
         padding-top: 50px;
         padding-inline: 30px;
 
+        details.-details.--box {
+            width: 100%;
+        }
+
         .vertical-line {
             display: none;
         }
@@ -186,9 +190,5 @@
             font-size: $legal;
             margin-bottom: 50px;
         }
-    }
-
-    details.-details.--box {
-        width: 100%;
     }
 }
