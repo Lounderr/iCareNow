@@ -9,10 +9,14 @@
     public class KeywordsService : IKeywordsService
     {
         private readonly IDeletableEntityRepository<Keyword> keywordsRepository;
+        private readonly IRepository<ArticleKeyword> articleKeywordRepository;
 
-        public KeywordsService(IDeletableEntityRepository<Keyword> keywordsRepository)
+        public KeywordsService(
+            IDeletableEntityRepository<Keyword> keywordsRepository,
+            IRepository<ArticleKeyword> articleKeywordRepository)
         {
             this.keywordsRepository = keywordsRepository;
+            this.articleKeywordRepository = articleKeywordRepository;
         }
 
         public async Task<Keyword> CreateKeywordAsync(string keyword)
@@ -34,6 +38,17 @@
             await this.keywordsRepository.SaveChangesAsync();
 
             return newKeywordEntity;
+        }
+
+        public async Task RemoveAllKeywordsForArticleAsync(string articleId)
+        {
+            var articleKeywords = this.articleKeywordRepository.All().Where(x => x.ArticleId == articleId);
+            foreach (var articleKeyword in articleKeywords)
+            {
+                this.articleKeywordRepository.Delete(articleKeyword);
+            }
+
+            await this.articleKeywordRepository.SaveChangesAsync();
         }
     }
 }

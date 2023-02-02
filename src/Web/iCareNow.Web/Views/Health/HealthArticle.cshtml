@@ -12,6 +12,9 @@
     <div class="background-darken"></div>
 </div>
 
+<a asp-area="Administration" asp-controller="Articles" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a asp-area="Administration" asp-controller="Articles" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+
 @Html.Raw(Model.Content)
 
 @section Scripts {

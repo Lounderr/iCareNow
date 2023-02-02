@@ -9,5 +9,11 @@ namespace iCareNow.Services.Data
         Task CreateAsync(CreateArticleInputModel inputModel);
 
         Task<T> GetArticleByIdAsync<T>(string id);
+
+        Task UpdateAsync(string id, EditArticleInputModel input);
+
+        Task<string> GetArticleKeywords(string articleId);
+
+        Task DeleteAsync(string id);
     }
 }
