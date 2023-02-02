@@ -1,0 +1,12 @@
+﻿@model iCareNow.Web.ViewModels.Articles.CreateArticleInputModel
+@{
+    this.ViewData["Title"] = "Create Article";
+}
+
+<form method="post">
+    <label asp-for="Content"></label>
+    <textarea asp-for="Content"></textarea>
+    <span asp-validation-for="Content"></span>
+
+    <input type="submit" value="Create" />
+</form>
