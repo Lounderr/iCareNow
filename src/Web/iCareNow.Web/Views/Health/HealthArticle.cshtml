@@ -1,4 +1,5 @@
 ﻿@using iCareNow.Common
+@model iCareNow.Web.ViewModels.Articles.ArticleInputModel
 @{
     this.ViewData["Title"] = "{Заглавие на статия}";
 }
@@ -10,7 +11,7 @@
     <img class="background-image" src="/assets/backgroundImage.jpg" alt="Background image" />
     <div class="background-darken"></div>
 </div>
-<section class="article-container -primary-section" aria-label="Раздел информация за болестта">
+@*<section class="article-container -primary-section" aria-label="Раздел информация за болестта">
     <div class="vertical-line"></div>
     <div class="article-summary">
         <h1 class="article-title">Болно гърло</h1>
@@ -100,7 +101,9 @@
         <p>Източник: <a href="#" class="-link" lang="en" hreflang="en">https://www.nhs.uk/conditions/sore-throat/</a><br />Политика на съдържанието на източника: <a href="#" class="-link">https://www.nhs.uk/our-policies/content-policy/</a></p>
         <p>Последна проверка на информацията: 05 февруари 2021 г.<br />Следващият срок за преглед: 05 февруари 2024 г.</p>
     </article>
-</section>
+</section>*@
+
+@Html.Raw(Model.Content)
 
 @section Scripts {
     <script src="~/js/healthArticle.js" asp-append-version="true"></script>

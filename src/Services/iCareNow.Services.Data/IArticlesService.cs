@@ -7,5 +7,7 @@ namespace iCareNow.Services.Data
     public interface IArticlesService
     {
         Task CreateAsync(CreateArticleInputModel inputModel);
+
+        Task<T> GetArticleByIdAsync<T>(string id);
     }
 }
