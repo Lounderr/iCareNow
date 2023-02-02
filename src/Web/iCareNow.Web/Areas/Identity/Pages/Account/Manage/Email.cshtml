@@ -27,7 +27,7 @@
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --disabled --invert-icon">
                     <input asp-for="Email" type="text" disabled aria-disabled="true"/>
-                    <img src="/assets/mailIcon.svg" aria-hidden="true" />
+                    <img class="-input-icon" src="/assets/mailIcon.svg" aria-hidden="true" />
                 </div>
                 <span asp-validation-for="Email" class="-validation-error"></span>
             </div>
@@ -35,7 +35,7 @@
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.NewEmail" placeholder="Нов имейл" type="text" />
-                    <img src="/assets/mailIcon.svg" aria-hidden="true" />
+                    <img class="-input-icon" src="/assets/mailIcon.svg" aria-hidden="true" />
                 </div>
                 <span asp-validation-for="Input.NewEmail" class="-validation-error"></span>
             </div>

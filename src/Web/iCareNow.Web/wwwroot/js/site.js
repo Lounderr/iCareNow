@@ -74,3 +74,28 @@ if (document.cookie.indexOf('.AspNet.Consent=') == -1) {
         consentWindow.style.display = "none";
     }, false);
 }
+
+const passInputContainers = document.querySelectorAll('.--password');
+
+if (passInputContainers != null) {
+
+    for (const passdInputContainer of passInputContainers) {
+        const showHideIcons = Array.from(passdInputContainer.children).filter(x => x.classList.contains("-password-show-toggle"));
+        const inputField = Array.from(passdInputContainer.children).filter(x => x.tagName == "INPUT")[0];
+
+        for (const showHideIcon of showHideIcons) {
+            showHideIcon.onclick = function () {
+                if (inputField.getAttribute("type") == "password") {
+                    inputField.setAttribute('type', 'text');
+                }
+                else {
+                    inputField.setAttribute('type', 'password');
+                }
+
+                for (const showHideIcon2 of showHideIcons) {
+                    showHideIcon2.classList.toggle("--active");
+                }
+            }
+        }
+    }
+}

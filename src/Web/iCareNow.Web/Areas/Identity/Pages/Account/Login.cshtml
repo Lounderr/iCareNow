@@ -23,23 +23,25 @@
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.Email" placeholder="Имейл" autocomplete="email" aria-describedby="email-validation-error" type="text" aria-required="true" required />
-                    <img src="/assets/mailIcon.svg" aria-hidden="true" />
+                    <img class="-input-icon" src="/assets/mailIcon.svg" aria-hidden="true" />
                 </div>
                 <span asp-validation-for="Input.Email" id="email-validation-error" class="-validation-error" role="alert"></span>
             </div>
             <div class="input-field">
-                <div class="input-text-field -text-field-input --icon --invert-icon">
+                <div class="input-text-field -text-field-input --icon --invert-icon --password">
                     <input asp-for="Input.Password" placeholder="Парола" autocomplete="password" aria-describedby="password-validation-error" required type="password" />
-                    <img src="/assets/keyIcon.svg" aria-hidden="true" />
+                    <img class="-input-icon" src="/assets/keyIcon.svg" aria-hidden="true" />
+                    <img class="-password-show-toggle --active" src="/assets/eye.svg" aria-hidden="true" />
+                    <img class="-password-show-toggle" src="/assets/eyeBlind.svg" aria-hidden="true" />
                 </div>
                 <span asp-validation-for="Input.Password" id="password-validation-error" class="-validation-error" role="alert"></span>
             </div>
+
 
             <label class="-checkbox-label">
                 <input class="-checkbox" type="checkbox" />
                 <span>Запомни ме</span>
             </label>
-
             <div asp-validation-summary="All" class="-validation-error"></div>
 
             <button type="submit" class="-button --large">@ViewData["Title"]</button>
