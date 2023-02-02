@@ -55,7 +55,7 @@
         {
             var article = await this.articlesRepository.All().FirstOrDefaultAsync(x => x.Id == id);
             article.Title = input.Title;
-            article.Content = input.Content;
+            article.Content = WebUtility.HtmlEncode(input.Content);
             article.BioSystem = input.BioSystem;
 
             await this.keywordsService.RemoveAllKeywordsForArticleAsync(id);
