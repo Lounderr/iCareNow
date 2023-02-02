@@ -10,6 +10,9 @@
         [Required]
         public string Content { get; set; }
 
+        [Required]
+        public string BioSystem { get; set; }
+
         public string Keywords { get; set; }
     }
 }

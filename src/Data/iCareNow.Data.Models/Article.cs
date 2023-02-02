@@ -21,6 +21,9 @@
         public string Title { get; set; }
 
         [Required]
+        public string BioSystem { get; set; }
+
+        [Required]
         [Column(TypeName = "ntext")]
         public string Content { get; set; }
 
