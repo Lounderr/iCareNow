@@ -641,6 +641,8 @@ input[type="radio"].-checkbox {
         }
 
         > img {
+            max-width: 17px;
+            height: 18px;
             position: absolute;
             top: 50%;
             left: 20px;
