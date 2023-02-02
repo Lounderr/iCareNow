@@ -1,24 +1,67 @@
 ﻿@model iCareNow.Web.ViewModels.Articles.CreateArticleInputModel
 @{
-    this.ViewData["Title"] = "Create Article";
+    this.ViewData["Title"] = "Добавяне на статия";
 }
 
-<form method="post">
-    <label asp-for="Title"></label>
-    <input asp-for="Title" />
-    <span asp-validation-for="Title"></span>
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/admin/createArticle.min.css" asp-append-version="true" />
+}
 
-    <label asp-for="Content"></label>
-    <textarea asp-for="Content"></textarea>
-    <span asp-validation-for="Content"></span>
 
-    <label asp-for="BioSystem"></label>
-    <input asp-for="BioSystem" />
-    <span asp-validation-for="BioSystem"></span>
 
-    <label asp-for="Keywords"></label>
-    <input asp-for="Keywords"/>
-    <span asp-validation-for="Keywords"></span>
 
-    <input type="submit" value="Create" />
-</form>
+<div class="page-background">
+    <img class="background-image" src="/assets/backgroundImage.jpg" aria-hidden="true" />
+    <div class="background-darken"></div>
+</div>
+<section class="first-section -primary-section --responsive-top-padding">
+
+    <div class="content-panel -content-panel --center">
+        <h2 class="panel-title">@ViewData["Title"]</h2>
+        <h4 class="panel-description">Въведете данните за статията</h4>
+
+        <form method="post" class="content-panel-form panel-column-flex">
+
+
+            <div class="input-field">
+                <div class="input-text-field -text-field-input --invert">
+                    <input asp-for="Title" placeholder="Заглавие" type="text" required />
+                </div>
+                <span asp-validation-for="Title" class="-validation-error" role="alert"></span>
+            </div>
+
+            <div class="input-field">
+                <div class="-select --large --invert">
+                    <select asp-for="BioSystem" name="BioSys" id="BioSys">
+                        <option value="" disabled selected>Избери биологична система</option>
+                        <option value="BioSys">BioSys</option>
+                        <option value="BioSys">BioSys</option>
+                        <option value="BioSys">BioSys</option>
+                        <option value="BioSys">BioSys</option>
+                    </select>
+                </div>
+                <span asp-validation-for="BioSystem" class="-validation-error" role="alert"></span>
+            </div>
+
+            <div class="input-field">
+                <textarea class="-textarea --resize-vertical --invert content-textarea" asp-for="Content" placeholder="Съдържание" required></textarea>
+                <span asp-validation-for="Content" class="-validation-error" role="alert"></span>
+            </div>
+
+            <div class="input-field">
+                <textarea class="-textarea --resize-vertical --invert content-textarea" asp-for="Keywords" placeholder="Ключови думи" required></textarea>
+                <span asp-validation-for="Keywords" class="-validation-error" role="alert"></span>
+            </div>
+
+
+
+
+            <button type="submit" value="Create" class="-button --large">@ViewData["Title"]</button>
+        </form>
+    </div>
+</section>
+
+@*
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}*@

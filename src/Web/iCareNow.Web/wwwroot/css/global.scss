@@ -146,6 +146,85 @@ ol.-list, ul.-list {
     }
 }
 
+.-select {
+    display: inline-block;
+    position: relative;
+    height: 36px;
+    width: fit-content;
+
+    select {
+        height: 100%;
+        width: 100%;
+        padding-inline: 36px;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.8rem;
+        line-height: 35px;
+        white-space: nowrap;
+        transition: ease-in-out 0.2s;
+
+        option[disabled] {
+            display: none;
+        }
+
+        &[disabled] {
+            background-color: $gray;
+        }
+
+
+        &:focus {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(2px);
+    }
+
+    &.--small {
+        height: 30px;
+
+        select {
+            padding-inline: 30px;
+            line-height: 28px;
+            font-size: 0.75rem;
+        }
+    }
+
+    &.--large {
+        height: 45px;
+
+        select {
+            padding-inline: 45px;
+            line-height: 45px;
+            font-size: 1rem;
+        }
+    }
+
+    &.--invert {
+        select {
+            color: $black;
+            background-color: $white;
+            border: 1px solid transparent;
+
+            &:hover {
+                background: #{$white}E0;
+            }
+        }
+    }
+}
+
 .-textarea {
     height: 200px;
     width: 320px;
@@ -206,7 +285,7 @@ a.-underline-anim-white {
 }
 
 details.-details {
-   summary {
+    summary {
         position: relative;
         padding-left: 1.5rem;
         line-height: $p3;

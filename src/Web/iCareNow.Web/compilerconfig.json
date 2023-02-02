@@ -34,5 +34,9 @@
   {
     "outputFile": "wwwroot/css/pages/policies/policies.css",
     "inputFile": "wwwroot/css/pages/policies/policies.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/admin/createArticle.css",
+    "inputFile": "wwwroot/css/pages/admin/createArticle.scss"
   }
 ]
