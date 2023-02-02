@@ -4,6 +4,8 @@ const synth = window.speechSynthesis;
 function clickTtsBtn() {
     if (synth.speaking) {
         synth.cancel();
+
+        toggleButtonState();
     }
     else {
         const articleTitle = document.querySelector(".article-title").textContent;
