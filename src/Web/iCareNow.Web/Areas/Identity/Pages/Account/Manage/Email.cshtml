@@ -13,7 +13,7 @@
 
 
 <div class="page-background">
-    <img class="background-image" src="/assets/backgroundImage.jpg" alt="Background image" />
+    <img class="background-image" src="/assets/backgroundImage.jpg" aria-hidden="true" />
     <div class="background-darken"></div>
 </div>
 
@@ -26,8 +26,8 @@
         <form id="email-form" method="post" class="panel-column-flex">
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --disabled --invert-icon">
-                    <input asp-for="Email" type="text" disabled />
-                    <img src="/assets/mailIcon.svg" alt="Icon of disabled current email input field" />
+                    <input asp-for="Email" type="text" disabled aria-disabled="true"/>
+                    <img src="/assets/mailIcon.svg" aria-hidden="true" />
                 </div>
                 <span asp-validation-for="Email" class="-validation-error"></span>
             </div>
@@ -35,7 +35,7 @@
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
                     <input asp-for="Input.NewEmail" placeholder="Нов имейл" type="text" />
-                    <img src="/assets/mailIcon.svg" alt="Icon of new email input field" />
+                    <img src="/assets/mailIcon.svg" aria-hidden="true" />
                 </div>
                 <span asp-validation-for="Input.NewEmail" class="-validation-error"></span>
             </div>

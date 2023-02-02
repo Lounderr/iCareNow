@@ -10,7 +10,7 @@
 }
 
 <div class="page-background">
-    <img class="background-image" src="/assets/backgroundImage.jpg" alt="Background image" />
+    <img class="background-image" src="/assets/backgroundImage.jpg" aria-hidden="true" />
     <div class="background-darken"></div>
 </div>
 
@@ -27,7 +27,7 @@
                 <div class="input-field">
                     <div class="input-text-field -text-field-input --icon --invert-icon">
                         <input asp-for="Input.Password" placeholder="Парола" type="password" />
-                        <img src="/assets/keyIcon.svg" alt="Icon of password input field" />
+                        <img src="/assets/keyIcon.svg" aria-hidden="true" />
                     </div>
                     <div asp-validation-summary="All" class="-validation-error"></div>
                     <span asp-validation-for="Input.Password" class="-validation-error"></span>

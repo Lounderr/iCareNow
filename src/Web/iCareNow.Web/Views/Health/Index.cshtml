@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/css/pages/healthAtoZ/healthAtoZ.min.css" asp-append-version="true" />
 }
 <div class="page-background">
-    <img class="background-image" src="/assets/backgroundImage.jpg" alt="Background image" />
+    <img class="background-image" src="/assets/backgroundImage.jpg" aria-hidden="true" />
     <div class="background-darken"></div>
 </div>
 
@@ -16,8 +16,8 @@
         <h1 class="search-heading">Търси</h1>
         <div class="search-input-field">
             <div class="search-text-field-input -text-field-input --icon --invert">
-                <input type="text" placeholder="Търси болест или симптом" />
-                <img src="/assets/mag-glass.svg" alt="Icon of search input field" />
+                <input type="search" placeholder="Търси болест или симптом" role="search" />
+                <img src="/assets/mag-glass.svg" aria-hidden="true" />
             </div>
             <button class="search-button">ТЪРСИ</button>
         </div>
