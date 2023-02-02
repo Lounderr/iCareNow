@@ -64,6 +64,8 @@
                 <span>Приемам <a class="-link --white" asp-area="" asp-controller="Policies" asp-action="Tos">условията за ползване</a>.</span>
             </label>
 
+            <div asp-validation-summary="All" class="-validation-error"></div>
+
             <button type="submit" class="-button --large">@ViewData["Title"]</button>
         </form>
     </div>

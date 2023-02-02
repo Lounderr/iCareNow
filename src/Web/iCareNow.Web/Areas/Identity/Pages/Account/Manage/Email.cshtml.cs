@@ -44,9 +44,8 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
-            [Display(Name = "New email")]
+            [Required(ErrorMessage = "Имейлът е задължителен.")]
+            [EmailAddress(ErrorMessage = "Имейлът е невалиден.")]
             public string NewEmail { get; set; }
         }
 
@@ -97,14 +96,14 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
                     protocol: Request.Scheme);
                 await _emailSender.SendEmailAsync(
                     Input.NewEmail,
-                    "Confirm your email",
-                    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    "Потвърдете своя имейл",
+                    $"Моля потвърдете своя имейл като <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>натиснете тук</a>.");
 
-                StatusMessage = "Confirmation link to change email sent. Please check your email.";
+                StatusMessage = "Имейл за потвържение бе изпратен. Моля проверете пощата си.";
                 return RedirectToPage();
             }
 
-            StatusMessage = "Your email is unchanged.";
+            StatusMessage = "Вашият имейл бе променен.";
             return RedirectToPage();
         }
 
@@ -133,10 +132,10 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
                 protocol: Request.Scheme);
             await _emailSender.SendEmailAsync(
                 email,
-                "Confirm your email",
-                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                "Потвърдете своя имейл",
+                $"Моля потвърдете своя имейл като <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>натиснете тук</a>.");
 
-            StatusMessage = "Verification email sent. Please check your email.";
+            StatusMessage = "Имейл за потвържение бе изпратен. Моля проверете пощата си.";
             return RedirectToPage();
         }
     }

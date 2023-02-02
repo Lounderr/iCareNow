@@ -89,7 +89,7 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            StatusMessage = "Профилът Ви бе актуализиран.";
             return RedirectToPage();
         }
     }

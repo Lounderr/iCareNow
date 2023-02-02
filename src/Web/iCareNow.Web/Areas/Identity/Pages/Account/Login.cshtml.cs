@@ -42,15 +42,14 @@
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "Имейлът е задължителен.")]
+            [EmailAddress(ErrorMessage = "Имейлът е невалиден.")]
             public string Email { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Паролата е задължителна.")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
-            [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
         }
 
@@ -98,7 +97,7 @@
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Грешен имейл или парола.");
                     return Page();
                 }
             }

@@ -51,30 +51,25 @@
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Имейлът е задължителен.")]
             [EmailAddress]
-            [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
-            [StringLength(80, ErrorMessage = "FirstName is too long")]
-            [Display(Name = "FirstName")]
+            [Required(ErrorMessage = "Името е задължително.")]
+            [StringLength(80, ErrorMessage = "Името е прекалено дълго.")]
             public string FirstName { get; set; }
 
-            [Required]
-            [StringLength(80, ErrorMessage = "LastName is too long")]
-            [Display(Name = "LastName")]
+            [Required(ErrorMessage = "Фамилията е задължителна.")]
+            [StringLength(80, ErrorMessage = "Фамилията е прекалено дълга.")]
             public string LastName { get; set; }
 
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required(ErrorMessage = "Паролата е задължителна.")]
+            [StringLength(100, ErrorMessage = "Паролата трябва да бъде между {1} и {0} брой знаци.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "Паролите не съвпадат.")]
             public string ConfirmPassword { get; set; }
 
             public bool AcceptTos { get; set; }
@@ -114,8 +109,8 @@
                         values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await _emailSender.SendEmailAsync(Input.Email, "Потвърдете своя имейл",
+                        $"Моля потвърдете имейла си, <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>натискайки тук</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

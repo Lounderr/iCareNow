@@ -30,7 +30,7 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Паролата е задължителна.")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
         }
@@ -62,7 +62,7 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
             {
                 if (!await _userManager.CheckPasswordAsync(user, Input.Password))
                 {
-                    ModelState.AddModelError(string.Empty, "Incorrect password.");
+                    ModelState.AddModelError(string.Empty, "Грешна парола.");
                     return Page();
                 }
             }

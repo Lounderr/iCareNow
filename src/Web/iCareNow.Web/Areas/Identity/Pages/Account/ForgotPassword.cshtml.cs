@@ -31,8 +31,8 @@
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "Имейлът е задължителен.")]
+            [EmailAddress(ErrorMessage = "Имейлът е невалиден.")]
             public string Email { get; set; }
         }
 
@@ -59,8 +59,8 @@
 
                 await _emailSender.SendEmailAsync(
                     Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    "Промени парола",
+                    $"Моля променете своята парола като <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>натиснете тук</a>.");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
