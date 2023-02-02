@@ -24,14 +24,14 @@
 
 
             <div class="input-field">
-                <div class="input-text-field -text-field-input --invert">
+                <div class="input-text-field -text-field-input">
                     <input asp-for="Title" placeholder="Заглавие" type="text" required />
                 </div>
                 <span asp-validation-for="Title" class="-validation-error" role="alert"></span>
             </div>
 
             <div class="input-field">
-                <div class="-select --large --invert">
+                <div class="-select --large">
                     <select asp-for="BioSystem" name="BioSys" id="BioSys">
                         <option value="" disabled selected>Избери биологична система</option>
                         <option value="BioSys">BioSys</option>
@@ -44,12 +44,12 @@
             </div>
 
             <div class="input-field">
-                <textarea class="-textarea --resize-vertical --invert content-textarea" asp-for="Content" placeholder="Съдържание" required></textarea>
+                <textarea class="-textarea --resize-vertical content-textarea" asp-for="Content" placeholder="Съдържание" required></textarea>
                 <span asp-validation-for="Content" class="-validation-error" role="alert"></span>
             </div>
 
             <div class="input-field">
-                <textarea class="-textarea --resize-vertical --invert content-textarea" asp-for="Keywords" placeholder="Ключови думи" required></textarea>
+                <textarea class="-textarea --resize-vertical content-textarea" asp-for="Keywords" placeholder="Ключови думи" required></textarea>
                 <span asp-validation-for="Keywords" class="-validation-error" role="alert"></span>
             </div>
 
