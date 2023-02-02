@@ -26,6 +26,10 @@
 
         public DbSet<Article> Articles { get; set; }
 
+        public DbSet<Keyword> Keywords { get; set; }
+
+        public DbSet<ArticleKeyword> ArticleKeywords { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
