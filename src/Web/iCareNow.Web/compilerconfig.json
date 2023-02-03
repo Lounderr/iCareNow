@@ -36,7 +36,7 @@
     "inputFile": "wwwroot/css/pages/policies/policies.scss"
   },
   {
-    "outputFile": "wwwroot/css/pages/admin/createArticle.css",
-    "inputFile": "wwwroot/css/pages/admin/createArticle.scss"
+    "outputFile": "wwwroot/css/pages/admin/crudArticle.css",
+    "inputFile": "wwwroot/css/pages/admin/crudArticle.scss"
   }
 ]

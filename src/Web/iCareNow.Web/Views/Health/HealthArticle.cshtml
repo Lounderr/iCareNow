@@ -12,10 +12,13 @@
     <div class="background-darken"></div>
 </div>
 
-<a asp-area="Administration" asp-controller="Articles" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-<a asp-area="Administration" asp-controller="Articles" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+
 
 @Html.Raw(Model.Content)
+<div class="admin-controls">
+    <a class="-button --invert" asp-area="Administration" asp-controller="Articles" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a class="-button --danger" asp-area="Administration" asp-controller="Articles" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+</div>
 
 @section Scripts {
     <script src="~/js/healthArticle.js" asp-append-version="true"></script>
