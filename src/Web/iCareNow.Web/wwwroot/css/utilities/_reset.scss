@@ -20,9 +20,13 @@
     /*outline: 1px dotted red;*/
 }
 
-*:focus-visible {
-    z-index: 99;
-    outline: dashed 4px crimson;
+*:not(input:not(input[type="checkbox"]))
+:not(textarea)
+:not(select)
+:focus-visible {
+    z-index: 99 !important;
+    outline: dashed 0.2rem crimson !important;
+    outline-offset: 0.2rem !important;
 }
 
 html:focus-within {
