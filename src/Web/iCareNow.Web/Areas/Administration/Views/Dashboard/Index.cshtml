@@ -1,7 +1,23 @@
 ﻿@{
-    this.ViewData["Title"] = "Admin dashboard";
+    this.ViewData["Title"] = "Администраторски панел";
 }
 
-<h1>@this.ViewData["Title"]</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/admin/crudArticle.min.css" asp-append-version="true" />
+}
 
-<button asp-area="Administration" asp-controller="Artiles" asp-action="Create">Create Article</button>
+<div class="page-background">
+    <img class="background-image" src="/assets/backgroundImage.jpg" aria-hidden="true" />
+    <div class="background-darken"></div>
+</div>
+
+<section class="first-section -primary-section --responsive-top-padding">
+
+    <div class="content-panel -content-panel --center">
+        <h2 class="panel-title">@ViewData["Title"]</h2>
+
+        <form method="post" class="content-panel-form panel-column-flex">
+            <button class="-button --large" asp-area="Administration" asp-controller="Artiles" asp-action="Create">Създай статия</button>
+        </form>
+    </div>
+</section>
