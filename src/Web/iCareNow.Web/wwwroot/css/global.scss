@@ -903,6 +903,10 @@ input[type="radio"].-checkbox {
         font-size: $title;
         font-weight: 600;
         margin: 0 0 20px 0;
+
+        &.--extra-margin {
+            margin: 0 0 80px 0;
+        }
     }
 
     > .panel-description {
