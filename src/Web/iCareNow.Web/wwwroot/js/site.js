@@ -1,8 +1,61 @@
-﻿window.onload = () => {
+﻿const navbar = document.querySelector('.navbar');
+
+window.onload = () => {
     document.body.classList.toggle("preload");
 }
 
-const navbar = document.querySelector('.navbar');
+window.onresize = () => {
+    navbar.classList.remove('--mobile-active');
+    document.body.classList.remove('--disable-body-scroll');
+    shrinkNavOnScroll();
+}
+
+window.onscroll = () => {
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+
+    shrinkNavOnScroll()
+};
+
+showCookieConsent();
+togglePasswordVisibility();
+
+function showCookieConsent() {
+    if (document.cookie.indexOf('.AspNet.Consent=') == -1) {
+        const consentWindow = document.querySelector("#cookieConsent");
+        const button = document.querySelector("#cookieConsent .cookieConsentButton");
+        button.addEventListener("click", function () {
+            document.cookie = button.dataset.cookieString;
+            consentWindow.style.display = "none";
+        }, false);
+    }
+}
+
+function togglePasswordVisibility() {
+    const eyeIcons = document.querySelectorAll('.-password-show-toggle');
+
+    for (const eyeIcon of eyeIcons) {
+        eyeIcon.addEventListener('click', (event) => {
+            const inputElement = event.target.parentElement.querySelector('input');
+
+            if (inputElement.type === 'password') {
+                inputElement.type = 'text'
+            }
+            else {
+                inputElement.type = 'password'
+            }
+
+            const inputEyes = event.target.parentElement.querySelectorAll('.-password-show-toggle');
+
+            for (const inputEye of inputEyes) {
+                inputEye.classList.toggle("--active");
+            }
+        })
+    }
+}
 
 function shrinkNavOnScroll() {
     if (window.innerWidth > 950 && window.innerWidth < 1100) {
@@ -25,77 +78,7 @@ function shrinkNavOnScroll() {
     }
 }
 
-
-addEventListener("resize", (event) => {
-    navbar.classList.remove('--mobile-active');
-    document.body.classList.remove('--disable-body-scroll');
-    shrinkNavOnScroll();
-});
-
 function toggleMenu() {
     navbar.classList.toggle('--mobile-active');
     document.body.classList.toggle('--disable-body-scroll');
-}
-
-const filtersOpen = document.querySelector('.filters-open');
-function toggleFilters() {
-    filtersOpen.classList.toggle('hidden');
-}
-
-var prevScrollpos = window.pageYOffset;
-function hideNavOnScroll() {
-    if (!navbar.classList.contains('--mobile-active') && window.innerWidth <= 950) {
-        currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.querySelector(".navbar").style.top = "0";
-        } else {
-            document.querySelector(".navbar").style.top = "-55px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-}
-
-window.onscroll = () => {
-    if (window.scrollY > 0) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-
-    //hideNavOnScroll();
-    shrinkNavOnScroll()
-};
-
-if (document.cookie.indexOf('.AspNet.Consent=') == -1) {
-    var consentWindow = document.querySelector("#cookieConsent");
-    var button = document.querySelector("#cookieConsent .cookieConsentButton");
-    button.addEventListener("click", function () {
-        document.cookie = button.dataset.cookieString;
-        consentWindow.style.display = "none";
-    }, false);
-}
-
-const passInputContainers = document.querySelectorAll('.--password');
-
-if (passInputContainers != null) {
-
-    for (const passdInputContainer of passInputContainers) {
-        const showHideIcons = Array.from(passdInputContainer.children).filter(x => x.classList.contains("-password-show-toggle"));
-        const inputField = Array.from(passdInputContainer.children).filter(x => x.tagName == "INPUT")[0];
-
-        for (const showHideIcon of showHideIcons) {
-            showHideIcon.onclick = function () {
-                if (inputField.getAttribute("type") == "password") {
-                    inputField.setAttribute('type', 'text');
-                }
-                else {
-                    inputField.setAttribute('type', 'password');
-                }
-
-                for (const showHideIcon2 of showHideIcons) {
-                    showHideIcon2.classList.toggle("--active");
-                }
-            }
-        }
-    }
 }

@@ -20,6 +20,8 @@
     <div class="-content-panel --center">
         <h2 class="panel-title">@ViewData["Title"]</h2>
         <h4 class="panel-description">Акаунтът <strong class="-font-weight-700">@this.User.Identity.Name</strong> не може да бъде възстановен след изтриване</h4>
+       
+        <div asp-validation-summary="All" class="-validation-error --all"></div>
 
         <form id="delete-user" method="post" class="panel-column-flex">
             @if (Model.RequirePassword)
@@ -31,7 +33,6 @@
                         <img class="-password-show-toggle --active" src="/assets/eye.svg" aria-hidden="true" />
                         <img class="-password-show-toggle" src="/assets/eyeBlind.svg" aria-hidden="true" />
                     </div>
-                    <div asp-validation-summary="All" class="-validation-error"></div>
                     <span asp-validation-for="Input.Password" class="-validation-error"></span>
                 </div>
             }

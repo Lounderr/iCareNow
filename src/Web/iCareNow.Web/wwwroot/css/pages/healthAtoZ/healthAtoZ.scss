@@ -32,8 +32,9 @@
                     border: none;
                     font-weight: 600;
 
-                    &:focus {
-                        outline: none;
+                    &:focus-visible {
+                        outline-offset: -2px;
+                        outline: solid 2px #{$black}30;
                     }
                 }
             }

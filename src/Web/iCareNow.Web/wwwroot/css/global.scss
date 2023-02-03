@@ -569,11 +569,6 @@ label.-checkbox-button {
     input[type="checkbox"] {
         position: absolute;
         opacity: 0;
-
-        &:focus-visible + span {
-            z-index: 99;
-            outline: dashed 4px crimson;
-        }
     }
 
     input:checked + span {
@@ -781,6 +776,12 @@ input[type="radio"].-checkbox {
     color: $danger;
     width: 320px;
     font-weight: 800;
+
+    &.--all {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
     &:empty {
         display: none;

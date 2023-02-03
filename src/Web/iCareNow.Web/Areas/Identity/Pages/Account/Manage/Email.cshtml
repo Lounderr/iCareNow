@@ -23,6 +23,8 @@
         <h2 class="panel-title">@ViewData["Title"]</h2>
         <h4 class="panel-description">Променете своя имейл</h4>
 
+        <div asp-validation-summary="All" class="-validation-error --all"></div>
+
         <form id="email-form" method="post" class="panel-column-flex">
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --disabled --invert-icon">
@@ -40,7 +42,6 @@
                 <span asp-validation-for="Input.NewEmail" class="-validation-error"></span>
             </div>
             <partial name="_StatusMessage" model="Model.StatusMessage" />
-            <div asp-validation-summary="All" class="-validation-error"></div>
 
             <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="-button --large">Промени</button>
         </form>
