@@ -4,6 +4,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
+<li style="margin-top: auto;"></li>
 @if (this.SignInManager.IsSignedIn(this.User))
 {
     <li class="nav-bottom-button"><a asp-area="Identity" asp-page="/Account/Manage/Index" class="-button --large">Профил</a></li>
