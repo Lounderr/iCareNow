@@ -32,13 +32,7 @@
 
             <div class="input-field">
                 <div class="-select --large">
-                    <select asp-for="BioSystem" name="BioSys" id="BioSys">
-                        <option value="" disabled selected>Избери биологична система</option>
-                        <option value="BioSys">BioSys</option>
-                        <option value="BioSys">BioSys</option>
-                        <option value="BioSys">BioSys</option>
-                        <option value="BioSys">BioSys</option>
-                    </select>
+                    <select asp-for="BioSystem" asp-items="@Model.BioSysytemItems"></select>
                 </div>
                 <span asp-validation-for="BioSystem" class="-validation-error" role="alert"></span>
             </div>

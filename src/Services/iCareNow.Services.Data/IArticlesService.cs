@@ -1,9 +1,11 @@
-﻿using iCareNow.Web.ViewModels.Articles;
-
-using System.Threading.Tasks;
-
-namespace iCareNow.Services.Data
+﻿namespace iCareNow.Services.Data
 {
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
+    using iCareNow.Web.ViewModels.Articles;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+
     public interface IArticlesService
     {
         Task CreateAsync(CreateArticleInputModel inputModel);
@@ -15,5 +17,7 @@ namespace iCareNow.Services.Data
         Task<string> GetArticleKeywords(string articleId);
 
         Task DeleteAsync(string id);
+
+        IEnumerable<SelectListItem> PopulateBioSystems();
     }
 }

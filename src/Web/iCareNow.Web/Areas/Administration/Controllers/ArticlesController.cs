@@ -23,15 +23,25 @@ namespace iCareNow.Web.Areas.Administration.Controllers
 
         public IActionResult Create()
         {
-            return this.View();
+            var viewModel = new CreateArticleInputModel();
+
+            viewModel.BioSysytemItems = this.articlesService.PopulateBioSystems();
+
+            return this.View(viewModel);
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateArticleInputModel input)
         {
+            if (!this.ModelState.IsValid)
+            {
+                input.BioSysytemItems = this.articlesService.PopulateBioSystems();
+                return this.View(input);
+            }
+
             await this.articlesService.CreateAsync(input);
 
-            return this.RedirectToAction("Index", "Dashboard", new { area = "Administration" });
+            return this.RedirectToAction("Index", "Health", new { area = "" });
         }
 
         public async Task<IActionResult> Edit(string id)
@@ -43,6 +53,7 @@ namespace iCareNow.Web.Areas.Administration.Controllers
             }
 
             input.Keywords = await this.articlesService.GetArticleKeywords(id);
+            input.BioSysytemItems = this.articlesService.PopulateBioSystems();
 
             return this.View(input);
         }
@@ -53,6 +64,7 @@ namespace iCareNow.Web.Areas.Administration.Controllers
             if (!this.ModelState.IsValid)
             {
                 input.Keywords = await this.articlesService.GetArticleKeywords(id);
+                input.BioSysytemItems = this.articlesService.PopulateBioSystems();
 
                 return this.View(input);
             }

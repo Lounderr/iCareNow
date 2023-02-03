@@ -1,13 +1,17 @@
 ﻿namespace iCareNow.Services.Data
 {
+    using System.Collections.Generic;
     using System.Linq;
     using System.Net;
+    using System.Reflection;
     using System.Threading.Tasks;
 
     using iCareNow.Data.Common.Repositories;
     using iCareNow.Data.Models;
     using iCareNow.Services.Mapping;
     using iCareNow.Web.ViewModels.Articles;
+
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
 
     public class ArticlesService : IArticlesService
@@ -98,6 +102,18 @@
                 .ToListAsync();
 
             return string.Join(", ", keywords);
+        }
+
+        public IEnumerable<SelectListItem> PopulateBioSystems()
+        {
+            var systems = typeof(BioSystem).GetFields(BindingFlags.Public | BindingFlags.Static)
+                .Where(f => f.FieldType == typeof(string))
+                .ToDictionary(
+                    x => x.Name,
+                    y => (string)y.GetValue(null))
+                .Select(x => new SelectListItem(x.Value, x.Value));
+
+            return systems;
         }
     }
 }
