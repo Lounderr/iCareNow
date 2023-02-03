@@ -7,5 +7,7 @@
     public interface IKeywordsService
     {
         Task<Keyword> CreateKeywordAsync(string keyword);
+
+        Task RemoveAllKeywordsForArticleAsync(string articleId);
     }
 }

@@ -32,3 +32,8 @@ function toggleButtonState() {
         readArticleButton.children[i].classList.toggle("active");
     }
 }
+
+function toggleArticleDeleteConfirmation() {
+    let deleteOverlay = document.querySelector(".admin-delete-confirm-darken");
+    deleteOverlay.classList.toggle("-hide");
+}

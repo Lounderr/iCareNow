@@ -25,6 +25,11 @@
         {
             var article = await this.articlesService.GetArticleByIdAsync<ArticleInputModel>(id);
 
+            if (article == null)
+            {
+                return this.NotFound();
+            }
+
             return this.View(article);
         }
     }
