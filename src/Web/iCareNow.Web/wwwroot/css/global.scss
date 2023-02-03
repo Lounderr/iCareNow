@@ -206,7 +206,7 @@ a.-underline-anim-white {
 }
 
 details.-details {
-   summary {
+    summary {
         position: relative;
         padding-left: 1.5rem;
         line-height: $p3;
@@ -685,6 +685,14 @@ input[type="radio"].-checkbox {
 
             &:focus {
                 outline: solid 1px $black;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+                transition: background-color 5000s !important;
+                -webkit-text-fill-color: $black !important;
             }
         }
     }
