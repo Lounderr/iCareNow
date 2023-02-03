@@ -2,21 +2,6 @@
 @import "../../utilities/_functions.scss";
 @import "../../utilities/_colors.scss";
 
-.admin-controls {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    z-index: 1;
-    background: #{$black}B0;
-    padding-block: 20px;
-
-    a {
-        width: 10rem;
-        text-align: center;
-    }
-}
-
 .article-container {
     height: fit-content;
     width: 1350px;
@@ -114,6 +99,86 @@
     }
 }
 
+.admin-controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 1;
+    background: #{$black}B0;
+    padding-block: 20px;
+
+    .-button {
+        width: 12rem;
+        text-align: center;
+    }
+}
+
+.admin-delete-confirm-darken {
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #{$black}B0;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(10px);
+    }
+
+    .admin-delete-confirm-overlay {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 250px;
+
+        .confirm-text {
+            color: $white;
+            text-align: center;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 1.9rem;
+        }
+
+        .confirm-options {
+            transform: scale(1.2);
+            display: flex;
+            width: 70%;
+            justify-content: space-around;
+        }
+    }
+}
+
+@include media($bp-950) {
+    .admin-delete-confirm-darken .admin-delete-confirm-overlay {
+        max-width: 400px;
+        width: 100%;
+        height: 200px;
+
+        .confirm-text {
+            font-size: 1.7rem;
+        }
+
+        .confirm-options {
+            transform: scale(1.1);
+            width: 80%;
+        }
+    }
+}
 
 @include media($bp-1350) {
     .article-container {

@@ -15,11 +15,20 @@
 @Html.Raw(Model.Content)
 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
 {
-    <form method="post" class="admin-controls">
-        <a class="-button --invert" asp-area="Administration" asp-controller="Articles" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-        
-        <button asp-area="Administration" asp-controller="Articles" asp-action="Delete" asp-route-id="@Model.Id" type="submit" class="-button --danger">Delete</button>
-    </form>
+    <div class="admin-delete-confirm-darken -hide">
+        <form method="post" class="admin-delete-confirm-overlay">
+            <span class="confirm-text">Наистина ли искаш да изтриеш тази статия?</span>
+            <div class="confirm-options">
+                <button asp-area="Administration" asp-controller="Articles" asp-action="Delete" asp-route-id="@Model.Id" type="submit" class="-button --danger">Изтрий</button>
+                <button type="button" onclick="toggleArticleDeleteConfirmation()" class="-button">Отмени</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="admin-controls">
+        <a class="-button --invert" asp-area="Administration" asp-controller="Articles" asp-action="Edit" asp-route-id="@Model.Id">Редактирай</a>
+        <button type="button" onclick="toggleArticleDeleteConfirmation()" class="-button --danger open-delete-confirm">Изтрий</button>
+    </div>
 }
 
 @section Scripts {
