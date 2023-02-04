@@ -6,7 +6,14 @@
 
 @if (this.SignInManager.IsSignedIn(this.User))
 {
-    <a class="account-btn-container" asp-area="Identity" asp-page="/Account/Manage/Index" tabindex="-1"><span class="account-name"><vc:user name-size="full"></vc:user></span><img class="profile-btn" src="/assets/profileBtn.svg" aria-hidden="true" /></a>
+    if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <a class="account-btn-container" asp-area="Identity" asp-page="/Account/Manage/Index" tabindex="-1"><span class="account-name"><vc:user name-size="full"></vc:user></span><img class="profile-btn" src="/assets/profileBtnAdmin.svg" aria-hidden="true" /></a>
+    }
+    else
+    {
+        <a class="account-btn-container" asp-area="Identity" asp-page="/Account/Manage/Index" tabindex="-1"><span class="account-name"><vc:user name-size="full"></vc:user></span><img class="profile-btn" src="/assets/profileBtn.svg" aria-hidden="true" /></a>
+    }
 }
 else
 {
