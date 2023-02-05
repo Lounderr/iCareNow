@@ -6,7 +6,7 @@
     <div class="result">
         <span>@articleLetter.Letter</span>
         <ul>
-            @foreach (var article in Model.Articles.Where(x => x.Title[0] == articleLetter.Letter))
+            @foreach (var article in Model.Articles.Where(x => x.Title[0] == articleLetter.Letter).OrderBy(x => x.Title))
             {
                 <li><a asp-area="" asp-controller="Health" asp-action="HealthArticle" asp-route-id="@article.Id">@article.Title.ToUpper()</a></li>
             }
