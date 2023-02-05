@@ -24,6 +24,7 @@
             {
                 Articles = articles,
                 ArticlesLetters = this.articlesService.GetAllSearchArticlesLetters(articles),
+                BioSystems = this.articlesService.GetAllBioSystems(),
             };
 
             return this.View(viewModel);

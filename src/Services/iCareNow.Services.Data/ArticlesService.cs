@@ -171,6 +171,14 @@
             return string.Join(", ", keywords);
         }
 
+        public IEnumerable<string> GetAllBioSystems()
+        {
+            return typeof(BioSystem).GetFields(BindingFlags.Public | BindingFlags.Static)
+                .Where(f => f.FieldType == typeof(string))
+                .Select(x => (string)x.GetValue(null))
+                .ToList();
+        }
+
         public IEnumerable<SelectListItem> PopulateBioSystems()
         {
             var systems = typeof(BioSystem).GetFields(BindingFlags.Public | BindingFlags.Static)

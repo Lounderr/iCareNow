@@ -10,5 +10,7 @@
         public SearchArticleInputModel SearchModel { get; set; }
 
         public IEnumerable<ArticleLetter> ArticlesLetters { get; set; }
+
+        public IEnumerable<string> BioSystems { get; set; }
     }
 }

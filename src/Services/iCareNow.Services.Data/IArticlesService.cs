@@ -28,5 +28,7 @@ namespace iCareNow.Services.Data
         Task DeleteAsync(string id);
 
         IEnumerable<SelectListItem> PopulateBioSystems();
+
+        IEnumerable<string> GetAllBioSystems();
     }
 }

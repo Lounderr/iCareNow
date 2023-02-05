@@ -69,31 +69,13 @@
                     </summary>
 
                     <fieldset class="bio-system-buttons -content">
-                        <label class="-checkbox-button --small">
-                            <input type="checkbox" />
-                            <span>Дихателна</span>
-                        </label>
-                        <label class="-checkbox-button --small">
-                            <input type="checkbox" />
-                            <span>Ендокринна</span>
-                        </label>
-                        <label class="-checkbox-button --small">
-                            <input type="checkbox" />
-                            <span>Кръвоносна</span>
-                        </label>
-                        <label class="-checkbox-button --small">
-                            <input type="checkbox" />
-                            <span>Отделителна</span>
-                        </label>
-                        <label class="-checkbox-button --small">
-                            <input type="checkbox" />
-                            <span>Нервна</span>
-                        </label>
-
-                        <label class="-checkbox-button --small">
-                            <input type="checkbox" />
-                            <span>Имунна</span>
-                        </label>
+                        @foreach (var bioSystem in Model.BioSystems)
+                        {
+                           <label class="-checkbox-button --small">
+                               <input type="checkbox" />
+                               <span>@bioSystem</span>
+                           </label>
+                        }
                     </fieldset>
                 </details>
             </div>
