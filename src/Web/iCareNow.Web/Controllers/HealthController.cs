@@ -33,7 +33,12 @@
         {
             var viewModel = await this.articlesService.GetArticleByIdAsync<ArticleInputModel>(id);
 
-            return this.View(viewModel);
+            if (article == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.View(article);
         }
     }
 }

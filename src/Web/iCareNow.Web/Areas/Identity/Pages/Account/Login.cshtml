@@ -19,6 +19,9 @@
         <h2 class="panel-title">@ViewData["Title"]</h2>
         <h4 class="panel-description">Въведете своите данни</h4>
 
+        <div asp-validation-summary="All" class="-validation-error --all"></div>
+
+
         <form method="post" class="panel-column-flex">
             <div class="input-field">
                 <div class="input-text-field -text-field-input --icon --invert-icon">
@@ -42,7 +45,6 @@
                 <input class="-checkbox" type="checkbox" />
                 <span>Запомни ме</span>
             </label>
-            <div asp-validation-summary="All" class="-validation-error"></div>
 
             <button type="submit" class="-button --large">@ViewData["Title"]</button>
             <a asp-page="./ForgotPassword" class="-link --white redirect-bottom-text">Забравена парола?</a>

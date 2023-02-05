@@ -1,6 +1,9 @@
-﻿var currentSlide = 0;
-const userQuotes = document.querySelectorAll('.user-quote');
+﻿const userQuotes = document.querySelectorAll('.user-quote');
 const userQuotesDots = document.querySelectorAll('.user-quote-dot');
+
+let currentSlide = 0;
+let cycleTimeout = setTimeout(cycleNext, 8000);
+
 function showSlide(n) {
     userQuotes[currentSlide].classList.toggle('active');
     userQuotes[n].classList.toggle('active');
@@ -9,8 +12,6 @@ function showSlide(n) {
     userQuotesDots[n].classList.toggle('active');
     currentSlide = n;
 }
-
-let cycleTimeout = setTimeout(cycleNext, 8000);
 
 function cycleNext() {
     let nextQuote = currentSlide + 1;

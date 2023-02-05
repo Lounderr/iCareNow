@@ -8,27 +8,32 @@ function clickTtsBtn() {
         toggleButtonState();
     }
     else {
-        const articleTitle = document.querySelector(".article-title").textContent;
-        const articleDescription = document.querySelector(".article-description").textContent;
-        const articleContent = document.querySelector(".article-content").textContent;
+        const articleTitle = document.querySelector(".article-title")?.textContent;
+        const articleDescription = document.querySelector(".article-description")?.textContent;
+        const articleContent = document.querySelector(".article-content")?.textContent;
 
         const inputTxt = `${articleTitle}. ${articleDescription}. ${articleContent}`;
         const utterThis = new SpeechSynthesisUtterance(inputTxt);
         utterThis.lang = 'bg-BG';
         synth.speak(utterThis);
 
-        utterThis.onstart = (event) => {
+        utterThis.onstart = () => {
             toggleButtonState()
         }
 
-        utterThis.onend = (event) => {
+        utterThis.onend = () => {
             toggleButtonState()
         }
     }
 }
 
 function toggleButtonState() {
-    for (var i = 0; i < readArticleButton.children.length; i++) {
+    for (let i = 0; i < readArticleButton.children.length; i++) {
         readArticleButton.children[i].classList.toggle("active");
     }
+}
+
+function toggleArticleDeleteConfirmation() {
+    let deleteOverlay = document.querySelector(".admin-delete-confirm-darken");
+    deleteOverlay.classList.toggle("-hide");
 }

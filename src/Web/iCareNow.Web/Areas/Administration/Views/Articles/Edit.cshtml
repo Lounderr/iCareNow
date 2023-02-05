@@ -1,14 +1,11 @@
-﻿@model iCareNow.Web.ViewModels.Articles.CreateArticleInputModel
+﻿@model iCareNow.Web.ViewModels.Articles.EditArticleInputModel
 @{
-    this.ViewData["Title"] = "Добавяне на статия";
+    this.ViewData["Title"] = "Редактирай статия";
 }
 
 @section Styles {
     <link rel="stylesheet" href="~/css/pages/admin/crudArticle.min.css" asp-append-version="true" />
 }
-
-
-
 
 <div class="page-background">
     <img class="background-image" src="/assets/backgroundImage.jpg" aria-hidden="true" />
@@ -21,7 +18,7 @@
         <h4 class="panel-description">Въведете данните за статията</h4>
 
         <form method="post" class="content-panel-form panel-column-flex">
-
+            <input type="hidden" asp-for="Id" />
 
             <div class="input-field">
                 <div class="input-text-field -text-field-input">
@@ -50,7 +47,7 @@
 
 
 
-            <button type="submit" value="Create" class="-button --large">@ViewData["Title"]</button>
+            <button type="submit" value="Edit" class="-button --large">@ViewData["Title"]</button>
         </form>
     </div>
 </section>
