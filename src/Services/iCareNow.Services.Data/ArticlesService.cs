@@ -1,5 +1,6 @@
 ﻿namespace iCareNow.Services.Data
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
@@ -9,9 +10,9 @@
     using iCareNow.Data.Common.Repositories;
     using iCareNow.Data.Models;
     using iCareNow.Services.Mapping;
+    using iCareNow.Web.ViewModels;
     using iCareNow.Web.ViewModels.Articles;
 
-    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
 
     public class ArticlesService : IArticlesService
@@ -55,6 +56,71 @@
             await this.articlesRepository.SaveChangesAsync();
         }
 
+        public IEnumerable<T> GetAll<T>()
+        {
+            return this.articlesRepository.AllAsNoTracking()
+                .To<T>()
+                .ToList();
+        }
+
+        public IEnumerable<T> GetAllArticlesBasedOnBioSystems<T>(string[] articlesIds, string[] bioSystems)
+        {
+            var query = this.articlesRepository
+                .AllAsNoTracking()
+                .Where(x => articlesIds.Contains(x.Id))
+                .AsQueryable();
+
+            if (bioSystems.Length != 0)
+            {
+                query = query.Where(x => bioSystems.Contains(x.BioSystem));
+            }
+
+            var articles = query
+                 .To<T>()
+                 .ToList();
+
+            return articles;
+        }
+
+        public IEnumerable<T> GetAllArticlesBySearch<T>(SearchArticleInputModel searchModel)
+        {
+            var query = this.articlesRepository.All().AsQueryable();
+
+            if (searchModel?.Search != null)
+            {
+                query = query.Where(x => x.Title.Contains(searchModel.Search) || x.Keywords.Any(x => x.Keyword.Value.Contains(searchModel.Search)));
+            }
+
+            var articles = query
+                .To<T>()
+                .ToList();
+
+            return articles;
+        }
+
+        public IEnumerable<ArticleLetter> GetAllSearchArticlesLetters(IEnumerable<ArticleInListViewModel> articles)
+        {
+            var articleLetters = new List<ArticleLetter>();
+
+            var letters = articles
+                .Select(x => x.Title.FirstOrDefault())
+                .Distinct()
+                .ToList();
+
+            foreach (var letter in letters)
+            {
+                var articleLetter = new ArticleLetter
+                {
+                    Letter = letter,
+                    LetterSearchId = (int)letter - 1039,
+                };
+
+                articleLetters.Add(articleLetter);
+            }
+
+            return articleLetters.OrderBy(x => x.Letter);
+        }
+        
         public async Task UpdateAsync(string id, EditArticleInputModel input)
         {
             var article = await this.articlesRepository.All().FirstOrDefaultAsync(x => x.Id == id);

@@ -59,6 +59,11 @@ using iCareNow.Services;
             services.AddRazorPages();
             services.AddDatabaseDeveloperPageExceptionFilter();
 
+            services.AddAntiforgery(options =>
+            {
+                options.HeaderName = "X-CSRF-TOKEN";
+            });
+
             services.AddSingleton(configuration);
 
             // Data repositories

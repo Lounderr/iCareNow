@@ -1,6 +1,7 @@
 ﻿namespace iCareNow.Web.Controllers
 {
     using iCareNow.Services.Data;
+    using iCareNow.Web.ViewModels;
     using iCareNow.Web.ViewModels.Articles;
 
     using Microsoft.AspNetCore.Mvc;
@@ -16,14 +17,21 @@
             this.articlesService = articlesService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(SearchArticleInputModel searchModel)
         {
-            return this.View();
+            var articles = this.articlesService.GetAllArticlesBySearch<ArticleInListViewModel>(searchModel);
+            var viewModel = new ArticlesListViewModel
+            {
+                Articles = articles,
+                ArticlesLetters = this.articlesService.GetAllSearchArticlesLetters(articles),
+            };
+
+            return this.View(viewModel);
         }
 
         public async Task<IActionResult> HealthArticle(string id)
         {
-            var article = await this.articlesService.GetArticleByIdAsync<ArticleInputModel>(id);
+            var viewModel = await this.articlesService.GetArticleByIdAsync<ArticleInputModel>(id);
 
             if (article == null)
             {

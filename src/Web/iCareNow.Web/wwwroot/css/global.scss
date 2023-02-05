@@ -760,6 +760,14 @@ input[type="radio"].-checkbox {
             &:focus {
                 outline: solid 1px $black;
             }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+                transition: background-color 5000s !important;
+                -webkit-text-fill-color: $black !important;
+            }
         }
     }
 

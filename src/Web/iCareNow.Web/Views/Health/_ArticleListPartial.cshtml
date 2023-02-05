@@ -1,0 +1,15 @@
+﻿@model iCareNow.Web.ViewModels.Articles.ArticlesListViewModel
+
+@foreach (var articleLetter in Model.ArticlesLetters)
+{
+    <a id="@("Letter"+articleLetter.LetterSearchId)" class="-page-section"></a>
+    <div class="result">
+        <span>@articleLetter.Letter</span>
+        <ul>
+            @foreach (var article in Model.Articles.Where(x => x.Title[0] == articleLetter.Letter))
+            {
+                <li><a asp-area="" asp-controller="Health" asp-action="HealthArticle" asp-route-id="@article.Id">@article.Title.ToUpper()</a></li>
+            }
+        </ul>
+    </div>
+}
