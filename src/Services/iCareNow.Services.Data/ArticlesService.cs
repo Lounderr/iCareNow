@@ -13,6 +13,7 @@
     using iCareNow.Web.ViewModels;
     using iCareNow.Web.ViewModels.Articles;
 
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
 
     public class ArticlesService : IArticlesService
@@ -120,7 +121,7 @@
 
             return articleLetters.OrderBy(x => x.Letter);
         }
-        
+
         public async Task UpdateAsync(string id, EditArticleInputModel input)
         {
             var article = await this.articlesRepository.All().FirstOrDefaultAsync(x => x.Id == id);
