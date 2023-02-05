@@ -17,5 +17,7 @@ namespace iCareNow.Services.Data
         IEnumerable<ArticleLetter> GetAllSearchArticlesLetters(IEnumerable<ArticleInListViewModel> articles);
 
         Task<T> GetArticleByIdAsync<T>(string id);
+
+        IEnumerable<T> GetAllArticlesBasedOnBioSystems<T>(string[] articlesIds, string[] bioSystems);
     }
 }

@@ -99,19 +99,63 @@
             </div>
         </details>
 
-
-        @foreach (var articleLetter in Model.ArticlesLetters)
-        {
-            <a id="@("Letter"+articleLetter.LetterSearchId)" class="-page-section"></a>
-            <div class="result">
-                <span>@articleLetter.Letter</span>
-                <ul>
-                    @foreach (var article in Model.Articles.Where(x => x.Title[0] == articleLetter.Letter))
-                    {
-                        <li><a asp-area="" asp-controller="Health" asp-action="HealthArticle" asp-route-id="@article.Id">@article.Title.ToUpper()</a></li>
-                    }
-                </ul>
-            </div>
-        }
+        <div id="articleList">
+            <partial name="_ArticleListPartial" model="@Model" />
+        </div>
     </div>
 </section>
+
+<form method="post" id="antiForgeryForm"></form>
+
+@section Scripts {
+    <script src="~/js/articleList.js" asp-append-version="true"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            const inputs = document.querySelectorAll('.bio-system-buttons  input[type=checkbox]');
+
+            let bioSystemsToFilter = [];
+            let articlesIds = [];
+
+            @foreach (var article in Model.Articles)
+            {
+                <text>
+                    articlesIds.push("@article.Id");
+                </text>
+            }
+
+            for (let input of inputs) {
+                input.addEventListener('change', (event) => {
+                    const bioSystem = event.target.parentElement.querySelector('span').textContent;
+
+                    if (bioSystemsToFilter.includes(bioSystem)) {
+                        const index = bioSystemsToFilter.indexOf(bioSystem);
+
+                        bioSystemsToFilter.splice(index, 1);
+                    } else {
+                        bioSystemsToFilter.push(bioSystem);
+                    }
+
+                    let data = { articlesIds: articlesIds, bioSystemsToFilter: bioSystemsToFilter };
+
+                    var antiForgeryToken = $('#antiForgeryForm input[name=__RequestVerificationToken]').val();
+
+                    $.ajax({
+                        type: "POST",
+                        url: 'api/Filters',
+                        data: JSON.stringify(data),
+                        headers: {
+                            'X-CSRF-TOKEN': antiForgeryToken
+                        },
+                        success: function(result) {
+                            $('#articleList').html(result)
+                        },
+                        contentType: 'application/json',
+                    });
+                });
+            }
+        });
+    </script>
+}

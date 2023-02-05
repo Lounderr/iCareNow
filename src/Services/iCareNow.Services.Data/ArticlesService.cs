@@ -1,5 +1,6 @@
 ﻿namespace iCareNow.Services.Data
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
@@ -10,6 +11,7 @@
     using iCareNow.Services.Mapping;
     using iCareNow.Web.ViewModels;
     using iCareNow.Web.ViewModels.Articles;
+
     using Microsoft.EntityFrameworkCore;
 
     public class ArticlesService : IArticlesService
@@ -55,6 +57,25 @@
             return this.articlesRepository.AllAsNoTracking()
                 .To<T>()
                 .ToList();
+        }
+
+        public IEnumerable<T> GetAllArticlesBasedOnBioSystems<T>(string[] articlesIds, string[] bioSystems)
+        {
+            var query = this.articlesRepository
+                .AllAsNoTracking()
+                .Where(x => articlesIds.Contains(x.Id))
+                .AsQueryable();
+
+            if (bioSystems.Length != 0)
+            {
+                query = query.Where(x => bioSystems.Contains(x.BioSystem));
+            }
+
+            var articles = query
+                 .To<T>()
+                 .ToList();
+
+            return articles;
         }
 
         public IEnumerable<T> GetAllArticlesBySearch<T>(SearchArticleInputModel searchModel)
