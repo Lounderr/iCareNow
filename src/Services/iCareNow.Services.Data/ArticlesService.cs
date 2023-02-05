@@ -83,13 +83,13 @@
             return articles;
         }
 
-        public IEnumerable<T> GetAllArticlesBySearch<T>(SearchArticleInputModel searchModel)
+        public IEnumerable<T> GetAllArticlesBySearch<T>(string search)
         {
             var query = this.articlesRepository.All().AsQueryable();
 
-            if (searchModel?.Search != null)
+            if (search != null)
             {
-                query = query.Where(x => x.Title.Contains(searchModel.Search) || x.Keywords.Any(x => x.Keyword.Value.Contains(searchModel.Search)));
+                query = query.Where(x => x.Title.Contains(search) || x.Keywords.Any(x => x.Keyword.Value.Contains(search)));
             }
 
             var articles = query

@@ -17,9 +17,9 @@
             this.articlesService = articlesService;
         }
 
-        public IActionResult Index(SearchArticleInputModel searchModel)
+        public IActionResult Index(string search)
         {
-            var articles = this.articlesService.GetAllArticlesBySearch<ArticleInListViewModel>(searchModel);
+            var articles = this.articlesService.GetAllArticlesBySearch<ArticleInListViewModel>(search);
             var viewModel = new ArticlesListViewModel
             {
                 Articles = articles,

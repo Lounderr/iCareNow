@@ -13,7 +13,7 @@ namespace iCareNow.Services.Data
 
         IEnumerable<T> GetAll<T>();
 
-        IEnumerable<T> GetAllArticlesBySearch<T>(SearchArticleInputModel searchModel);
+        IEnumerable<T> GetAllArticlesBySearch<T>(string search);
 
         IEnumerable<ArticleLetter> GetAllSearchArticlesLetters(IEnumerable<ArticleInListViewModel> articles);
 
