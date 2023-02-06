@@ -24,20 +24,21 @@
             var keywordEntity = this.keywordsRepository
                 .AllAsNoTracking()
                 .FirstOrDefault(x => x.Value == keyword);
+
             if (keywordEntity != null)
             {
                 return keywordEntity;
             }
 
-            var newKeywordEntity = new Keyword
+            keywordEntity = new Keyword
             {
                 Value = keyword,
             };
 
-            await this.keywordsRepository.AddAsync(newKeywordEntity);
+            await this.keywordsRepository.AddAsync(keywordEntity);
             await this.keywordsRepository.SaveChangesAsync();
 
-            return newKeywordEntity;
+            return keywordEntity;
         }
 
         public async Task RemoveAllKeywordsForArticleAsync(string articleId)

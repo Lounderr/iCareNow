@@ -41,19 +41,23 @@
                 BioSystem = inputModel.BioSystem,
             };
 
+            await this.articlesRepository.AddAsync(article);
+
             var keywords = inputModel.Keywords.Split(",").Select(x => x.Trim()).ToList();
 
             foreach (var keyword in keywords)
             {
                 var keywordEntity = await this.keywordsService.CreateKeywordAsync(keyword);
 
-                article.Keywords.Add(new ArticleKeyword
+                var articleKeyword = new ArticleKeyword
                 {
+                    Article = article,
                     Keyword = keywordEntity,
-                });
+                };
+
+                await this.articleKeywordRepository.AddAsync(articleKeyword);
             }
 
-            await this.articlesRepository.AddAsync(article);
             await this.articlesRepository.SaveChangesAsync();
         }
 
@@ -138,10 +142,13 @@
             {
                 var keywordEntity = await this.keywordsService.CreateKeywordAsync(keyword);
 
-                article.Keywords.Add(new ArticleKeyword
+                var articleKeyword = new ArticleKeyword
                 {
+                    Article = article,
                     Keyword = keywordEntity,
-                });
+                };
+
+                await this.articleKeywordRepository.AddAsync(articleKeyword);
             }
 
             await this.articlesRepository.SaveChangesAsync();
