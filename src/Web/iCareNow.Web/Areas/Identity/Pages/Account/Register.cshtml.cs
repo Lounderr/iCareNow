@@ -93,8 +93,8 @@
                 {
                     UserName = Input.Email,
                     Email = Input.Email,
-                    FirstName = Input.FirstName,
-                    LastName = Input.LastName,
+                    FirstName = this.usersService.CapitalizeName(Input.FirstName),
+                    LastName = this.usersService.CapitalizeName(Input.LastName),
                     NormalizedFirstName = this.usersService.NormalizeFirstName(Input.FirstName),
                     NormalizedLastName = this.usersService.NormalizeLastName(Input.LastName),
                 };

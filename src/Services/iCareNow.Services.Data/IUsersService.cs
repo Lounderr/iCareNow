@@ -2,8 +2,10 @@
 {
     public interface IUsersService
     {
-        public string NormalizeFirstName(string firstName);
+        string NormalizeFirstName(string firstName);
 
-        public string NormalizeLastName(string firstName);
+        string NormalizeLastName(string firstName);
+
+        string CapitalizeName(string name);
     }
 }
