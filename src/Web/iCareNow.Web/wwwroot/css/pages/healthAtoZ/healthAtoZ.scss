@@ -75,8 +75,6 @@
         .filters-disclosure {
             margin-bottom: 20px;
 
-
-
             .bio-system-buttons {
                 display: flex;
                 gap: 10px;
@@ -95,6 +93,7 @@
                 font-size: $heading;
                 color: $white;
                 margin-bottom: 10px;
+                text-transform: capitalize;
             }
 
             ul li a {
@@ -117,6 +116,20 @@
                     color: $white;
                 }
             }
+        }
+
+        .no-results {
+            display: block;
+            margin-top: 40px;
+            margin-inline: 10%;
+            color: $black;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-inline: 5%;
+            background: #{$white}F5;
+            border-radius: 6px;
+            padding-block: 12px;
         }
     }
 }

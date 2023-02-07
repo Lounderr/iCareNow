@@ -84,7 +84,7 @@
         <div id="articleList">
             @if (Model.Search != null && Model.Articles.Count() == 0)
             {
-                <h1>No Results</h1>
+                <h1 class="no-results">Не бяха намерени резултати.</h1>
             }
             <partial name="_ArticleListPartial" model="@Model" />
         </div>
