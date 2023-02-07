@@ -96,7 +96,7 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
                     protocol: Request.Scheme);
                 await _emailSender.SendEmailAsync(
                     Input.NewEmail,
-                    "Потвърдете своя имейл",
+                    "Потвърдете своя имейл.",
                     $"Моля потвърдете своя имейл като <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>натиснете тук</a>.");
 
                 StatusMessage = "Имейл за потвържение бе изпратен. Моля проверете пощата си.";
@@ -134,7 +134,7 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
                 protocol: Request.Scheme);
             await _emailSender.SendEmailAsync(
                 email,
-                "Потвърдете своя имейл",
+                "Потвърдете своя имейл.",
                 $"Моля потвърдете своя имейл като <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>натиснете тук</a>.");
 
             StatusMessage = "Имейл за потвържение бе изпратен. Моля проверете пощата си.";

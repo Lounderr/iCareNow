@@ -34,11 +34,11 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required(ErrorMessage = "Старата парола е задължителна")]
+            [Required(ErrorMessage = "Старата парола е задължителна.")]
             [DataType(DataType.Password)]
             public string OldPassword { get; set; }
 
-            [Required(ErrorMessage = "Новата парола е задължителна")]
+            [Required(ErrorMessage = "Новата парола е задължителна.")]
             [StringLength(100, ErrorMessage = "Новата парола трябва да бъде между {2} и {1} брой знаци.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             public string NewPassword { get; set; }
@@ -85,7 +85,7 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
                 {
                     if (error.Code == "PasswordMismatch")
                     {
-                        ModelState.AddModelError(string.Empty, "Грешна парола");
+                        ModelState.AddModelError(string.Empty, "Грешна парола.");
                     }
                     else
                     {

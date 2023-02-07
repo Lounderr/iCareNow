@@ -59,7 +59,7 @@
 
                 await _emailSender.SendEmailAsync(
                     Input.Email,
-                    "Промени парола",
+                    "Промени парола.",
                     $"Моля променете своята парола като <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>натиснете тук</a>.");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
