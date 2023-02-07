@@ -71,6 +71,7 @@
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
+            [Required(ErrorMessage = "Паролата е задължителна.")]
             [Compare("Password", ErrorMessage = "Паролите не съвпадат.")]
             public string ConfirmPassword { get; set; }
 
