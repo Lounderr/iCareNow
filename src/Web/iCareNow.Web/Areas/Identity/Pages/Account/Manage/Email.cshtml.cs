@@ -103,8 +103,10 @@ namespace iCareNow.Web.Areas.Identity.Pages.Account.Manage
                 return RedirectToPage();
             }
 
-            StatusMessage = "Вашият имейл бе променен.";
-            return RedirectToPage();
+            ModelState.AddModelError(string.Empty, "Новият имейл трябва да бъде различен от настоящия.");
+            this.Input.NewEmail = "";
+            await LoadAsync(user);
+            return Page();
         }
 
         public async Task<IActionResult> OnPostSendVerificationEmailAsync()
