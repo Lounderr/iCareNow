@@ -20,11 +20,11 @@
     /*outline: 1px dotted red;*/
 }
 
-*:not(input:not(input[type="checkbox"])):not(textarea):not(select):focus-visible {
+/**:not(input:not(input[type="checkbox"])):not(textarea):not(select):focus-visible {
     z-index: 99 !important;
-    outline: dashed 0.2rem crimson !important;
-    outline-offset: 0.2rem !important;
-}
+    outline: dashed 0.15rem $gray !important;
+    outline-offset: 0.15rem !important;
+}*/
 
 html:focus-within {
     scroll-behavior: smooth;
