@@ -37,8 +37,8 @@ function showCookieConsent() {
 function togglePasswordVisibility() {
     const eyeIcons = document.querySelectorAll('.-password-show-toggle');
 
-    for (const eyeIcon of eyeIcons) {
-        eyeIcon.addEventListener('click', (event) => {
+    for (let i = 0; i < eyeIcons.length; i++) {
+        eyeIcons[i].addEventListener('click', (event) => {
             const inputElement = event.target.parentElement.querySelector('input');
 
             if (inputElement.type === 'password') {
