@@ -57,12 +57,12 @@
 
             [Required(ErrorMessage = "Името е задължително.")]
             [StringLength(80, ErrorMessage = "Името е прекалено дълго.")]
-            [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Използвайте само малки и големи букви.")]
+            [RegularExpression(@"^[a-zA-ZA-Яа-я]+$", ErrorMessage = "Използвайте само малки и големи букви.")]
             public string FirstName { get; set; }
 
             [Required(ErrorMessage = "Фамилията е задължителна.")]
             [StringLength(80, ErrorMessage = "Фамилията е прекалено дълга.")]
-            [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Използвайте само малки и големи букви.")]
+            [RegularExpression(@"^[a-zA-ZA-Яа-я]+$", ErrorMessage = "Използвайте само малки и големи букви.")]
             public string LastName { get; set; }
 
             [Required(ErrorMessage = "Паролата е задължителна.")]

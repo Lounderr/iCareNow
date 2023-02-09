@@ -21,7 +21,7 @@ namespace iCareNow.Data.Models
 
         [Required]
         [StringLength(80)]
-        [RegularExpression(@"^[a-zA-Z]+$")]
+        [RegularExpression(@"^[a-zA-ZA-Яа-я]+$")]
         [ProtectedPersonalData]
         public string FirstName { get; set; }
 
@@ -31,7 +31,7 @@ namespace iCareNow.Data.Models
 
         [Required]
         [StringLength(80)]
-        [RegularExpression(@"^[a-zA-Z]+$")]
+        [RegularExpression(@"^[a-zA-ZA-Яа-я]+$")]
         [ProtectedPersonalData]
         public string LastName { get; set; }
 
