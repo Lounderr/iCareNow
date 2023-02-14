@@ -197,5 +197,10 @@
 
             return systems;
         }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await this.articlesRepository.AllAsNoTracking().CountAsync();
+        }
     }
 }

@@ -9,5 +9,7 @@
         Task<Keyword> CreateKeywordAsync(string keyword);
 
         Task RemoveAllKeywordsForArticleAsync(string articleId);
+
+        Task<int> GetCountAsync();
     }
 }

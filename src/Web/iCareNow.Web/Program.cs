@@ -1,6 +1,7 @@
 ﻿namespace iCareNow.Web
 {
     using System.Reflection;
+    using AutoMapper;
 
     using iCareNow.Data;
     using iCareNow.Data.Common;
@@ -58,6 +59,13 @@ using iCareNow.Services;
                 }).AddRazorRuntimeCompilation();
             services.AddRazorPages();
             services.AddDatabaseDeveloperPageExceptionFilter();
+
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
 
             services.AddAntiforgery(options =>
             {

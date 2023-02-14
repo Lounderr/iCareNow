@@ -13,6 +13,8 @@ namespace iCareNow.Services.Data
 
         IEnumerable<T> GetAll<T>();
 
+        Task<int> GetCountAsync();
+
         IEnumerable<T> GetAllArticlesBySearch<T>(string search);
 
         IEnumerable<ArticleLetter> GetAllSearchArticlesLetters(IEnumerable<ArticleInListViewModel> articles);

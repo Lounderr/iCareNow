@@ -6,6 +6,8 @@
     using iCareNow.Data.Common.Repositories;
     using iCareNow.Data.Models;
 
+    using Microsoft.EntityFrameworkCore;
+
     public class KeywordsService : IKeywordsService
     {
         private readonly IDeletableEntityRepository<Keyword> keywordsRepository;
@@ -44,12 +46,17 @@
         public async Task RemoveAllKeywordsForArticleAsync(string articleId)
         {
             var articleKeywords = this.articleKeywordRepository.All().Where(x => x.ArticleId == articleId);
-            foreach (var articleKeyword in articleKeywords)
+            foreach (var articleKeyword in articleKeywords.ToList())
             {
                 this.articleKeywordRepository.Delete(articleKeyword);
             }
 
             await this.articleKeywordRepository.SaveChangesAsync();
+        }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await this.keywordsRepository.AllAsNoTracking().CountAsync();
         }
     }
 }
